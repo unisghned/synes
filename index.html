@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -197,3 +197,328 @@
             </div>
         </div>
     </section>
+
+    <!-- 4. KONTEN UTAMA: CAROUSEL SWIPE PREVIEW & MODAL DETIL DESKRIPSI -->
+    <section id="recap-section" class="py-24 px-4 md:px-8 relative border-t border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header Title -->
+            <div class="text-center max-w-xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 tracking-tight">
+                    ✨ Synesthesia 2024 Recap
+                </h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-synes-teal to-synes-accent mx-auto mb-4 rounded-full"></div>
+                <p class="text-white/60 text-xs md:text-sm leading-relaxed">
+                    Kilas balik keseruan, panggung seni megah, jajaran bintang tamu spektakuler, serta pesona maskot ikonik kami yang terukir indah dalam ingatan.
+                </p>
+                <p class="text-synes-gold font-bold text-[11px] mt-4 uppercase tracking-widest bg-synes-gold/10 inline-block px-4 py-1.5 rounded-full border border-synes-gold/20 animate-bounce">
+                    🚀 Wait for the next synesthesia!
+                </p>
+            </div>
+
+            <!-- Horizontal Swipeable/Scrollable Carousel Area -->
+            <div class="relative group reveal">
+                <!-- Tombol Navigasi Desktop -->
+                <button onclick="scrollCarousel(-1)" class="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-synes-card/90 border border-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity shadow-xl hover:bg-synes-accent">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button onclick="scrollCarousel(1)" class="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-synes-card/90 border border-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity shadow-xl hover:bg-synes-accent">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+
+                <!-- Scrollable Horizontal Div Grid Container -->
+                <div id="recap-items-container" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-8 px-2">
+                    
+                    <!-- Item 1: Panggung Utama -->
+                    <div onclick="openItemModal('stage')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-synes-teal/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/panggung.JPG');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-synes-teal bg-synes-teal/10 px-2 py-0.5 rounded">Main Stage</span>
+                            <h4 class="text-lg font-bold text-white font-display">Panggung Utama</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Panggung utama megah tempat berlangsungnya pertunjukan akbar dengan audio visual mutakhir.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Musik -->
+                    <div onclick="openItemModal('music')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-synes-accent/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/BAND (8).JPG');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-synes-accent bg-synes-accent/10 px-2 py-0.5 rounded">Live Performance</span>
+                            <h4 class="text-lg font-bold text-white font-display">Musik (Band Saja)</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Aksi panggung penuh distorsi melodi harmoni indah yang dibawakan khusus oleh jajaran band pilihan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Tari -->
+                    <div onclick="openItemModal('dance')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-green-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/dance-group.jpg');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Art & Culture</span>
+                            <h4 class="text-lg font-bold text-white font-display">Dance</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Perpaduan gerak estetik tradisional nusantara dan tarian modern kolaboratif yang menawan mata.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Kuliner Bazaar -->
+                    <div onclick="openItemModal('bazaar')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-synes-gold/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/TENANT.JPG');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-synes-gold bg-synes-gold/10 px-2 py-0.5 rounded">Bazaar Area</span>
+                            <h4 class="text-lg font-bold text-white font-display">Kuliner & Bazaar</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Stand tenant kuliner, jajanan food-truck, serta lapak cinderamata resmi merchandise original synes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Aruma -->
+                    <div onclick="openItemModal('aruma')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-pink-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/ARUMA.JPG');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-pink-400 bg-pink-400/10 px-2 py-0.5 rounded">Guest Star</span>
+                            <h4 class="text-lg font-bold text-white font-display">Special Artist: Aruma</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Penampilan penuh syahdu suara emas solois berbakat Aruma membuai ribuan pasang mata audiens.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: HiVi! -->
+                    <div onclick="openItemModal('hivi')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-purple-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/HIVI.JPG');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">Guest Star</span>
+                            <h4 class="text-lg font-bold text-white font-display">Special Artist: HiVi!</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Sesi penutup super ceria bernyanyi dendang bersama grup musik pop legendaris nasional HiVi!</p>
+                        </div>
+                    </div>
+
+                    <!-- Maskot 1: Zaga -->
+                    <div onclick="openItemModal('zaga')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-orange-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/all-mascots.jpg'); background-position: left center;"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-orange-400 bg-orange-400/10 px-2 py-0.5 rounded">Mascot Profile</span>
+                            <h4 class="text-lg font-bold text-white font-display">🐘 Mascot: Zaga</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Simbol fondasi kekuatan, keteguhan hati, serta pilar energi besar penopang kesuksesan festival.</p>
+                        </div>
+                    </div>
+
+                    <!-- Maskot 2: Lala -->
+                    <div onclick="openItemModal('lala')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-yellow-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/all-mascots.jpg'); background-position: center;"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded">Mascot Profile</span>
+                            <h4 class="text-lg font-bold text-white font-display">🐘 Mascot: Lala</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Karakter penuh senyuman ramah tamah yang menyebarkan kehangatan getaran persahabatan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Maskot 3: Rocky -->
+                    <div onclick="openItemModal('rocky')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-red-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/all-mascots.jpg'); background-position: right center;"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-red-400 bg-red-400/10 px-2 py-0.5 rounded">Mascot Profile</span>
+                            <h4 class="text-lg font-bold text-white font-display">🎸 Mascot: Rocky</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Jiwa kebebasan berekspresi eksploratif pemetik chord melodi gitar bergelora semangat muda.</p>
+                        </div>
+                    </div>
+
+                    <!-- Maskot 4: Kila -->
+                    <div onclick="openItemModal('kila')" class="snap-start shrink-0 w-[290px] sm:w-[330px] bg-synes-card border border-white/5 hover:border-blue-400/30 rounded-2xl overflow-hidden cursor-pointer shadow-xl transform hover:-translate-y-1.5 transition-all duration-300">
+                        <div class="h-48 w-full bg-cover bg-center" style="background-image: url('assets/all-mascots.jpg');"></div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[9px] uppercase font-bold tracking-widest text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded">Mascot Profile</span>
+                            <h4 class="text-lg font-bold text-white font-display">🎸 Mascot: Kila</h4>
+                            <p class="text-white/60 text-xs line-clamp-2">Keanggunan visual harmoni penyejuk ritme damai penyinar keindahan palet seni sanubari.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Hubungan Pengait ke Halaman Latar Belakang (Lebih Menarik) -->
+            <div class="text-center mt-14 reveal">
+                <a href="latar-belakang.html" class="inline-flex items-center gap-3 group text-xs font-bold tracking-widest uppercase text-synes-gold hover:text-white transition-colors duration-300 bg-white/5 border border-white/10 px-8 py-4 rounded-full hover:bg-synes-accent hover:border-synes-accent shadow-lg">
+                    Pelajari lebih lanjut tentang Synesthesia
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. TIMELINE PERJALANAN AGENDA VISUAL MODERN -->
+    <section id="timeline-section" class="py-24 px-4 md:px-8 bg-[#070A1E] relative border-t border-white/5">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(255,59,105,0.04)_0%,transparent_50%)]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            
+            <div class="text-center max-w-xl mx-auto mb-20 reveal">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 tracking-tight">
+                    Timeline Perjalanan
+                </h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-synes-teal to-synes-accent mx-auto mb-4 rounded-full"></div>
+                <p class="text-white/60 text-xs leading-relaxed">
+                    Rangkaian agenda perwujudan visi ekspresi, selebrasi prestasi, serta ruang kolaborasi tak terbatas komunitas siswa SMA Talenta.
+                </p>
+            </div>
+
+            <!-- Interconnected Vertical Line Timeline Wireframe -->
+            <div class="relative border-l-2 border-white/10 ml-4 md:ml-32 space-y-16 pb-4">
+                
+                <!-- Node 1: Synesthesia 2024 -->
+                <div class="relative reveal pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-synes-accent shadow-[0_0_15px_rgba(255,59,105,0.5)] border-4 border-[#070A1E]">
+                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </span>
+                    <span class="hidden md:block absolute -left-32 top-0.5 text-right w-24 font-display font-bold text-2xl text-synes-accent">2024</span>
+                    
+                    <div class="bg-synes-card border border-white/5 rounded-2xl p-6 shadow-xl hover:border-synes-accent/30 transition-all duration-300">
+                        <span class="inline-block md:hidden text-[10px] font-bold text-synes-accent mb-1 font-display uppercase tracking-widest">2024</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">Synesthesia 2024 (Recap Memories)</h4>
+                        <p class="text-white/70 text-xs leading-relaxed">
+                            Puncak perayaan akbar festival seni, pameran offline karya rupa siswa, serta konser akbar musik kolaboratif spektakuler bersama Aruma dan HiVi! sukses terukir abadi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Node 2: OSTlympics 2026 -->
+                <div class="relative reveal pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-synes-teal shadow-[0_0_15px_rgba(0,242,254,0.5)] border-4 border-[#070A1E]">
+                        <svg class="w-3 h-3 text-[#070A1E]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                    </span>
+                    <span class="hidden md:block absolute -left-32 top-0.5 text-right w-24 font-display font-bold text-2xl text-synes-teal">2026</span>
+                    
+                    <div class="bg-synes-card border border-white/5 rounded-2xl p-6 shadow-xl hover:border-synes-teal/30 transition-all duration-300">
+                        <span class="inline-block md:hidden text-[10px] font-bold text-synes-teal mb-1 font-display uppercase tracking-widest">2026</span>
+                        <h4 class="text-lg font-bold text-white font-display mb-2">OSTLYMPICS 2026 (Current Event)</h4>
+                        <p class="text-white/70 text-xs leading-relaxed">
+                            Ajang kompetisi multi-bidang olahraga dan sportivitas kreativitas internal akbar serta eksternal sekolah demi menyaring dan menumbuhkan bibit-bibit unggul masa depan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Node 3: Synesthesia ? -->
+                <div class="relative reveal pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 flex items-center justify-center w-8 h-8 rounded-full bg-synes-gold shadow-[0_0_15px_rgba(255,215,0,0.5)] border-4 border-[#070A1E] animate-pulse">
+                        <svg class="w-3 h-3 text-[#070A1E]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                    </span>
+                    <span class="hidden md:block absolute -left-32 top-0.5 text-right w-24 font-display font-bold text-2xl text-synes-gold animate-pulse">Next</span>
+                    
+                    <div class="bg-gradient-to-br from-synes-card to-[#151D4A] border border-synes-gold/20 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                        <span class="inline-block md:hidden text-[10px] font-bold text-synes-gold mb-1 font-display uppercase tracking-widest">Next</span>
+                        <h4 class="text-lg font-bold text-synes-gold font-display mb-2">Synesthesia ? (Masa Depan)</h4>
+                        <p class="text-white/70 text-xs leading-relaxed">
+                            Lembaran panggung kreasi konseptual seni yang siap kembali mengeksplorasi dimensi baru melodi visual estetis tak bertepi. Bersiaplah menyambut kemegahannya!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. RICH INFORMATIVE FOOTER (LOGO, TAB LINK, SOSMED) -->
+    <footer class="bg-[#080B1C] text-white/60 border-t border-white/5 pt-16 pb-8 px-4 md:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            
+            <!-- Logo & Brand Description Column -->
+            <div class="space-y-4">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
+                <p class="text-xs leading-relaxed text-white/50">
+                    Wadah resmi selebrasi festival seni panggung ekspresi, harmoni melodi, kolaborasi ekosistem kreatif siswa persembahan OSIS SMA Talenta Bandung.
+                </p>
+            </div>
+
+            <!-- Internal Tab Anchor Navigation Column -->
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-teal">Navigasi Tab</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-synes-teal transition-colors">Home Utama</a></li>
+                    <li><a href="latar-belakang.html" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
+                    <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Galeri Momen</a></li>
+                    <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Struktur Panitia</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Action Target Outbound Links Column -->
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-accent">Hubungi Kontak</h5>
+                <ul class="space-y-2 text-xs">
+                    <li>
+                        <a href="https://www.instagram.com/synesthesia.talenta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram Synesthesia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/osis_talenta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram OSIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@osis_talenta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>TikTok OSIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/smatalenta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram SMA Talenta</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Address School Information Column -->
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-gold">Lokasi Sekolah</h5>
+                <p class="text-xs leading-relaxed text-white/40">
+                    SMA Talenta Bandung<br>
+                    Kec. Margaasih, Kabupaten Bandung,<br>
+                    Jawa Barat, Indonesia 40215
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-white/40 gap-4">
+            <p>© 2026 Synesthesia - OSIS SMA Talenta. Seluruh Hak Cipta Dilindungi.</p>
+            <p>Dibuat dengan dedikasi penuh kreativitas Seni & Alunan Melodi</p>
+        </div>
+    </footer>
+
+    <!-- 7. SYSTEM POPUP MODAL MULTI-CAROUSEL INTERAKTIF -->
+    <div id="recap-modal" class="fixed inset-0 z-[110] hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4" onclick="closeItemModal()">
+        <div class="bg-synes-card border border-white/10 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative" onclick="event.stopPropagation()">
+            
+            <!-- Tombol Keluar Silang Atas -->
+            <button onclick="closeItemModal()" class="absolute top-4 right-4 z-30 w-9 h-9 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white hover:bg-synes-accent transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <!-- Track Gambar Slider Internal Modal -->
+            <div class="relative w-full h-60 sm:h-72 bg-slate-900 overflow-hidden">
+                <div id="modal-carousel-track" class="flex h-full transition-transform duration-500 ease-in-out">
+                    <!-- Diisi via skrip script.js -->
+                </div>
+                <!-- Tombol Navigasi Slider Internal -->
+                <button onclick="moveModalSlide(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white flex items-center justify-center hover:bg-synes-accent transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button onclick="moveModalSlide(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 border border-white/10 text-white flex items-center justify-center hover:bg-synes-accent transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <!-- Deskripsi Detail Content Modal -->
+            <div class="p-6 sm:p-8 space-y-3">
+                <span id="modal-badge" class="text-[9px] uppercase font-bold tracking-widest px-2.5 py-1 rounded bg-white/10 text-white">Category</span>
+                <h3 id="modal-title" class="text-xl sm:text-2xl font-bold font-display text-white">Title</h3>
+                <p id="modal-desc" class="text-xs sm:text-sm text-white/70 leading-relaxed pt-2">Description text.</p>
+                
+                <div class="pt-6 flex justify-end">
+                    <button onclick="closeItemModal()" class="px-6 py-2 bg-white/5 border border-white/10 hover:bg-white/10 text-[10px] font-bold tracking-wider uppercase rounded-full transition">
+                        Kembali Ke Menu Utama
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pemuatan Skrip File JS Eksternal Berkualitas Tinggi -->
+    <script src="js/script.js"></script>
+</body>
+</html>
