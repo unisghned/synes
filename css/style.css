@@ -1,204 +1,45 @@
-/* css/style.css (Style Lengkap dan Terstruktur - FINAL FIX) */
+/* style.css - Pengaturan Styling Khusus & Animasi Scroll */
 
-/* ===================================== */
-/* 1. CUSTOM FONTS & BASE STYLES         */
-/* ===================================== */
-.font-bungee { 
-    font-family: 'Oswald', sans-serif; 
-}
-.font-cabin { 
-    font-family: 'Cabin', sans-serif; 
-}
-/* FIX: Atur overflow horizontal di html/body dan hapus padding/margin yang tidak perlu */
+/* Aturan Utama Mengunci Kebocoran Horizontal */
 html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-body {
-    margin: 0;
-    padding: 0;
+
+/* Sembunyikan Jalur Scrollbar Default di Carousel Geser */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* FIX KRITIS: PADDING OFFSET UNTUK KONTEN DI HALAMAN NON-HOME */
-/* Class ini harus DITAMBAHKAN ke <section> pertama di LATAR BELAKANG, GALERI, dan PANITIA */
-.content-start-offset {
-    /* Mengimbangi Navbar setinggi 5rem (sekitar 80px) */
-    padding-top: 5rem !important; 
-}
-
-/* ===================================== */
-/* 2. NAVBAR STYLING CUSTOM (FIXED KUAT) */
-/* ===================================== */
-#navbar {
-    /* FIX: Z-INDEX dan POSITION: FIXED DENGAN !important */
-    position: fixed !important; 
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 900 !important; /* Di bawah loading (9999), di atas konten */
-    transition: all 0.3s ease-in-out;
-}
-.navbar-initial {
-    background-color: rgba(26, 35, 126, 0.7); 
-    backdrop-filter: blur(8px);
-}
-.navbar-scrolled {
-    background-color: rgba(26, 35, 126, 0.2); 
-    backdrop-filter: blur(10px);
-}
-
-/* ===================================== */
-/* 3. FIX LOADING SCREEN & SCROLL LOCK   */
-/* ===================================== */
-.no-scroll {
-    overflow: hidden !important; 
-    height: 100vh !important;
-}
-#loading-screen {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 9999 !important; 
-    background-color: #1a237e; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease;
-}
-
-/* ===================================== */
-/* 4. ANIMASI TRANSISI HALAMAN (FIXED)   */
-/* ===================================== */
-/* Transisi masuk (Page-In) - Fade In */
-@keyframes page-transition-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.page-transition-in {
-    animation: page-transition-in 0.8s ease-out forwards;
-}
-/* Transisi keluar (Page-Out) - Fade Out Cepat */
-.page-transition-out {
+/* Kelas Efek Animasi Muncul Saat Di-Scroll (Scroll Reveal Engine) */
+.reveal {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transform: translateY(40px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Animasi konten masuk (untuk section utama halaman) - Slide Up & Fade In */
-@keyframes fadeInSlideUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Diterapkan pada <section> konten utama di semua halaman */
-.page-content-fade-in {
-    opacity: 0; 
-    animation: fadeInSlideUp 0.6s ease-out 0.2s forwards;
-}
-
-/* ===================================== */
-/* 5. CUSTOM HERO & SECTION STYLES       */
-/* ===================================== */
+/* Kustomisasi Tampilan Latar Belakang Hero Utama Komunitas */
 .hero-gajah-bg {
-    background-image: url('../assets/bg.jpg'); 
+    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('background.jpg'); 
     background-size: cover;
     background-position: center bottom; 
-    background-attachment: fixed; 
-    min-height: 100vh;
-    position: relative;
-}
-.tagline-shadow {
-    text-shadow: 
-        0 0 5px #000000, 
-        0 0 10px rgba(255, 255, 255, 0.8);
-}
-.section-bg-dark-blue {
-    background-color: #121A52; 
-}
-.title-shadow {
-    text-shadow: 0 4px 10px rgba(244, 67, 54, 0.8);
-}
-/* Card Content Styling */
-.card-content-feature {
-    background-color: #1A237E; 
-    padding-bottom: 24px; 
-    border-radius: 0.75rem; 
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-    overflow: hidden; 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    border: 1px solid #3F51B5;
-}
-.card-content-feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px -5px rgba(255, 255, 255, 0.2);
-}
-.card-photo-frame {
-    height: 128px; 
-    background-color: #3F51B5; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    border-bottom: 4px solid #FFEB3B; 
-}
-/* Tombol Pulse */
-.pulse-button {
-    animation: pulse-red 2s infinite;
-}
-@keyframes pulse-red {
-    0% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(244, 67, 54, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0); }
+    background-attachment: fixed;
 }
 
-
-/* ===================================== */
-/* 6. GALERI STYLING (Grid Stabil BARU)  */
-/* ===================================== */
-.gallery-item-new {
-    background-color: #1A237E; /* Indigo 800 */
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
+/* Penyesuaian Slider Volume Lagu */
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    transition: transform 0.2s;
 }
-.gallery-item-new:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 20px -3px rgba(255, 235, 59, 0.3); /* Efek glow kuning saat hover */
-}
-.gallery-item-new img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    display: block;
-}
-.gallery-item-new-content {
-    padding: 1.5rem;
-}
-.gallery-item-new-content h4 {
-    margin-bottom: 0.5rem;
-    font-family: 'Oswald', sans-serif;
-}
-.gallery-item-new-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.5rem;
-}
-.gallery-item-new-content li {
-    font-size: 0.9rem;
-    color: #CCC;
-    margin-bottom: 0.2rem;
-    position: relative;
-    padding-left: 15px;
-}
-.gallery-item-new-content li::before {
-    content: "🎵"; /* Menggunakan ikon sebagai bullet point */
-    color: #FFEB3B;
-    position: absolute;
-    left: 0;
-    font-size: 0.8rem;
-    top: 2px;
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
 }
