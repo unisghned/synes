@@ -20,19 +20,19 @@ const modalData = {
         badge: "Art & Cultural Show",
         desc: "Kolaborasi gerakan koreografi ekspresif dinamis modern dance terkemuka dengan keanggunan penjiwaan tarian etnik nusantara Indonesia tradisional yang kaya akan nilai budaya leluhur. Menampilkan perpaduan visual kostum dinamis warna-warni memikat mata demi meningkatkan apresiasi keragaman seni gerak kultural holistik nusantara.",
         images: ["assets/DANCE (1).JPG", "assets/DANCE (2).JPG", "assets/DANCE (3).JPG", "assets/DANCE (4).JPG", "assets/DANCE (5).JPG", "assets/DANCE (6).JPG", "assets/DANCE (7).JPG", "assets/DANCE (8).JPG", "assets/DANCE (9).JPG", "assets/DANCE (10).JPG", 
-            "assets/DANCE (11).JPG", "assets/DANCE (12).JPG", "assets/DANCE (13).JPG", "assets/DANCE (14).JPG", "assets/DANCE (15).JPG", "assets/DANCE (16).JPG", "assets/DANCE (17).JPG", "assets/DANCE (18).JPG", "assets/DANCE (19).JPG", "assets/DANCE (20).JPG"]
+            "assets/DANCE (11).JPG", "assets/DANCE (12).JPG", "assets/DANCE (13).JPG"]
     },
     bazaar: {
         title: "Kuliner Kreatif & Area Bazaar Stand",
         badge: "Bazaar & Merchant Tenants",
         desc: "Area zona eksklusif jajaran stan festival kuliner jajanan nusantara Food-Truck pilihan serta lapak kreatif tenant UMKM siswa. Menyediakan aneka santapan lezat pelepas dahaga, spot bersantai ria melepas penat bersama rekan sejawat, sekaligus stan pusat merchandise cinderamata resmi original Synesthesia 2024.",
-        images: ["assets/TENANT.JPG", "assets/bg.jpg"]
+        images: ["assets/TENANT.JPG", "assets/TENANT (1).JPG", "assets/TENANT (2).JPG", "assets/TENANT (3).JPG", "assets/TENANT (4).JPG", "assets/TENANT (5).JPG", "assets/TENANT (6).JPG", "assets/TENANT (7).JPG", "assets/TENANT (8).JPG"]
     },
     aruma: {
         title: "Guest Star Utama: Aruma",
         badge: "Guest Star Performance",
         desc: "Penyanyi solois nasional berbakat, Aruma, sukses menghipnotis ribuan pasang mata audiens melalui petikan nada gitar akustik dan lantunan suara emas merdu lagu hits andalannya yang emosional. Membawa keheningan romantis syahdu yang mendalam, menyentuh relung hati sanubari seluruh penonton festival malam puncak.",
-        images: ["assets/ARUMA.JPG", "assets/stage-view.jpg"]
+        images: ["assets/ARUMA.JPG", "assets/ARUMA (1).JPG", "assets/ARUMA (2).JPG", "assets/ARUMA (3).JPG", "assets/ARUMA (4).JPG", "assets/ARUMA (5).JPG", "assets/ARUMA (6).JPG", "assets/ARUMA (7).JPG", "assets/ARUMA (8).JPG", "assets/ARUMA (9).JPG"]
     },
     hivi: {
         title: "Guest Star Utama: HiVi!",
@@ -44,25 +44,25 @@ const modalData = {
         title: "Profil Maskot Penting: Zaga 🐘",
         badge: "Official Mascot Profile",
         desc: "Zaga hadir berwujud karakter gajah tangguh perkasa mandiri yang melambangkan pondasi utama kekuatan internal organisasi, konsistensi komitmen kerja keras kepanitiaan, serta pilar energi besar yang menopang penuh terwujudnya kesuksesan mahakarya festival Synesthesia dari awal perancangan hingga garis akhir.",
-        images: ["assets/all-mascots.jpg"]
+        images: ["assets/Zaga.png"]
     },
     lala: {
         title: "Profil Maskot Penting: Lala 🐘",
         badge: "Official Mascot Profile",
         desc: "Lala mendampingi Zaga sebagai karakter maskot gajah betina yang super imut, ramah, dan penuh keceriaan tanpa batas. Karakter Lala memancarkan hospitality kehangatan persahabatan sejati, menyapa riang seluruh pengunjung arena festival, serta menyebarkan getaran aura kegembiraan positif.",
-        images: ["assets/all-mascots.jpg"]
+        images: ["assets/Lala.png"]
     },
     rocky: {
         title: "Profil Maskot Penting: Rocky 🎸",
         badge: "Official Mascot Profile",
         desc: "Rocky merepresentasikan gelora distorsi melodi petikan gitar elektrik yang berani, merdeka, bebas, dan penuh gelora ekspresi eksploratif. Karakter Rocky melambangkan kebebasan jiwa muda berekspresi tanpa batas dalam menembus ruang kreasi melodi orisinalitas seni musik.",
-        images: ["assets/all-mascots.jpg"]
+        images: ["assets/Rocky.png"]
     },
     kila: {
         title: "Profil Maskot Penting: Kila 🎸",
         badge: "Official Mascot Profile",
         desc: "Kila melambangkan keanggunan ritme kedamaian melodi akustik yang menyejukkan sanubari serta keindahan estetika visual harmonis. Kila bertugas menyeimbangkan gelora distorsi festival dengan sentuhan kehalusan estetika seni, menyinari kilau palet keindahan seni jiwa.",
-        images: ["assets/all-mascots.jpg"]
+        images: ["assets/Kila.png"]
     }
 };
 
