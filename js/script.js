@@ -6,7 +6,7 @@ const modalData = {
         title: "Panggung Utama Synesthesia 2024",
         badge: "Main Stage Area",
         desc: "Panggung Utama Synesthesia 2024 dikonsep megah dengan rancangan tata tata cahaya sorot Moving Beam cerdas serta instalasi sistem pengeras suara berkekuatan tinggi dari tim teknisi ahli profesional kelas konser akbar. Panggung megah ini didedikasikan penuh sebagai saksi bisu bersatunya gelombang harmoni melodi, gempita keceriaan sorak penonton, serta kilau apresiasi ekspresi performa mahakarya seni anak muda.",
-        images: ["assets/panggung.JPG", "assets/PANGGUNG (1).jpg", "assets/PANGGUNG (2).jpg", "assets/PANGGUNG (3).jpg", "assets/PANGGUNG (4).jpg", "assets/PANGGUNG (5).jpg", "assets/PANGGUNG (6).jpg"]
+        images: ["assets/panggung.JPG", "assets/PANGGUNG (1).JPG", "assets/PANGGUNG (2).JPG", "assets/PANGGUNG (3).JPG", "assets/PANGGUNG (4).JPG", "assets/PANGGUNG (5).JPG", "assets/PANGGUNG (6).JPG"]
     },
     music: {
         title: "Musik Sesi (Penampilan Band Pilihan)",
