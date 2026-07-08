@@ -22,7 +22,7 @@ const photoDatabase = [
   { src: "assets/BAND (13).JPG", caption: "Band Performance By Huh Band ", category: "music", rotate: "rotate-5" },
   { src: "assets/MC (1).JPG", caption: "Duo MC asikk ", category: "stage", rotate: "rotate-5" },
   { src: "assets/BAND (34).JPG", caption: "Band Performance By The Drunkcaster ", category: "music", rotate: "rotate-5" },
-  { src: "assets/PENONTON (1).JPG", caption: "Festival Epic Final Peak ", category: "Stage", rotate: "rotate-5" },
+  { src: "assets/PENONTON (1).JPG", caption: "PENONTON DI SYNESTHESIA ", category: "Stage", rotate: "rotate-5" },
   { src: "assets/ARUMA.JPG", caption: "ARUMA AT SYNESTHESIA ", category: "star", rotate: "rotate-5" },
   { src: "assets/MC (2).JPG", caption: "Duo MC Terbaik di Synesthesia 2024 ", category: "stage", rotate: "rotate-5" },
   { src: "assets/BAND (26).JPG", caption: "Band Performance The The Clowneries ", category: "music", rotate: "rotate-5" },
