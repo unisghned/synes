@@ -242,6 +242,21 @@
         </div>
     </footer>
 
-    <script type="module" src="js/galeri-ui.js"></script>
+    <script type="module" src="js/script.js"></script>
+
+    <script src="js/galeri-ui.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Memastikan fungsi dari galeri-ui.js sudah tersedia di window sebelum dieksekusi
+            if (typeof window.renderGallery === "function") {
+                window.renderGallery('all');
+                window.renderCarousel();
+                window.renderInfiniteTicker();
+            } else {
+                console.error("Fungsi render galeri belum ter-expose dengan benar di galeri-ui.js");
+            }
+        });
+    </script>
 </body>
 </html>
