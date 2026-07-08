@@ -260,6 +260,19 @@ window.toggleMobileMenu = function() {
   if(menu) menu.classList.toggle('hidden');
 };
 
+// Pastikan hamburger hanya membuka/menutup mobile menu (bukan toggle class lain)
+document.addEventListener('DOMContentLoaded', () => {
+  const burgerBtn = document.getElementById('hamburger-menu');
+  const menu = document.getElementById('mobile-menu');
+  if (burgerBtn && menu) {
+    burgerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.toggle('hidden');
+    });
+  }
+});
+
 window.scrollCarousel = function(dir) {
   const container = document.getElementById('recap-items-container');
   const itemWidth = 350;
