@@ -50,6 +50,9 @@
         }
     </style>
 </head>
+
+  <!-- ELEMEN AUDIO AUDIO .MP3 REVOLUSIONER -->
+    <audio id="bg-music" loop src="assets/musik_hivi.mp3"></audio>
 <body class="bg-synes-dark text-white font-sans min-h-screen selection:bg-synes-accent selection:text-white overflow-x-hidden">
 
     <!-- Navbar mengikuti gaya main.html (CSS/JS external) -->
@@ -60,9 +63,9 @@
             </a>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Home</a>
+                <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Home</a>
                 <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Latar Belakang</a>
-                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
+                <a href="#" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Galeri</a>
                 <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
 
                 <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
@@ -88,9 +91,9 @@
 
         <div id="mobile-menu" class="hidden max-w-7xl mx-auto mt-4 bg-synes-card/95 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl">
             <div class="flex flex-col space-y-3">
-                <a href="main.html" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Home</a>
+                <a href="main.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Home</a>
                 <a href="latar-belakang.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Latar Belakang</a>
-                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
+                <a href="#" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Galeri</a>
                 <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
 
                 <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
@@ -177,8 +180,66 @@
         </div>
     </div>
 
-    <footer class="w-full border-t border-white/5 mt-24 py-8 text-center text-[10px] text-white/30 tracking-widest uppercase">
-        &copy; 2024 Synesthesia Documentation Team. All Rights Reserved.
+<footer class="bg-[#080B1C] text-white/60 border-t border-white/5 pt-16 pb-8 px-4 md:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            
+            <div class="space-y-4">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
+                <p class="text-xs leading-relaxed text-white/50">
+                    Wadah resmi selebrasi festival seni panggung ekspresi, harmoni melodi, kolaborasi ekosistem kreatif siswa persembahan OSIS SMA Talenta Bandung.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-teal">Navigasi Tab</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="main.html" class="hover:text-synes-teal transition-colors">Home Utama</a></li>
+                    <li><a href="latar-belakang.html" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
+                    <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Galeri Momen</a></li>
+                    <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Struktur Panitia</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-accent">Hubungi Kontak</h5>
+                <ul class="space-y-2 text-xs">
+                    <li>
+                        <a href="https://www.instagram.com/synesthesia.ost/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram Synesthesia</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/osissmatalenta/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram OSIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@osis.smatalenta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>TikTok OSIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/talentasma/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-synes-accent transition-colors">
+                            <span>Instagram SMA Talenta</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-gold">Lokasi Sekolah</h5>
+                <p class="text-xs leading-relaxed text-white/40">
+                    SMA Talenta Bandung<br>
+                    Kec. Margaasih, Kabupaten Bandung,<br>
+                    Jawa Barat, Indonesia 40215
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-white/40 gap-4">
+            <p>© 2026 Synesthesia - OSIS SMA Talenta. Seluruh Hak Cipta Dilindungi.</p>
+            <p>Dibuat dengan dedikasi penuh kreativitas Seni & Alunan Melodi</p>
+        </div>
     </footer>
 
     <script type="module" src="js/galeri-ui.js"></script>
