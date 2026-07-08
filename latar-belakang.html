@@ -49,6 +49,9 @@
                 <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Latar Belakang</a>
                 <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
                 <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
+                <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
+                    Logout
+                </button>
             </div>
 
             <!-- Music Controller Widget (Sinkron dengan script.js) -->
@@ -61,7 +64,7 @@
                     <svg class="w-3.5 h-3.5 text-white/40 group-hover:text-synes-teal transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
                     <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" oninput="setVolume(this.value)" class="w-16 md:w-20 h-1 accent-synes-teal bg-white/20 rounded-lg appearance-none cursor-pointer">
                 </div>
-                <button id="hamburger-menu" onclick="toggleMobileMenu()" class="md:hidden text-white/80 hover:text-white pl-2 border-l border-white/10">
+                <button id="hamburger-menu" type="button" class="md:hidden text-white/80 hover:text-white pl-2 border-l border-white/10" onclick="(function(){var m=document.getElementById('mobile-menu'); if(m) m.classList.toggle('hidden');})()">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -74,6 +77,13 @@
                 <a href="latar-belakang.html" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Latar Belakang</a>
                 <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
                 <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
+
+                <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <span>logout</span>
+                </button>
             </div>
         </div>
     </nav>
