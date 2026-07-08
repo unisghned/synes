@@ -5,18 +5,36 @@
 
 
 const photoDatabase = [
-  { src: "assets/panggung.JPG", caption: "Main Stage Soundcheck ✨", category: "stage", rotate: "-rotate-3" },
-  { src: "assets/BAND (1).JPG", caption: "Opening Act Rocking Out! 🎸", category: "music", rotate: "rotate-2" },
-  { src: "assets/DANCE (1).JPG", caption: "Traditional Heritage Show 🌸", category: "dance", rotate: "-rotate-2" },
-  { src: "assets/TENANT.JPG", caption: "Bazaar Culinary Craze 🍔", category: "bazaar", rotate: "rotate-3" },
-  { src: "assets/ARUMA.JPG", caption: "Aruma - Muak Live Session 🎤", category: "star", rotate: "-rotate-4" },
-  { src: "assets/HIVI.JPG", caption: "HiVi! - Euphoria Closing ❤️", category: "star", rotate: "rotate-4" },
-  { src: "assets/PANGGUNG (2).JPG", caption: "Midnight Beam Laser Show ⚡", category: "stage", rotate: "-rotate-1" },
-  { src: "assets/BAND (3).JPG", caption: "Energetic Drum Solo Beat 🥁", category: "music", rotate: "rotate-3" },
-  { src: "assets/DANCE (4).JPG", caption: "Modern Crew Synchronization ⚡", category: "dance", rotate: "-rotate-3" },
-  { src: "assets/TENANT (2).JPG", caption: "Tenant Area Crowds Line Up 🥤", category: "bazaar", rotate: "rotate-1" },
-  { src: "assets/ARUMA (3).JPG", caption: "Singing Along with Aruma 🌌", category: "star", rotate: "-rotate-2" },
-  { src: "assets/HIVI (4).JPG", caption: "Festival Epic Final Peak 🎉", category: "star", rotate: "rotate-5" }
+  { src: "assets/panggung.JPG", caption: "Main Stage of Synesthesia2024 ", category: "stage", rotate: "-rotate-3" },
+  { src: "assets/BAND (1).JPG", caption: "Band Performance By Tutti Frootie ", category: "music", rotate: "rotate-2" },
+  { src: "assets/DANCE (1).JPG", caption: "Dance By Aever ", category: "dance", rotate: "-rotate-2" },
+  { src: "assets/TENANT.JPG", caption: "Bazaar Culinary Craze ", category: "bazaar", rotate: "rotate-3" },
+  { src: "assets/ARUMA.JPG", caption: "Aruma - Muak Live Session ", category: "star", rotate: "-rotate-4" },
+  { src: "assets/HIVI.JPG", caption: "HiVi! - Euphoria Closing ", category: "star", rotate: "rotate-4" },
+  { src: "assets/PANGGUNG (2).JPG", caption: "Midnight Beam Laser Show ", category: "stage", rotate: "-rotate-1" },
+  { src: "assets/BAND (3).JPG", caption: "Band Performance By Velvet Harmony ", category: "music", rotate: "rotate-3" },
+  { src: "assets/DANCE (7).JPG", caption: "Dancy By Ruination ", category: "dance", rotate: "-rotate-3" },
+  { src: "assets/TENANT (2).JPG", caption: "Tenant Area Crowds Line Up ", category: "stage", rotate: "rotate-1" },
+  { src: "assets/ARUMA (3).JPG", caption: "Singing Along with Aruma ", category: "star", rotate: "-rotate-2" },
+  { src: "assets/BAND (8).JPG", caption: "Band Performance By H2O ", category: "music", rotate: "rotate-5" },
+  { src: "assets/DANCE (9).JPG", caption: "Dance By Thrushelle", category: "dance", rotate: "rotate-5" },
+  { src: "assets/HIVI (1).JPG", caption: "HIVI AT SYNESTHESIA ", category: "star", rotate: "rotate-5" },
+  { src: "assets/BAND (13).JPG", caption: "Band Performance By Huh Band ", category: "music", rotate: "rotate-5" },
+  { src: "assets/MC (1).JPG", caption: "Duo MC asikk ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/BAND (34).JPG", caption: "Band Performance By The Drunkcaster ", category: "music", rotate: "rotate-5" },
+  { src: "assets/PENONTON (1).JPG", caption: "Festival Epic Final Peak ", category: "Stage", rotate: "rotate-5" },
+  { src: "assets/ARUMA.JPG", caption: "ARUMA AT SYNESTHESIA ", category: "star", rotate: "rotate-5" },
+  { src: "assets/MC (2).JPG", caption: "Duo MC Terbaik di Synesthesia 2024 ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/BAND (26).JPG", caption: "Band Performance The The Clowneries ", category: "music", rotate: "rotate-5" },
+  { src: "assets/OP (1).JPG", caption: "Sambutan Kepala Wilayah ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/TENANT (1).JPG", caption: "Bazaar Culinary di Synesthesia ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/PANGGUNG (5).JPG", caption: "Main Stage of Synesthesia 2024 ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/BAND (39).JPG", caption: "Band Performance By TumBand ", category: "music", rotate: "rotate-5" },
+  { src: "assets/HIVI (5).JPG", caption: "Festival Epic Final Peak ", category: "star", rotate: "rotate-5" },
+  { src: "assets/BAND (18).JPG", caption: "Band Performance By Syc Band ", category: "music", rotate: "rotate-5" },
+  { src: "assets/SOUNDCHECK.JPG", caption: "Soundcheck Before Synesthesia", category: "stage", rotate: "rotate-5" },
+  { src: "assets/OP (2).JPG", caption: "Sambutan Kepala Sekolah ", category: "stage", rotate: "rotate-5" },
+  { src: "assets/BAND (23).JPG", caption: "Band Performance By Telenovia ", category: "music", rotate: "rotate-5" }
 ];
 
 let isInited = false;
