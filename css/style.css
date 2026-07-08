@@ -1,10 +1,24 @@
-/* style.css - Pengaturan Styling Khusus & Animasi Scroll */
-
 /* Aturan Utama Mengunci Kebocoran Horizontal */
 html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+}
+
+/* Kustomisasi Tampilan Scrollbar Kamus Utama */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0F26;
+}
+::-webkit-scrollbar-thumb {
+    background: #131A42;
+    border-radius: 999px;
+    border: 2px solid #0B0F26;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF3B69;
 }
 
 /* Sembunyikan Jalur Scrollbar Default di Carousel Geser */
@@ -16,12 +30,14 @@ html, body {
     scrollbar-width: none;
 }
 
-/* Kelas Efek Animasi Muncul Saat Di-Scroll (Scroll Reveal Engine) */
+/* Kelas Efek Animasi Muncul Saat Di-Scroll (Scroll Reveal Engine Asli) */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Saat elemen berada di viewport, tampilkan kembali */
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
