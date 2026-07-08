@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synesthesia | Interactive Memory Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        synes: {
+                            dark: '#0B0F26',
+                            card: '#131A42',
+                            accent: '#FF3B69',
+                            gold: '#FFD700',
+                            teal: '#00F2FE',
+                        }
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 30s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tipografi khusus cetak tulisan tangan polaroid fisik */
+        .polaroid-font {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        /* Efek bayangan cetak tebal & realistis untuk Polaroid */
+        .polaroid-shadow {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 5px 15px rgba(0, 0, 0, 0.45);
+        }
+    </style>
+</head>
+<body class="bg-synes-dark text-white font-sans min-h-screen selection:bg-synes-accent selection:text-white overflow-x-hidden">
+
+    <!-- Navbar mengikuti gaya main.html (CSS/JS external) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-[#0B0F26]/40 backdrop-blur-xl border-b border-white/5 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="main.html" class="flex items-center space-x-3 group">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Home</a>
+                <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Latar Belakang</a>
+                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
+                <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
+
+                <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
+                    Logout
+                </button>
+            </div>
+
+            <div class="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-4 py-2 space-x-3 shadow-inner">
+                <button id="music-btn" onclick="toggleMusic()" class="text-white hover:text-synes-teal transition-all focus:outline-none flex items-center justify-center p-1 rounded-full bg-white/5 hover:bg-white/10">
+                    <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <div class="flex items-center space-x-1.5 group">
+                    <svg class="w-3.5 h-3.5 text-white/40 group-hover:text-synes-teal transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" oninput="setVolume(this.value)" class="w-16 md:w-20 h-1 accent-synes-teal bg-white/20 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <button id="hamburger-menu" type="button" class="md:hidden text-white/80 hover:text-white pl-2 border-l border-white/10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden max-w-7xl mx-auto mt-4 bg-synes-card/95 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl">
+            <div class="flex flex-col space-y-3">
+                <a href="main.html" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Home</a>
+                <a href="latar-belakang.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Latar Belakang</a>
+                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
+                <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
+
+                <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <span>Keluar dari Sesi</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+        
+        <section class="space-y-12 reveal">
+            <div class="text-center max-w-xl mx-auto space-y-3">
+                <span class="text-[10px] text-synes-teal font-bold tracking-[0.2em] uppercase block">Physical Print Frame Collection</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold font-display tracking-tight text-white uppercase">Polaroid Memory Rack</h2>
+                <p class="text-xs text-white/60 leading-relaxed">
+                    Koleksi potongan momen berharga festival Synesthesia yang diabadikan lewat lembaran bingkai cetak fisik klasik. Arahkan kursor atau ketuk foto untuk berinteraksi.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2.5 text-[10px] font-bold uppercase tracking-wider max-w-2xl mx-auto">
+                <button onclick="filterGallery('all', this)" class="px-5 py-2.5 rounded-full bg-synes-accent text-white border border-synes-accent shadow-lg shadow-synes-accent/20 transition-all duration-300">All Prints</button>
+                <button onclick="filterGallery('stage', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Stage & Rigging</button>
+                <button onclick="filterGallery('music', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Performances</button>
+                <button onclick="filterGallery('dance', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Arts & Culture</button>
+                <button onclick="filterGallery('bazaar', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Bazaar Zone</button>
+                <button onclick="filterGallery('star', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Guest Stars</button>
+            </div>
+
+            <div id="polaroid-grid-rack" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 pt-4 max-w-6xl mx-auto">
+                </div>
+        </section>
+
+        <section class="space-y-8 pt-4 reveal">
+            <div class="space-y-1">
+                <span class="text-[10px] text-synes-accent font-bold tracking-widest uppercase block">Curated Highlights</span>
+                <h2 class="text-2xl font-bold font-display uppercase tracking-tight text-white">Featured Moments</h2>
+            </div>
+
+            <div class="relative group bg-synes-card/40 p-5 rounded-2xl border border-white/5 overflow-hidden backdrop-blur-sm">
+                <div id="featured-carousel-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth py-2">
+                    </div>
+
+                <button onclick="scrollFeaturedCarousel(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-synes-accent hover:border-synes-accent hover:scale-110 shadow-xl z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button onclick="scrollFeaturedCarousel(1)" class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/70 border border-white/10 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:bg-synes-accent hover:border-synes-accent hover:scale-110 shadow-xl z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="space-y-6 pt-4 w-full overflow-hidden reveal">
+            <div class="space-y-1">
+                <span class="text-[10px] text-synes-teal font-bold tracking-widest uppercase block">Live Stream Recaps</span>
+                <h2 class="text-2xl font-bold font-display uppercase tracking-tight text-white">Continuous Memory Flow</h2>
+            </div>
+
+            <div class="relative w-full overflow-hidden bg-black/20 py-6 border-y border-white/5 flex">
+                <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-synes-dark to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-synes-dark to-transparent z-10 pointer-events-none"></div>
+
+                <div id="infinite-ticker-track" class="flex gap-4 shrink-0 animate-infinite-scroll min-w-full hover:[animation-play-state:paused] cursor-pointer">
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="gallery-lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 cursor-zoom-out" onclick="closeLightbox()">
+        <div class="max-w-md w-full bg-white p-4 pb-12 rounded-sm polaroid-shadow border border-black/10 transform scale-95 opacity-0 transition-all duration-300 relative cursor-default" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white/70 hover:text-synes-accent text-[10px] font-bold tracking-widest uppercase transition-colors">✕ Close Preview</button>
+            
+            <div class="aspect-square w-full bg-zinc-950 overflow-hidden shadow-inner border border-zinc-200/50 rounded-sm">
+                <img id="lightbox-img" src="" alt="Momen Zoom" class="w-full h-full object-cover filter contrast-[1.03] brightness-[0.99]">
+            </div>
+            
+            <div class="pt-6 px-2 text-center">
+                <p id="lightbox-caption" class="text-zinc-800 text-sm tracking-wide italic polaroid-font filter drop-shadow-sm"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full border-t border-white/5 mt-24 py-8 text-center text-[10px] text-white/30 tracking-widest uppercase">
+        &copy; 2024 Synesthesia Documentation Team. All Rights Reserved.
+    </footer>
+
+    <script type="module" src="js/galeri-ui.js"></script>
+</body>
+</html>
