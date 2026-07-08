@@ -1,4 +1,8 @@
 // ========================================================
+// Main UI interactions only (no Firebase)
+// ========================================================
+
+// ========================================================
 // 1. KAMUS DATA KONTEN UNTUK SISTEM PREVIEW JENDELA MODAL
 // ========================================================
 const modalData = {
@@ -260,13 +264,19 @@ window.toggleMobileMenu = function() {
 document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('hamburger-menu');
   const menu = document.getElementById('mobile-menu');
-  if (burgerBtn && menu) {
-    burgerBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      menu.classList.toggle('hidden');
-    });
-  }
+  if (!burgerBtn || !menu) return;
+
+  burgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    menu.classList.toggle('hidden');
+  });
+
+  // Klik di luar menu untuk menutup agar toggle konsisten
+  document.addEventListener('click', (e) => {
+    const clickedInside = menu.contains(e.target) || burgerBtn.contains(e.target);
+    if (!clickedInside) menu.classList.add('hidden');
+  });
 });
 
 window.scrollCarousel = function(dir) {
