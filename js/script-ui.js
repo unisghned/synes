@@ -257,22 +257,24 @@ window.setVolume = function(val) {
 
 window.toggleMobileMenu = function() {
   const menu = document.getElementById('mobile-menu');
-  if(menu) menu.classList.toggle('hidden');
+  if (menu) menu.classList.toggle('hidden');
 };
 
-// Pastikan hamburger hanya membuka/menutup mobile menu (bukan toggle class lain)
+// Pastikan hamburger hanya membuka/menutup mobile menu.
+// Satu mekanisme saja: event listener dari sini (hapus listener duplikat di bawah).
 document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('hamburger-menu');
   const menu = document.getElementById('mobile-menu');
   if (!burgerBtn || !menu) return;
 
+  // Toggle hanya saat tombol diklik.
   burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     menu.classList.toggle('hidden');
   });
 
-  // Klik di luar menu untuk menutup agar toggle konsisten
+  // Tutup ketika klik di luar menu.
   document.addEventListener('click', (e) => {
     const clickedInside = menu.contains(e.target) || burgerBtn.contains(e.target);
     if (!clickedInside) menu.classList.add('hidden');
@@ -300,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
   }
 
-  const burgerBtn = document.getElementById('hamburger-menu');
-  if (burgerBtn) burgerBtn.addEventListener('click', window.toggleMobileMenu);
 });
+
 
