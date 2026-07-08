@@ -267,11 +267,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('mobile-menu');
   if (!burgerBtn || !menu) return;
 
+  // Pastikan event listener hanya terpasang sekali.
+  // (Walau modul ter-load ulang, mencegah duplikasi.)
+  if (burgerBtn.dataset.bbHamburgerBound === '1') return;
+  burgerBtn.dataset.bbHamburgerBound = '1';
+
   // Toggle hanya saat tombol diklik.
   burgerBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    menu.classList.toggle('hidden');
+
+    // Toggle pakai direct class operations (lebih deterministik)
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
   });
 
   // Tutup ketika klik di luar menu.
