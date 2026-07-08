@@ -291,9 +291,10 @@ window.setVolume = function(val) {
     if(audioEngine) audioEngine.volume = val;
 };
 
+// NOTE: Mobile hamburger dikontrol penuh oleh js/script-ui.js.
+// Fungsi toggleMobileMenu di script.js dinonaktifkan supaya tidak konflik.
 window.toggleMobileMenu = function() {
-    const menu = document.getElementById('mobile-menu');
-    if(menu) menu.classList.toggle('hidden');
+    console.warn('[script.js] toggleMobileMenu dinonaktifkan. Gunakan script-ui.js');
 };
 
 window.scrollCarousel = function(dir) {
