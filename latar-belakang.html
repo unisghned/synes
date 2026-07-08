@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latar Belakang | Synesthesia</title>
+    <!-- Framework Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Premium Selection -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hubungan File CSS Eksternal Tunggal -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        synes: {
+                            dark: '#0B0F26',
+                            card: '#131A42',
+                            accent: '#FF3B69',
+                            gold: '#FFD700',
+                            teal: '#00F2FE',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0B0F26] text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- ELEMEN AUDIO AUDIO .MP3 REVOLUSIONER (SINKRON DENGAN SCRIPT.JS) -->
+    <audio id="bg-music" loop src="assets/music.mp3"></audio>
+
+    <!-- 1. NAVBAR MODERN (SEMI TRANSPARAN + KONTROLLER AUDIO) -->
+    <nav id="navbar" class="fixed w-full z-50 bg-[#0B0F26]/40 backdrop-blur-xl border-b border-white/5 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="main.html" class="flex items-center space-x-3 group">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105"> 
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Home</a>
+                <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Latar Belakang</a>
+                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
+                <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
+            </div>
+
+            <!-- Music Controller Widget (Sinkron dengan script.js) -->
+            <div class="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-4 py-2 space-x-3 shadow-inner">
+                <button id="music-btn" onclick="toggleMusic()" class="text-white hover:text-synes-teal transition-all focus:outline-none flex items-center justify-center p-1 rounded-full bg-white/5 hover:bg-white/10">
+                    <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <div class="flex items-center space-x-1.5 group">
+                    <svg class="w-3.5 h-3.5 text-white/40 group-hover:text-synes-teal transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" oninput="setVolume(this.value)" class="w-16 md:w-20 h-1 accent-synes-teal bg-white/20 rounded-lg appearance-none cursor-pointer">
+                </div>
+                <button id="hamburger-menu" onclick="toggleMobileMenu()" class="md:hidden text-white/80 hover:text-white pl-2 border-l border-white/10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden max-w-7xl mx-auto mt-4 bg-synes-card/95 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl">
+            <div class="flex flex-col space-y-3">
+                <a href="main.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Home</a>
+                <a href="latar-belakang.html" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Latar Belakang</a>
+                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
+                <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO JURANG FILOSOFI (HEADER LATAR BELAKANG) -->
+    <header class="relative min-h-[60vh] flex items-center justify-center text-center pt-20 overflow-hidden">
+        <!-- Background Glow Gradasi Efek Nebula -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F26] via-[#0D143A] to-[#0B0F26]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-synes-teal/10 to-synes-accent/10 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10 py-12 space-y-4">
+            <div class="inline-flex items-center space-x-2 bg-synes-teal/10 border border-synes-teal/20 rounded-full px-4 py-1.5 mb-2">
+                <span class="w-1.5 h-1.5 bg-synes-teal rounded-full animate-ping"></span>
+                <span class="text-[10px] uppercase tracking-widest text-synes-teal font-bold font-display">Gagasan & Filosofi</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-display font-extrabold tracking-tight leading-none text-white drop-shadow-2xl">
+                Dibalik Tirai <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-synes-teal via-synes-accent to-synes-gold">Synesthesia</span>
+            </h1>
+            <p class="text-xs md:text-sm text-white/50 max-w-xl mx-auto font-light leading-relaxed uppercase tracking-[0.2em]">
+                Sebuah Esensi Peleburan Indra Menjadi Mahakarya Seni
+            </p>
+        </div>
+    </header>
+
+    <!-- 3. KONTEN NARASI UTAMA (FILOSOFI & LOGO TEKS) -->
+    <section class="py-16 px-4 md:px-8 relative z-10">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <!-- Sisi Kiri: Sticky Sub-Header -->
+            <div class="md:col-span-1 md:sticky md:top-28 h-fit space-y-4 reveal">
+                <h3 class="text-xl md:text-2xl font-bold font-display text-synes-teal">
+                    Mengapa "Synesthesia"?
+                </h3>
+                <div class="h-1 w-16 bg-gradient-to-r from-synes-teal to-synes-accent rounded-full"></div>
+                <p class="text-xs text-white/50 leading-relaxed font-light">
+                    Penjelasan mendalam tentang visi konseptual yang diusung oleh OSIS SMA Talenta dalam melahirkan panggung festival ini.
+                </p>
+            </div>
+
+            <!-- Sisi Kanan: Uraian Teks Deskriptif Epik -->
+            <div class="md:col-span-2 space-y-8 text-white/80 text-sm font-light leading-relaxed reveal">
+                <p>
+                    Nama <span class="text-synes-teal font-medium">Synesthesia</span> (Sinestesia) berakar dari fenomena neurologis unik di mana stimulasi pada salah satu indra manusia mampu memicu respons otomatis pada indra lainnya. Ketika seseorang mendengar sebuah alunan nada musik, mereka tidak sekadar mendengarnya—mereka melihat warna menari-nari, merasakan tekstur, atau bahkan mengecap rasa dari melodi tersebut.
+                </p>
+
+                <blockquote>
+                    <p class="border-l-4 border-synes-accent pl-4 my-6 italic text-white/90 bg-white/5 py-3 rounded-r-xl text-xs md:text-sm">
+                        "Enlighten the Nurtures of Talent Within the Soul's Palette" bukan sekadar slogan, melainkan sebuah komitmen untuk menyinari setiap bakat terpendam siswa agar memancarkan gradasi warna terbaiknya di atas panggung kehidupan.
+                    </p>
+                </blockquote>
+
+                <p>
+                    Berangkat dari analogi peleburan sensorik inilah, <span class="text-white font-semibold">Synesthesia 2024</span> diciptakan sebagai ruang ekosistem kreatif inklusif bagi seluruh siswa SMA Talenta. Kami percaya bahwa ekspresi seni rupa visual, ketukan dinamis seni tari, dan harmonisasi petikan instrumen musik bukanlah elemen yang terpisah. Semuanya saling berinteraksi, menguatkan, dan melebur menjadi sebuah pengalaman festival seni holistik yang tak terlupakan.
+                </p>
+
+                <p>
+                    Melalui acara ini, kami ingin mengajak penonton untuk masuk ke dalam lanskap di mana batas-batas ekspresi menjadi pudar. Sebuah momentum emas untuk merayakan keragaman talenta, memicu kreativitas tanpa sekat, serta mengabadikan memori kolektif yang indah bersama komunitas sekolah.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ELEMEN VISUAL: ANATOMI MAKNA MASKOT FESTIVAL -->
+    <section class="py-20 px-4 md:px-8 bg-[#070A1E] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-xl mx-auto mb-16 reveal">
+                <span class="text-[9px] font-bold text-synes-gold tracking-widest bg-synes-gold/10 px-3 py-1 rounded-full border border-synes-gold/20 uppercase">Mascot Meaning</span>
+                <h2 class="text-3xl md:text-5xl font-display font-bold mt-4 mb-3 tracking-tight">Filosofi Maskot</h2>
+                <p class="text-white/60 text-xs leading-relaxed font-light">
+                    Karakter ikonik perwujudan pilar kekuatan organisasi, kehangatan persahabatan, serta kebebasan berekspresi.
+                </p>
+            </div>
+
+            <!-- Grid Card Info Maskot -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card Zaga -->
+                <div class="bg-synes-card border border-white/5 hover:border-orange-400/30 rounded-2xl p-6 shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-3xl mb-4">🐘</div>
+                    <h4 class="text-base font-bold font-display text-white mb-2">Zaga (Kekuatan)</h4>
+                    <p class="text-white/60 text-xs leading-relaxed font-light">
+                        Mewakili gajah tangguh yang melambangkan fondasi komitmen kerja keras kepanitiaan, stabilitas, dan pilar energi besar penopang kesuksesan festival.
+                    </p>
+                </div>
+
+                <!-- Card Lala -->
+                <div class="bg-synes-card border border-white/5 hover:border-yellow-400/30 rounded-2xl p-6 shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-3xl mb-4">🐘</div>
+                    <h4 class="text-base font-bold font-display text-white mb-2">Lala (Keceriaan)</h4>
+                    <p class="text-white/60 text-xs leading-relaxed font-light">
+                        Karakter ramah penuh kehangatan persahabatan sejati yang bertugas menyebarkan aura kegembiraan positif kepada seluruh pengunjung arena festival.
+                    </p>
+                </div>
+
+                <!-- Card Rocky -->
+                <div class="bg-synes-card border border-white/5 hover:border-red-400/30 rounded-2xl p-6 shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-3xl mb-4">🎸</div>
+                    <h4 class="text-base font-bold font-display text-white mb-2">Rocky (Kebebasan)</h4>
+                    <p class="text-white/60 text-xs leading-relaxed font-light">
+                        Merepresentasikan distorsi melodi gitar elektrik yang berani, merdeka, dan bergelora dalam menembus batas orisinalitas ruang kreasi seni musik anak muda.
+                    </p>
+                </div>
+
+                <!-- Card Kila -->
+                <div class="bg-synes-card border border-white/5 hover:border-blue-400/30 rounded-2xl p-6 shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-3xl mb-4">🎵</div>
+                    <h4 class="text-base font-bold font-display text-white mb-2">Kila (Keanggunan)</h4>
+                    <p class="text-white/60 text-xs leading-relaxed font-light">
+                        Melambangkan harmoni kedamaian nada akustik dan kelembutan estetika visual penyejuk jiwa pembawa ketenangan yang menyinari palet sanubari.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. RICH INFORMATIVE FOOTER (SINKRON DENGAN INDEX.HTML) -->
+    <footer class="bg-[#080B1C] text-white/60 border-t border-white/5 pt-16 pb-8 px-4 md:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            
+            <div class="space-y-4">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
+                <p class="text-xs leading-relaxed text-white/50">
+                    Wadah resmi selebrasi festival seni panggung ekspresi, harmoni melodi, kolaborasi ekosistem kreatif siswa persembahan OSIS SMA Talenta Bandung.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-teal">Navigasi Tab</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-synes-teal transition-colors">Home Utama</a></li>
+                    <li><a href="latar-belakang.html" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
+                    <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Galeri Momen</a></li>
+                    <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Struktur Panitia</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-accent">Hubungi Kontak</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="https://www.instagram.com/synesthesia.talenta" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram Synesthesia</a></li>
+                    <li><a href="https://www.instagram.com/osis_talenta" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram OSIS</a></li>
+                    <li><a href="https://www.tiktok.com/@osis_talenta" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">TikTok OSIS</a></li>
+                    <li><a href="https://www.instagram.com/smatalenta" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram SMA Talenta</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-gold">Lokasi Sekolah</h5>
+                <p class="text-xs leading-relaxed text-white/40">
+                    SMA Talenta Bandung<br>
+                    Kec. Margaasih, Kabupaten Bandung,<br>
+                    Jawa Barat, Indonesia 40215
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-white/40 gap-4">
+            <p>© 2026 Synesthesia - OSIS SMA Talenta. Seluruh Hak Cipta Dilindungi.</p>
+            <p>Dibuat dengan dedikasi penuh kreativitas Seni & Alunan Melodi</p>
+        </div>
+    </footer>
+
+    <!-- Pemuatan Skrip File JS Eksternal Berkualitas Tinggi -->
+    <script type="module" src="js/script-ui.js"></script>
+</body>
+</html>
