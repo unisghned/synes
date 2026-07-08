@@ -3,6 +3,7 @@
 // No Firebase here.
 // ========================================================
 
+
 const photoDatabase = [
   { src: "assets/panggung.JPG", caption: "Main Stage Soundcheck ✨", category: "stage", rotate: "-rotate-3" },
   { src: "assets/BAND (1).JPG", caption: "Opening Act Rocking Out! 🎸", category: "music", rotate: "rotate-2" },
@@ -169,6 +170,8 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
   if (isInited) return;
   isInited = true;
+  console.log('[galeri-ui] init');
+
 
   renderGallery('all');
   renderCarousel();
