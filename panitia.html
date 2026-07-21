@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synesthesia | Panitia Acara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-lines text-white font-cabin overflow-x-hidden pt-20"> 
+    
+    <audio id="festival-music" loop><source src="assets/festival-music.mp3" type="audio/mp3"></audio>
+
+    <nav id="navbar" class="fixed w-full z-40 p-4 transition duration-300 navbar-initial">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-10 md:h-12 w-auto">
+                <h1 class="font-bungee text-2xl md:text-3xl tracking-wide text-white hidden sm:block">SYNESTHESIA</h1>
+            </a>
+            <div class="hidden md:flex space-x-6 lg:space-x-10">
+                <a href="index.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Home</a>
+                <a href="latar-belakang.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Latar Belakang</a>
+                <a href="galeri.html" class="nav-link text-lg font-bold hover:text-yellow-400 transition">Galeri</a>
+                <a href="panitia.html" class="nav-link text-lg font-bold text-yellow-400 hover:text-red-500 transition border-b-2 border-yellow-400">Panitia</a>
+            </div>
+            <button id="hamburger-menu" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-indigo-800/90 rounded-xl p-4 shadow-xl">
+            <a href="index.html" class="block py-2 text-white hover:text-yellow-400 font-bold border-b border-indigo-700">Home</a>
+            <a href="latar-belakang.html" class="block py-2 text-white hover:text-yellow-400 font-bold border-b border-indigo-700">Latar Belakang</a>
+            <a href="galeri.html" class="block py-2 text-white hover:text-yellow-400 font-bold border-b border-indigo-700">Galeri</a>
+            <a href="panitia.html" class="block py-2 text-yellow-400 hover:text-red-500 font-bold">Panitia</a>
+        </div>
+    </nav>
+
+    <main class="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+        
+        <header class="text-center mb-16 bg-indigo-900/90 p-8 rounded-xl shadow-2xl border-b-8 border-red-500">
+            <h1 class="font-bungee text-6xl md:text-8xl text-yellow-400 mb-4 animate-bounce-slow">TIM PANITIA 2024</h1>
+            <p class="text-xl md:text-3xl text-gray-200 font-bold">The Core Team: Mereka yang Mengubah Visi Menjadi Vibe</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-4xl font-bungee text-center text-red-500 mb-12">✨ BPH Inti (Badan Pengurus Harian)</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-indigo-900 p-6 rounded-2xl text-center panitia-card">
+                    <img src="https://via.placeholder.com/150/F44336/FFFFFF?text=Ketua" alt="Foto Ketua" class="panitia-foto w-32 h-32 mx-auto mb-4 object-cover">
+                    <h4 class="text-2xl font-bold text-yellow-400">Rizky Adhiatma</h4>
+                    <p class="text-red-500 font-bungee text-xl">Ketua Pelaksana</p>
+                    <p class="text-gray-400 mt-2 text-sm italic">"Vibe-nya harus pecah!"</p>
+                </div>
+
+                <div class="bg-indigo-900 p-6 rounded-2xl text-center panitia-card">
+                    <img src="https://via.placeholder.com/150/FFEB3B/1A237E?text=Wakil" alt="Foto Wakil" class="panitia-foto w-32 h-32 mx-auto mb-4 object-cover border-yellow-400">
+                    <h4 class="text-2xl font-bold text-yellow-400">Sarah Wijaya</h4>
+                    <p class="text-red-500 font-bungee text-xl">Wakil Pelaksana</p>
+                    <p class="text-gray-400 mt-2 text-sm italic">"Siap koordinasi semua warna!"</p>
+                </div>
+
+                <div class="bg-indigo-900 p-6 rounded-2xl text-center panitia-card">
+                    <img src="https://via.placeholder.com/150/4CAF50/FFFFFF?text=Sekretaris" alt="Foto Sekretaris" class="panitia-foto w-32 h-32 mx-auto mb-4 object-cover border-green-400">
+                    <h4 class="text-2xl font-bold text-yellow-400">Dion Haryono</h4>
+                    <p class="text-red-500 font-bungee text-xl">Sekretaris</p>
+                    <p class="text-gray-400 mt-2 text-sm italic">"Administrasi aman, festival jalan!"</p>
+                </div>
+                
+                <div class="bg-indigo-900 p-6 rounded-2xl text-center panitia-card">
+                    <img src="https://via.placeholder.com/150/2196F3/FFFFFF?text=Bendahara" alt="Foto Bendahara" class="panitia-foto w-32 h-32 mx-auto mb-4 object-cover border-blue-400">
+                    <h4 class="text-2xl font-bold text-yellow-400">Maya Larasati</h4>
+                    <p class="text-red-500 font-bungee text-xl">Bendahara</p>
+                    <p class="text-gray-400 mt-2 text-sm italic">"Cash flow secerah Yellow Stage."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-indigo-900/90 p-8 rounded-3xl shadow-2xl border-t-4 border-yellow-400">
+            <h2 class="text-4xl font-bungee text-center text-yellow-400 mb-12">🛠️ Divisi Penunjang Acara</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-indigo-800 p-6 rounded-xl border-l-4 border-red-500 hover:shadow-red-700/50 shadow-xl transition duration-300">
+                    <h3 class="text-3xl font-bungee text-red-500 mb-2">Divisi Acara (Stage & Talent)</h3>
+                    <p class="text-gray-300 mb-2">Bertanggung jawab atas kurasi artis, *rundown* panggung, dan memastikan setiap *performance* berjalan lancar dan spektakuler.</p>
+                    <p class="text-sm font-bold text-yellow-400">Koordinator: Fajar (Kontak Artis) & Bella (Manajemen Panggung)</p>
+                </div>
+                
+                <div class="bg-indigo-800 p-6 rounded-xl border-l-4 border-green-500 hover:shadow-green-700/50 shadow-xl transition duration-300">
+                    <h3 class="text-3xl font-bungee text-green-500 mb-2">Divisi Pubdok (Publikasi & Dokumentasi)</h3>
+                    <p class="text-gray-300 mb-2">Tim di balik media sosial, desain, foto, dan video. Mereka adalah *mata* dan *suara* dari Synesthesia di dunia maya.</p>
+                    <p class="text-sm font-bold text-yellow-400">Koordinator: Chandra (Visual) & Nisa (Sosial Media)</p>
+                </div>
+
+                <div class="bg-indigo-800 p-6 rounded-xl border-l-4 border-yellow-500 hover:shadow-yellow-700/50 shadow-xl transition duration-300">
+                    <h3 class="text-3xl font-bungee text-yellow-500 mb-2">Divisi Logistik & Keamanan</h3>
+                    <p class="text-gray-300 mb-2">Menyediakan semua kebutuhan teknis, *venue*, keamanan, dan memastikan kenyamanan semua pengunjung dan pengisi acara.</p>
+                    <p class="text-sm font-bold text-yellow-400">Koordinator: Bima (Logistik) & Rizka (Keamanan)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-indigo-900 p-6 text-center border-t-4 border-yellow-400 mt-16">
+        <p class="text-gray-400 text-sm">© 2024 Synesthesia - OSIS SMA Talenta Bandung. Power of The Team.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
