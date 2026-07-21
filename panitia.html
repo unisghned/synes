@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synesthesia | Organogram & Panitia Festival</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        synes: {
+                            dark: '#0B0F26',
+                            card: '#131A42',
+                            accent: '#FF3B69',
+                            gold: '#FFD700',
+                            teal: '#00F2FE',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .polaroid-font {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        .polaroid-shadow {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 5px 15px rgba(0, 0, 0, 0.45);
+        }
+    </style>
+</head>
+
+<body class="bg-synes-dark text-white font-sans min-h-screen selection:bg-synes-accent selection:text-white overflow-x-hidden">
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop src="assets/musik_hivi.mp3"></audio>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-[#0B0F26]/40 backdrop-blur-xl border-b border-white/5 py-4 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="main.html" class="flex items-center space-x-3 group">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105">
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Home</a>
+                <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Latar Belakang</a>
+                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
+                <a href="#" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Panitia</a>
+                <a href="ticket.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Ticket</a>
+                <a href="contact.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Contact</a>
+
+                <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
+                    Logout
+                </button>
+            </div>
+
+            <div class="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-4 py-2 space-x-3 shadow-inner">
+                <button id="music-btn" onclick="toggleMusic()" class="text-white hover:text-synes-teal transition-all focus:outline-none flex items-center justify-center p-1 rounded-full bg-white/5 hover:bg-white/10">
+                    <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <div class="flex items-center space-x-1.5 group">
+                    <svg class="w-3.5 h-3.5 text-white/40 group-hover:text-synes-teal transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                    <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" oninput="setVolume(this.value)" class="w-16 md:w-20 h-1 accent-synes-teal bg-white/20 rounded-lg appearance-none cursor-pointer">
+                </div>
+
+                <button id="hamburger-menu" type="button" class="md:hidden text-white/80 hover:text-white pl-2 border-l border-white/10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden max-w-7xl mx-auto mt-4 bg-synes-card/95 border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl">
+            <div class="flex flex-col space-y-3">
+                <a href="main.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Home</a>
+                <a href="latar-belakang.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Latar Belakang</a>
+                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
+                <a href="#" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Panitia</a>
+                <a href="ticket.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Ticket</a>
+                <a href="contact.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Contact</a>
+
+                <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                    <span>Keluar dari Sesi</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pt-28 pb-16 space-y-20">
+        
+        <!-- Header Section -->
+        <section class="space-y-8 text-center max-w-2xl mx-auto reveal">
+            <span class="text-[10px] text-synes-teal font-bold tracking-[0.2em] uppercase block">The Dream Team Behind Synesthesia</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold font-display tracking-tight text-white uppercase">Struktur Kepanitiaan</h1>
+            <p class="text-xs md:text-sm text-white/60 leading-relaxed">
+                Sosok-sosok berdedikasi tinggi dari OSIS SMA Talenta Bandung yang bekerja keras di balik layar demi mewujudkan selebrasi seni dan harmoni festival Synesthesia.
+            </p>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 text-[10px] font-bold uppercase tracking-wider">
+                <button onclick="filterPanitia('all', this)" class="px-5 py-2.5 rounded-full bg-synes-accent text-white border border-synes-accent shadow-lg shadow-synes-accent/20 transition-all duration-300">Semua Tim</button>
+                <button onclick="filterPanitia('inti', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">BPH Inti</button>
+                <button onclick="filterPanitia('acara', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Divisi Acara</button>
+                <button onclick="filterPanitia('humas', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Humas & Dok</button>
+                <button onclick="filterPanitia('logistik', this)" class="px-5 py-2.5 rounded-full bg-white/5 text-white/60 border border-white/5 hover:bg-white/10 hover:text-white transition-all duration-300">Logistik & Dekor</button>
+            </div>
+        </section>
+
+        <!-- Polaroid Team Rack -->
+        <section class="reveal">
+            <div id="panitia-grid-rack" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 max-w-6xl mx-auto">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Detail Lightbox -->
+    <div id="panitia-lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 cursor-zoom-out" onclick="closePanitiaModal()">
+        <div class="max-w-md w-full bg-white p-5 pb-8 rounded-sm polaroid-shadow border border-black/10 transform scale-95 opacity-0 transition-all duration-300 relative cursor-default" onclick="event.stopPropagation()">
+            <button onclick="closePanitiaModal()" class="absolute -top-10 right-0 text-white/70 hover:text-synes-accent text-[10px] font-bold tracking-widest uppercase transition-colors">✕ Close Preview</button>
+            
+            <div class="aspect-square w-full bg-zinc-950 overflow-hidden shadow-inner border border-zinc-200/50 rounded-sm relative">
+                <img id="panitia-img" src="" alt="Panitia" class="w-full h-full object-cover filter contrast-[1.03] brightness-[0.99]">
+                <span id="panitia-badge" class="absolute top-3 left-3 bg-synes-accent text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md shadow-md"></span>
+            </div>
+            
+            <div class="pt-5 text-center space-y-2">
+                <h3 id="panitia-nama" class="text-zinc-900 font-extrabold text-lg tracking-tight font-display"></h3>
+                <p id="panitia-jabatan" class="text-synes-accent font-bold text-xs uppercase tracking-wider polaroid-font"></p>
+                <p id="panitia-desc" class="text-zinc-600 text-xs leading-relaxed pt-2 border-t border-zinc-200/60"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#080B1C] text-white/60 border-t border-white/5 pt-16 pb-8 px-4 md:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            
+            <div class="space-y-4">
+                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
+                <p class="text-xs leading-relaxed text-white/50">
+                    Wadah resmi selebrasi festival seni panggung ekspresi, harmoni melodi, kolaborasi ekosistem kreatif siswa persembahan OSIS SMA Talenta Bandung.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-teal">Navigasi Tab</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="main.html" class="hover:text-synes-teal transition-colors">Home Utama</a></li>
+                    <li><a href="latar-belakang.html" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
+                    <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Galeri Momen</a></li>
+                    <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Struktur Panitia</a></li>
+                    <li><a href="ticket.html" class="hover:text-synes-teal transition-colors">Ticketing</a></li>
+                    <li><a href="contact.html" class="hover:text-synes-teal transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-accent">Hubungi Kontak</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="https://www.instagram.com/synesthesia.ost/" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram Synesthesia</a></li>
+                    <li><a href="https://www.instagram.com/osissmatalenta/" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram OSIS</a></li>
+                    <li><a href="https://www.tiktok.com/@osis.smatalenta" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">TikTok OSIS</a></li>
+                    <li><a href="https://www.instagram.com/talentasma/" target="_blank" rel="noopener noreferrer" class="hover:text-synes-accent transition-colors">Instagram SMA Talenta</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h5 class="text-white font-semibold font-display text-xs uppercase tracking-widest text-synes-gold">Lokasi Sekolah</h5>
+                <p class="text-xs leading-relaxed text-white/40">
+                    SMA Talenta Bandung<br>
+                    Kec. Margaasih, Kabupaten Bandung,<br>
+                    Jawa Barat, Indonesia 40215
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-white/40 gap-4">
+            <p>© 2026 Synesthesia - OSIS SMA Talenta. Seluruh Hak Cipta Dilindungi.</p>
+            <p>Dibuat dengan dedikasi penuh kreativitas Seni & Alunan Melodi</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script Loaders -->
+    <script src="js/script-ui.js"></script>
+    <script src="js/panitia-ui.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof window.renderPanitia === "function") {
+                window.renderPanitia('all');
+            }
+        });
+    </script>
+</body>
+</html>
