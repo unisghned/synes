@@ -38,16 +38,18 @@
     <audio id="bg-music" loop src="assets/musik_hivi.mp3"></audio>
 <!-- 2. NAVBAR MODERN (SEMI TRANSPARAN + KONTROLLER AUDIO) -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-[#0B0F26]/40 backdrop-blur-xl border-b border-white/5 py-4 px-4 md:px-8">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="max-w-7xl mx-auto flex justify-between items-center" loading="lazy">
             <a href="main.html" class="flex items-center space-x-3 group">
                 <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105"> 
             </a>
             
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-8" loading="lazy">
                 <a href="#" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Home</a>
                 <a href="latar-belakang.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Latar Belakang</a>
-                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri</a>
+                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galery</a>
                 <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
+                <a href="ticket.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Ticket</a>
+                <a href="contact.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Contact</a>
                 
                 <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
                     Logout
@@ -75,8 +77,10 @@
             <div class="flex flex-col space-y-3">
                 <a href="#" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Home</a>
                 <a href="latar-belakang.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Latar Belakang</a>
-                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri</a>
+                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galery</a>
                 <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
+                <a href="ticket.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Ticket</a>
+                <a href="contact.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Contact</a>
                 
                 <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -403,6 +407,8 @@
                     <li><a href="latar-belakang.html" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
                     <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Galeri Momen</a></li>
                     <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Struktur Panitia</a></li>
+                    <li><a href="ticket.html" class="hover:text-synes-teal transition-colors">Ticketing</a></li>
+                    <li><a href="contact.html" class="hover:text-synes-teal transition-colors">Contact</a></li>
                 </ul>
             </div>
 
