@@ -109,11 +109,20 @@
             </p>
         </section>
 
+        <!-- Container Pesan Jika Semua Tiket Ditutup / Expired -->
+        <div id="ticket-expired-message" class="hidden text-center py-16 px-6 bg-synes-card/40 border border-white/10 rounded-2xl max-w-2xl mx-auto backdrop-blur-xl space-y-3 shadow-2xl">
+            <div class="text-4xl">🎫</div>
+            <h3 class="text-2xl font-bold font-display text-white uppercase">Penjualan Tiket Ditutup</h3>
+            <p class="text-xs text-white/50 leading-relaxed max-w-md mx-auto">
+                Masa penjualan tiket telah berakhir atau seluruh tiket telah habis. Terima kasih atas antusiasme kamu dan sampai jumpa di event Synesthesia berikutnya!
+            </p>
+        </div>
+
         <!-- Ticket Cards Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <section id="ticket-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             
             <!-- Ticket 1: Early Bird -->
-            <div class="bg-synes-card/60 border border-white/10 rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between hover:border-synes-teal/50 transition-all duration-300 hover:-translate-y-1 shadow-2xl">
+            <div data-ticket-name="Early Bird" class="ticket-card bg-synes-card/60 border border-white/10 rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between hover:border-synes-teal/50 transition-all duration-300 hover:-translate-y-1 shadow-2xl">
                 <div class="space-y-4">
                     <div class="flex justify-between items-center">
                         <span class="text-[10px] font-bold uppercase tracking-wider text-synes-teal bg-synes-teal/10 px-3 py-1 rounded-full border border-synes-teal/20">Phase 1</span>
@@ -132,13 +141,13 @@
                     </ul>
                 </div>
 
-                <button onclick="openTicketModal('Early Bird', 35000)" class="mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-synes-teal hover:text-synes-dark border border-white/10 transition-all duration-300">
+                <button onclick="openTicketModal('Early Bird', 35000)" class="ticket-btn mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-synes-teal hover:text-synes-dark border border-white/10 transition-all duration-300">
                     Pilih Tiket
                 </button>
             </div>
 
             <!-- Ticket 2: Presale Pass (Featured) -->
-            <div class="bg-synes-card/90 border-2 border-synes-accent rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between shadow-2xl shadow-synes-accent/20 relative hover:-translate-y-1 transition-all duration-300">
+            <div data-ticket-name="Presale Pass" class="ticket-card bg-synes-card/90 border-2 border-synes-accent rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between shadow-2xl shadow-synes-accent/20 relative hover:-translate-y-1 transition-all duration-300">
                 <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-synes-accent to-pink-600 text-white font-extrabold text-[9px] uppercase px-3.5 py-1 rounded-full tracking-widest shadow-md">
                     Terpopuler
                 </div>
@@ -161,13 +170,13 @@
                     </ul>
                 </div>
 
-                <button onclick="openTicketModal('Presale Pass', 45000)" class="mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-synes-accent to-pink-600 text-white hover:brightness-110 shadow-lg shadow-synes-accent/30 transition-all duration-300">
+                <button onclick="openTicketModal('Presale Pass', 45000)" class="ticket-btn mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-synes-accent to-pink-600 text-white hover:brightness-110 shadow-lg shadow-synes-accent/30 transition-all duration-300">
                     Pilih Tiket
                 </button>
             </div>
 
             <!-- Ticket 3: VIP Experience -->
-            <div class="bg-synes-card/60 border border-white/10 rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between hover:border-synes-gold/50 transition-all duration-300 hover:-translate-y-1 shadow-2xl">
+            <div data-ticket-name="VIP Experience" class="ticket-card bg-synes-card/60 border border-white/10 rounded-2xl p-8 backdrop-blur-xl flex flex-col justify-between hover:border-synes-gold/50 transition-all duration-300 hover:-translate-y-1 shadow-2xl">
                 <div class="space-y-4">
                     <div class="flex justify-between items-center">
                         <span class="text-[10px] font-bold uppercase tracking-wider text-synes-gold bg-synes-gold/10 px-3 py-1 rounded-full border border-synes-gold/20">VIP Pass</span>
@@ -185,7 +194,7 @@
                     </ul>
                 </div>
 
-                <button onclick="openTicketModal('VIP Experience', 85000)" class="mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-synes-gold hover:text-synes-dark border border-white/10 transition-all duration-300">
+                <button onclick="openTicketModal('VIP Experience', 85000)" class="ticket-btn mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-white/5 hover:bg-synes-gold hover:text-synes-dark border border-white/10 transition-all duration-300">
                     Pilih Tiket
                 </button>
             </div>
@@ -292,11 +301,57 @@
     <!-- Logic Script Loaders -->
     <script src="js/script-ui.js"></script>
     <script>
+        // =========================================================================
+        // 🎛️ PENGATURAN STATUS OPERATOR PER TIKET (DIUBAH DARI VS CODE)
+        // Pilihan Status:
+        // 'AVAILABLE' -> Tiket buka dan bisa dibeli normal
+        // 'SOLD_OUT'  -> Tombol tidak bisa diklik dan berubah jadi "Tiket Habis"
+        // 'EXPIRED'   -> Kartu tiket disembunyikan dari halaman (Ticket Not Listed)
+        // =========================================================================
+        const TICKET_CONFIG = {
+            'Early Bird': 'SOLD_OUT',
+            'Presale Pass': 'AVAILABLE',
+            'VIP Experience': 'AVAILABLE'
+        };
+
         let currentTicketPrice = 0;
         let currentTicketName = '';
-
-        // GANTI URL INI DENGAN URL BACKEND VERCEL KAMU YANG SUDAH DIDEPLOY
         const BACKEND_API_URL = 'https://synes-backend.vercel.app/api/charge-ticket';
+
+        // 🔄 LOGIKA OPERATOR TIKET SAAT HALAMAN DI-LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            const ticketCards = document.querySelectorAll('[data-ticket-name]');
+            let visibleCount = 0;
+
+            ticketCards.forEach(card => {
+                const ticketName = card.getAttribute('data-ticket-name');
+                const status = TICKET_CONFIG[ticketName] || 'AVAILABLE';
+                const btn = card.querySelector('.ticket-btn');
+
+                if (status === 'SOLD_OUT') {
+                    visibleCount++;
+                    if (btn) {
+                        btn.disabled = true;
+                        btn.textContent = 'Tiket Habis';
+                        btn.className = 'ticket-btn mt-8 w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-white/10 text-white/40 border border-white/10 cursor-not-allowed';
+                        btn.removeAttribute('onclick');
+                    }
+                } else if (status === 'EXPIRED') {
+                    card.classList.add('hidden');
+                } else {
+                    visibleCount++;
+                }
+            });
+
+            // Jika semua tiket diset EXPIRED (tidak ada yang tampil sama sekali)
+            const expiredMsg = document.getElementById('ticket-expired-message');
+            const ticketGrid = document.getElementById('ticket-grid');
+
+            if (visibleCount === 0) {
+                if (ticketGrid) ticketGrid.classList.add('hidden');
+                if (expiredMsg) expiredMsg.classList.remove('hidden');
+            }
+        });
 
         function openTicketModal(name, price) {
             currentTicketName = name;
@@ -329,9 +384,8 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Memproses...';
 
-            // Menyiapkan Payload Data ke Backend
             const payload = {
-                order_id: 'SYNES-' + Date.now(), // Unique Order ID
+                order_id: 'SYNES-' + Date.now(),
                 gross_amount: totalAmount,
                 first_name: name,
                 email: email,
@@ -340,7 +394,6 @@
             };
 
             try {
-                // Request Snap Token ke Backend Vercel
                 const response = await fetch(BACKEND_API_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -352,7 +405,6 @@
                 if (result.status === 'success' && result.snap_token) {
                     closeTicketModal();
 
-                    // Buka Pop-up Midtrans Snap
                     window.snap.pay(result.snap_token, {
                         onSuccess: function(result){
                             alert("Pembayaran Berhasil! E-Tiket dikirim ke email.");
@@ -383,9 +435,7 @@
             }
         }
 
-    /* 1. PROTEKSI DEVTOOLS & WARNING KONSOL*/
-
-    // Peringatan Tegas Langsung di Konsol
+    /* 1. PROTEKSI DEVTOOLS & WARNING KONSOL */
     function printConsoleWarning() {
         console.clear();
         console.log(
@@ -398,10 +448,8 @@
         );
     }
 
-    // Jalankan peringatan di awal
     printConsoleWarning();
 
-    // Blokir Pintasan Keyboard DevTools & Save/Source
     document.addEventListener('keydown', function (e) {
         const isF12 = e.key === 'F12' || e.keyCode === 123;
         const isCtrlShiftI = e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.keyCode === 73);
@@ -413,13 +461,12 @@
         if (isF12 || isCtrlShiftI || isCtrlShiftJ || isCtrlShiftC || isCtrlU || isCtrlS) {
             e.preventDefault();
             e.stopPropagation();
-            printConsoleWarning(); // Tampilkan ulang peringatan
+            printConsoleWarning();
             return false;
         }
     });
 
-
-    /*2. CUSTOM CONTEXT MENU (KLIK KANAN)*/
+    /* 2. CUSTOM CONTEXT MENU (KLIK KANAN) */
     const contextMenu = document.getElementById('custom-context-menu');
     const contextMenuItems = document.getElementById('context-menu-items');
 
@@ -432,7 +479,6 @@
         contextMenuItems.innerHTML = '';
 
         if (isTextInput) {
-            // Menu Jika di Dalam Textbox
             contextMenuItems.innerHTML = `
                 <button onclick="executeTextAction('copy', target)" class="flex items-center space-x-2 px-3 py-2 hover:bg-white/10 rounded-xl w-full text-left transition">
                     <span>📋</span> <span>Copy</span>
@@ -449,7 +495,6 @@
                 </button>
             `;
         } else {
-            // Menu Jika di Luar Textbox
             contextMenuItems.innerHTML = `
                 <button onclick="window.location.reload()" class="flex items-center space-x-2 px-3 py-2 hover:bg-white/10 rounded-xl w-full text-left transition text-synes-teal">
                     <span>🔄</span> <span>Refresh Halaman</span>
@@ -467,7 +512,6 @@
             `;
         }
 
-        // Mengatur Posisi Menu agar Tidak Terpotong Layar
         let mouseX = e.clientX;
         let mouseY = e.clientY;
         const menuWidth = 200;
@@ -479,7 +523,6 @@
         contextMenu.style.left = `${mouseX}px`;
         contextMenu.style.top = `${mouseY}px`;
 
-        // Tampilkan Menu
         contextMenu.classList.remove('hidden');
         setTimeout(() => {
             contextMenu.classList.remove('scale-95', 'opacity-0');
@@ -487,7 +530,6 @@
         }, 10);
     });
 
-    // Sembunyikan Menu Saat Klik Biasa
     document.addEventListener('click', function () {
         closeContextMenu();
     });
@@ -501,7 +543,6 @@
             }, 150);
         }
     }
-
 
     /* 3. FUNGSI EKSEKUSI TEXTBOX & FULLSCREEN */
     async function executeTextAction(action, element) {
