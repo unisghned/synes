@@ -52,17 +52,18 @@ function renderGallery(filterCategory = 'all') {
     card.className = `bg-white p-3 pb-7 rounded-sm polaroid-shadow border border-white/95 transform ${photo.rotate} hover:rotate-0 hover:scale-105 hover:z-20 transition-all duration-300 cursor-pointer group relative`;
 
     card.innerHTML = `
-      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/25 backdrop-blur-[2px] border border-white/10 shadow-sm -rotate-12 group-hover:opacity-75 transition-opacity pointer-events-none"></div>
+  <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-14 h-5 bg-white/25 backdrop-blur-[2px] border border-white/10 shadow-sm -rotate-12 group-hover:opacity-75 transition-opacity pointer-events-none"></div>
 
-      <div class="aspect-square w-full bg-zinc-950 overflow-hidden relative shadow-inner rounded-sm border border-zinc-200/20">
-        <img src="${photo.src}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-[1.04] brightness-[0.98]">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent"></div>
-      </div>
+  <div class="aspect-square w-full bg-zinc-950 overflow-hidden relative shadow-inner rounded-sm border border-zinc-200/20">
+    <!-- TAMBAHKAN loading="lazy" DI SINI -->
+    <img src="${photo.src}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-[1.04] brightness-[0.98]">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent"></div>
+  </div>
 
-      <div class="pt-3.5 px-0.5 text-center select-none">
-        <p class="text-zinc-800 text-[10.5px] tracking-tight truncate polaroid-font filter drop-shadow-sm">${photo.caption}</p>
-      </div>
-    `;
+  <div class="pt-3.5 px-0.5 text-center select-none">
+    <p class="text-zinc-800 text-[10.5px] tracking-tight truncate polaroid-font filter drop-shadow-sm">${photo.caption}</p>
+  </div>
+`;
 
     card.addEventListener('click', () => openLightbox(photo.src, photo.caption));
     rack.appendChild(card);
@@ -95,15 +96,16 @@ function renderCarousel() {
     item.className = "w-[280px] sm:w-[360px] shrink-0 snap-start bg-synes-card border border-white/5 p-3 rounded-2xl space-y-3 group/item cursor-pointer hover:border-white/10 transition-all duration-300";
 
     item.innerHTML = `
-      <div class="w-full aspect-[4/3] bg-zinc-900 rounded-xl overflow-hidden relative">
-        <img src="${photo.src}" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-      </div>
-      <div class="px-1 flex items-center justify-between">
-        <p class="text-xs font-semibold text-white/90 truncate">${photo.caption}</p>
-        <span class="text-[9px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-synes-teal">${photo.category}</span>
-      </div>
-    `;
+    <div class="w-full aspect-[4/3] bg-zinc-900 rounded-xl overflow-hidden relative">
+      <!-- TAMBAHKAN loading="lazy" DI SINI -->
+      <img src="${photo.src}" loading="lazy" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+    </div>
+    <div class="px-1 flex items-center justify-between">
+      <p class="text-xs font-semibold text-white/90 truncate">${photo.caption}</p>
+      <span class="text-[9px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-synes-teal">${photo.category}</span>
+    </div>
+`;
 
     item.addEventListener('click', () => openLightbox(photo.src, photo.caption));
     track.appendChild(item);
