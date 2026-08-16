@@ -56,14 +56,14 @@ html, body {
 
 /* Kustomisasi Tampilan Latar Belakang Hero Utama Komunitas */
 .hero-gajah-bg {
-    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis2.jpg'); 
+    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis2.JPG'); 
     background-size: cover;
     background-position: center bottom; 
     background-attachment: fixed;
 }
 
 .hero-latar-bg {
-    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis3.jpg'); 
+    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis3.JPG'); 
     background-size: cover;
     background-position: center bottom; 
     background-attachment: fixed;
