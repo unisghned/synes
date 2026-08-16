@@ -33,8 +33,8 @@ html, body {
 /* Kelas Efek Animasi Muncul Saat Di-Scroll (Scroll Reveal Engine Asli) */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px);
+    animation: revealFade 0.9s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
 }
 
 /* Saat elemen berada di viewport, tampilkan kembali */
@@ -43,12 +43,54 @@ html, body {
     transform: translateY(0);
 }
 
+@keyframes revealFade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Kustomisasi Tampilan Latar Belakang Hero Utama Komunitas */
 .hero-gajah-bg {
-    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('background.jpg'); 
+    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis2.jpg'); 
     background-size: cover;
     background-position: center bottom; 
     background-attachment: fixed;
+}
+
+.hero-latar-bg {
+    background-image: linear-gradient(to bottom, rgba(11, 15, 38, 0.35), rgba(11, 15, 38, 0.98)), url('fotoosis3.jpg'); 
+    background-size: cover;
+    background-position: center bottom; 
+    background-attachment: fixed;
+}
+
+.hero-animate {
+    animation: heroFadeIn 1.2s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+.hero-inner {
+    animation: heroFadeIn 1.35s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+    animation-delay: 0.12s;
+}
+
+.hero-animate-slow {
+    animation: heroFadeIn 1.5s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* Penyesuaian Slider Volume Lagu */
@@ -58,4 +100,30 @@ input[type="range"]::-webkit-slider-thumb {
 }
 input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.2);
+}
+
+/* Custom Glassmorphism Effect */
+.glass-card {
+  background: rgba(19, 26, 66, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Modal Open Animation */
+#ticket-modal:not(.hidden) {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+#ticket-modal > div {
+  animation: scaleUp 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
