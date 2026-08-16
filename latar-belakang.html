@@ -41,24 +41,23 @@
     <nav id="navbar" class="fixed w-full z-50 bg-[#0B0F26]/40 backdrop-blur-xl border-b border-white/5 py-4 px-4 md:px-8">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="main.html" class="flex items-center space-x-3 group">
-                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105"> 
-                <img src="assets/ostlympickeren.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105">
+                <img src="assets/logo-mahkota.png" alt="Synesthesia Logo" class="h-9 md:h-11 w-auto transition-transform group-hover:scale-105"> 
             </a>
             
-            <div class="hidden md:flex items-center space-x-8">
+             <div class="hidden md:flex items-center space-x-8" loading="lazy">
                 <a href="main.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Home</a>
                 <a href="#" class="text-xs font-bold tracking-widest uppercase text-synes-teal border-b-2 border-synes-teal pb-1">Latar Belakang</a>
-                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri 1</a>
-                <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galeri 2</a>
-                <a href="ticket.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Ticket</a>
+                <a href="galeri.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galery 1</a>
+                <a href="panitia.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Galery 2</a>
+                <a href="panit.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Panitia</a>
                 <a href="contact.html" class="text-xs font-bold tracking-widest uppercase text-white/70 hover:text-white transition pb-1">Contact</a>
-
+                
                 <button onclick="handleLogout()" class="ml-2 px-4 py-2 bg-gradient-to-r from-synes-accent/20 to-pink-600/10 border border-synes-accent/40 hover:from-synes-accent hover:to-pink-600 text-white text-[10px] font-bold tracking-wider uppercase rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-synes-accent/10">
                     Logout
                 </button>
             </div>
 
-            <!-- Music Controller Widget (Sinkron dengan script.js) -->
+            <!-- Music Controller Widget di Sisi Kanan/Kiri Navbar -->
             <div class="flex items-center bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-4 py-2 space-x-3 shadow-inner">
                 <button id="music-btn" onclick="toggleMusic()" class="text-white hover:text-synes-teal transition-all focus:outline-none flex items-center justify-center p-1 rounded-full bg-white/5 hover:bg-white/10">
                     <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -79,33 +78,30 @@
             <div class="flex flex-col space-y-3">
                 <a href="main.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Home</a>
                 <a href="#" class="px-4 py-2.5 bg-white/5 rounded-xl text-synes-teal font-semibold text-sm">Latar Belakang</a>
-                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri 1</a>
-                <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galeri 2</a>
-                <a href="ticket.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Ticket</a>
-                <a href="contact.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Contact</a>    
-
+                <a href="galeri.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galery 1</a>
+                <a href="panitia.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Galery 2</a>
+                <a href="panit.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Panitia</a>
+                <a href="contact.html" class="px-4 py-2.5 hover:bg-white/5 rounded-xl text-white/80 hover:text-white transition text-sm font-medium">Contact</a>
+                
                 <button onclick="handleLogout()" class="w-full text-left text-synes-accent font-bold text-xs tracking-widest uppercase border-t border-white/10 pt-3 flex items-center space-x-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                    </svg>
-                    <span>logout</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>logout</span>
                 </button>
-            </div>
+            </div>   
         </div>
     </nav>
 
     <!-- 2. HERO JURANG FILOSOFI (HEADER LATAR BELAKANG) -->
-    <header class="relative min-h-[60vh] flex items-center justify-center text-center pt-20 overflow-hidden">
-        <!-- Background Glow Gradasi Efek Nebula + foto panggung (biar nggak boring) -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0B0F26]/70 via-[#0D143A]/40 to-[#0B0F26]/80"></div>
-        <div class="absolute inset-0" style="background-image:url('css/background (1).JPG'); background-size:cover; background-position:center; opacity:20; mix-blend-mode:normal;"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F26]/80 via-[#0B0F26]/35 to-transparent"></div>
+    <header class="hero-latar-bg hero-animate min-h-screen flex items-center justify-center text-center relative pt-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F26] via-transparent to-transparent"></div>
 
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-gradient-to-tr from-synes-teal/10 to-synes-accent/10 rounded-full blur-3xl opacity-70 pointer-events-none"></div>
 
 
 
-        <div class="max-w-4xl mx-auto px-6 relative z-10 py-12 space-y-4">
+        <div class="hero-inner max-w-4xl mx-auto px-6 relative z-10 py-12 space-y-4">
             <div class="inline-flex items-center space-x-2 bg-synes-teal/10 border border-synes-teal/20 rounded-full px-4 py-1.5 mb-2">
                 <span class="w-1.5 h-1.5 bg-synes-teal rounded-full animate-ping"></span>
                 <span class="text-[10px] uppercase tracking-widest text-synes-teal font-bold font-display">Gagasan & Filosofi</span>
@@ -116,10 +112,10 @@
             <!-- Area Logo Interkoneksi Bercahaya -->
             <div class="relative flex justify-center items-center py-6">
                 <div class="absolute w-44 h-44 bg-synes-accent/20 rounded-full blur-3xl animate-ping opacity-30"></div>
-                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="w-60 h-auto relative z-10 filter drop-shadow-[0_0_25px_rgba(255,59,105,0.35)]">
+                <img src="assets/logo-mahkota.png" alt="Synesthesia Logo" class="w-60 h-auto relative z-10 filter drop-shadow-[0_0_25px_rgba(255,59,105,0.35)]">
             </div>
             <p class="text-xs md:text-sm text-white/50 max-w-xl mx-auto font-light leading-relaxed uppercase tracking-[0.2em]">
-                Sebuah Esensi Peleburan Indra Menjadi Mahakarya Seni
+                Sebuah Kepanitiaaan yang selalu berusaha menyalurkan energi positif siswa SMA Talenta 
             </p>
         </div>
     </header>
@@ -131,11 +127,11 @@
             <!-- Sisi Kiri: Sticky Sub-Header -->
             <div class="md:col-span-1 md:sticky md:top-28 h-fit space-y-4 reveal">
                 <h3 class="text-xl md:text-2xl font-bold font-display text-synes-teal">
-                    Mengapa "Synesthesia"?
+                    Mengapa "OST"?
                 </h3>
                 <div class="h-1 w-16 bg-gradient-to-r from-synes-teal to-synes-accent rounded-full"></div>
                 <p class="text-xs text-white/50 leading-relaxed font-light">
-                    Penjelasan mendalam tentang visi konseptual yang diusung oleh OSIS SMA Talenta dalam melahirkan panggung festival ini.
+                    Penjelasan mendalam tentang visi dan misi dari OSIS SMA TALENTA, serta filosofi di balik pemilihan nama "OST"
                 </p>
             </div>
 
@@ -222,10 +218,9 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
             
             <div class="space-y-4">
-                <img src="assets/logo-synes.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
-                <img src="assets/ostlympickeren.png" alt="Synesthesia Logo" class="h-12 w-auto mb-2">
+                <img src="assets/logo-mahkota.png" alt="Mahkota Logo" class="h-12 w-auto mb-2">
                 <p class="text-xs leading-relaxed text-white/50">
-                    Wadah resmi selebrasi festival seni panggung ekspresi, harmoni melodi, kolaborasi ekosistem kreatif siswa persembahan OSIS SMA Talenta Bandung.
+                    Sebuah kepanitaan yang berada di bawah naungan SMA Talenta Bandung yang selalu memberikan hal positif dan kreatif dalam setiap kegiatan dan program yang dilaksanakan
                 </p>
             </div>
 
@@ -237,7 +232,7 @@
                     <li><a href="#" class="hover:text-synes-teal transition-colors">Latar Belakang</a></li>
                     <li><a href="galeri.html" class="hover:text-synes-teal transition-colors">Synesthesia Galery</a></li>
                     <li><a href="panitia.html" class="hover:text-synes-teal transition-colors">Ostlympic Galery</a></li>
-                    <li><a href="ticket.html" class="hover:text-synes-teal transition-colors">Ticketing</a></li>
+                    <li><a href="panit.html" class="hover:text-synes-teal transition-colors">Panitia Osis</a></li>
                     <li><a href="contact.html" class="hover:text-synes-teal transition-colors">Contact</a></li>
                 </ul>
             </div>
