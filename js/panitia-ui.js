@@ -1031,16 +1031,13 @@ const panitiaDatabase = [
 // HTML FRAME BUILDER (Per-Image Dynamic Lazy Loading Target)
 // =========================================================================
 function createCardHTML(person) {
-  // SVG Placeholder transparan 1x1 pixel agar tidak makan memori GPU & tidak merusak dimensi grid
-  const placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
-
   if (person.style === 'polaroid') {
     return `
       <div class="bg-[#F8F6F0] p-3 pb-6 rounded-sm shadow-2xl border border-white/20 transform ${person.rotate} hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 cursor-pointer group relative">
         <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-white/40 backdrop-blur-[3px] border border-white/30 shadow-sm -rotate-6 z-10 group-hover:opacity-80 transition-opacity"></div>
         
         <div class="aspect-square w-full bg-zinc-900 overflow-hidden relative shadow-inner rounded-sm border border-black/10">
-          <img data-src="${person.src}" src="${placeholder}" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:scale-110">
+          <img src="${person.src}" loading="lazy" decoding="async" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover transition-opacity duration-300 group-hover:scale-110">
           <span class="absolute top-2 right-2 bg-synes-accent/90 backdrop-blur-md text-white text-[9px] font-mono font-extrabold px-2 py-0.5 rounded uppercase border border-white/20 shadow-md">CREW</span>
         </div>
 
@@ -1061,7 +1058,7 @@ function createCardHTML(person) {
         </div>
 
         <div class="aspect-square w-full bg-zinc-900 overflow-hidden relative border border-white/10">
-          <img data-src="${person.src}" src="${placeholder}" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover opacity-0 transition-opacity duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110">
+          <img src="${person.src}" loading="lazy" decoding="async" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover transition-opacity duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110">
           <span class="absolute bottom-1 right-1 text-[8px] font-mono font-bold text-black bg-synes-gold px-2 py-0.5 rounded-sm uppercase tracking-wider">CREW</span>
         </div>
 
@@ -1079,7 +1076,7 @@ function createCardHTML(person) {
         </div>
 
         <div class="aspect-square w-full bg-zinc-900 rounded-lg overflow-hidden relative border border-white/20">
-          <img data-src="${person.src}" src="${placeholder}" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:scale-110">
+          <img src="${person.src}" loading="lazy" decoding="async" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover transition-opacity duration-300 group-hover:scale-110">
         </div>
 
         <div class="pt-3 text-center select-none space-y-0.5">
@@ -1103,60 +1100,84 @@ function setupImageObserver() {
     imageObserver.disconnect();
   }
 
-  const placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E";
-
-  imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const img = entry.target;
-      const realSrc = img.getAttribute('data-src');
-
-      if (entry.isIntersecting) {
-        // GAMBAR MASUK VIEWPORT -> Load Gambar
-        if (realSrc && img.src !== realSrc) {
-          img.src = realSrc;
-          img.onload = () => img.classList.remove('opacity-0');
-        }
-      } else {
-        // GAMBAR KELUAR VIEWPORT -> Unload Gambar (Kosongkan GPU Memory)
-        if (img.src !== placeholder) {
-          img.classList.add('opacity-0');
-          img.src = placeholder;
-        }
-      }
-    });
-  }, {
-    rootMargin: '300px 0px 300px 0px', // Preload 300px sebelum masuk viewport agar tidak kaget saat scroll cepat
-    threshold: 0.01
-  });
-
   document.querySelectorAll('img.lazy-panitia-img').forEach((img) => {
-    imageObserver.observe(img);
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.style.opacity = '1';
+    img.dataset.loaded = 'true';
   });
 }
 
 // =========================================================================
 // RENDER & FILTER ENGINE
 // =========================================================================
+let panitiaFilteredItems = [];
+let panitiaRenderQueue = [];
+let panitiaRenderTimer = null;
+
+function resolvePersonDay(person) {
+  if (person.day) return person.day;
+
+  const id = Number(person.id) || 0;
+  if (id <= 25) return 'Day 1';
+  if (id <= 50) return 'Day 2';
+  if (id <= 75) return 'Day 3';
+  return 'Day 4';
+}
+
+function getFilteredPanitia(filterCategory = 'all') {
+  return panitiaDatabase.filter((person) => {
+    const personDay = resolvePersonDay(person);
+    return filterCategory === 'all' || person.divisi === filterCategory || personDay === filterCategory;
+  });
+}
+
 function renderPanitia(filterCategory = 'all') {
   const rack = document.getElementById('panitia-grid-rack');
   if (!rack) return;
 
   rack.innerHTML = '';
+  panitiaFilteredItems = getFilteredPanitia(filterCategory);
+  panitiaRenderQueue = panitiaFilteredItems.slice();
 
-  panitiaDatabase.forEach((person) => {
-    if (filterCategory !== 'all' && person.divisi !== filterCategory) return;
+  if (panitiaRenderTimer) {
+    clearTimeout(panitiaRenderTimer);
+  }
+
+  let currentIndex = 0;
+  const renderNextCard = () => {
+    if (currentIndex >= panitiaRenderQueue.length) {
+      setupImageObserver();
+      return;
+    }
+
+    const person = panitiaRenderQueue[currentIndex];
+    currentIndex += 1;
 
     const cardContainer = document.createElement('div');
     cardContainer.innerHTML = createCardHTML(person);
 
     const actualCard = cardContainer.firstElementChild;
-    actualCard.addEventListener('click', () => openPanitiaModal(person));
-    
-    rack.appendChild(actualCard);
-  });
+    if (actualCard) {
+      actualCard.style.opacity = '0';
+      actualCard.style.filter = 'blur(1.5px)';
+      actualCard.style.transform = 'translateY(14px) scale(0.985)';
+      actualCard.style.transition = 'opacity 260ms ease, transform 260ms ease, filter 260ms ease';
+      actualCard.style.willChange = 'opacity, transform, filter';
+      actualCard.addEventListener('click', () => openPanitiaModal(person));
+      rack.appendChild(actualCard);
 
-  // Terapkan observer pada seluruh elemen img yang baru dibuat
-  setupImageObserver();
+      requestAnimationFrame(() => {
+        actualCard.style.opacity = '1';
+        actualCard.style.filter = 'blur(0)';
+        actualCard.style.transform = 'translateY(0) scale(1)';
+      });
+    }
+
+    panitiaRenderTimer = setTimeout(renderNextCard, 50);
+  };
+
+  renderNextCard();
 }
 
 function filterPanitia(category, buttonElement) {
@@ -1221,11 +1242,83 @@ function closePanitiaModal() {
 }
 
 // Global Exports
+function renderPanitiaFeaturedMoments() {
+  const track = document.getElementById('panitia-featured-track');
+  if (!track) return;
+
+  track.innerHTML = '';
+
+  panitiaDatabase.slice(0, 6).forEach((person) => {
+    const item = document.createElement('div');
+    item.className = 'w-[280px] sm:w-[360px] shrink-0 snap-start bg-synes-card border border-white/5 p-3 rounded-2xl space-y-3 group/item cursor-pointer hover:border-white/10 transition-all duration-300';
+
+    item.innerHTML = `
+      <div class="w-full aspect-[4/3] bg-zinc-900 rounded-xl overflow-hidden relative">
+        <img src="${person.src}" loading="lazy" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+      </div>
+      <div class="px-1 flex items-center justify-between gap-3">
+        <p class="text-xs font-semibold text-white/90 truncate">${person.nama}</p>
+        <span class="text-[9px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-synes-teal">${person.divisi || 'crew'}</span>
+      </div>
+    `;
+
+    item.addEventListener('click', () => openPanitiaModal(person));
+    track.appendChild(item);
+  });
+}
+
+function scrollPanitiaFeaturedCarousel(dir) {
+  const track = document.getElementById('panitia-featured-track');
+  if (!track) return;
+  track.scrollBy({ left: dir * 340, behavior: 'smooth' });
+}
+
+function renderPanitiaTicker() {
+  const track = document.getElementById('panitia-ticker-track');
+  if (!track) return;
+
+  track.innerHTML = '';
+
+  const doubleList = [...panitiaDatabase, ...panitiaDatabase];
+
+  doubleList.forEach((person) => {
+    const node = document.createElement('div');
+    node.className = 'w-36 h-24 sm:w-48 sm:h-32 shrink-0 rounded-xl overflow-hidden border border-white/5 hover:border-synes-teal transition-colors duration-300 relative group/tick shadow-lg';
+
+    node.innerHTML = `
+      <img src="${person.src}" loading="lazy" class="w-full h-full object-cover filter brightness-90 group-hover/tick:brightness-100 group-hover/tick:scale-105 transition-all duration-500">
+    `;
+
+    node.addEventListener('click', () => openPanitiaModal(person));
+    track.appendChild(node);
+  });
+}
+
 window.filterPanitia = filterPanitia;
 window.renderPanitia = renderPanitia;
+window.scrollPanitiaFeaturedCarousel = scrollPanitiaFeaturedCarousel;
 window.openPanitiaModal = openPanitiaModal;
 window.closePanitiaModal = closePanitiaModal;
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePanitiaModal();
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof window.renderPanitia === 'function') {
+    window.renderPanitia('all');
+  }
+  renderPanitiaFeaturedMoments();
+  renderPanitiaTicker();
+});
+
+if (document.readyState !== 'loading') {
+  setTimeout(() => {
+    if (typeof window.renderPanitia === 'function') {
+      window.renderPanitia('all');
+    }
+    renderPanitiaFeaturedMoments();
+    renderPanitiaTicker();
+  }, 0);
+}
