@@ -7,7 +7,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #01",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_SC09344_1.JPG",
+    src: "assets/ostlympic/DAY1/_SC09344_1.JPG",
     desc: "Crew pelaksana yang bertanggung jawab atas koordinasi umum festival Synesthesia.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -17,7 +17,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #02",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/[000153].jpg",
+    src: "assets/ostlympic/DAY1/[000153].jpg",
     desc: "Crew yang mengelola administrasi, surat-menyurat, serta arsip data panitia.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -27,7 +27,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #03",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSC09458.JPG",
+    src: "assets/ostlympic/DAY1/DSC09458.JPG",
     desc: "Crew pengelola alokasi dana operasional dan rekapitulasi keuangan acara.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -37,7 +37,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #04",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSCF6657.JPG",
+    src: "assets/ostlympic/DAY1/DSCF6657.JPG",
     desc: "Crew penyusun berkas proposal, perizinan, dan penjadwalan rapat panitia.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -47,7 +47,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #05",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSC00258.JPG",
+    src: "assets/ostlympic/DAY1/DSC00258.JPG",
     desc: "Crew pengawas ritme kerja antar divisi selama persiapan hingga festival berlangsung.",
     style: "filmstrip",
     rotate: "-rotate-1"
@@ -57,7 +57,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #06",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_ACH8792.JPG",
+    src: "assets/ostlympic/DAY1/_ACH8792.JPG",
     desc: "Crew pemantau kepatuhan timeline dan pengerjaan tugas tiap divisi.",
     style: "sticker",
     rotate: "rotate-4"
@@ -67,7 +67,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #07",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_ACH9355.JPG",
+    src: "assets/ostlympic/DAY1/_ACH9355.JPG",
     desc: "Crew pemeriksa nota transaksional dan validasi alokasi dana darurat.",
     style: "polaroid",
     rotate: "-rotate-3"
@@ -77,7 +77,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #08",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_ACH9268.JPG",
+    src: "assets/ostlympic/DAY1/_ACH9268.JPG",
     desc: "Crew pencatat risalah rapat mendadak dan rekap instruksi pimpinan.",
     style: "filmstrip",
     rotate: "rotate-1"
@@ -87,7 +87,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #09",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_ACH9078.JPG",
+    src: "assets/ostlympic/DAY1/_ACH9078.JPG",
     desc: "Crew pengurus surat izin keramaian dan MoU dengan pihak eksternal.",
     style: "sticker",
     rotate: "-rotate-2"
@@ -97,7 +97,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #10",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/_ACH9572.JPG",
+    src: "assets/ostlympic/DAY1/_ACH9572.JPG",
     desc: "Crew penyusun catatan evaluasi dan arsip pelaksanaan festival.",
     style: "polaroid",
     rotate: "rotate-3"
@@ -107,7 +107,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #01",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_9255.JPG",
+    src: "assets/ostlympic/DAY1/IMG_9255.JPG",
     desc: "Crew pelaksana yang bertanggung jawab atas koordinasi umum festival Synesthesia.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -117,7 +117,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #02",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_1288.JPG",
+    src: "assets/ostlympic/DAY1/IMG_1288.JPG",
     desc: "Crew yang mengelola administrasi, surat-menyurat, serta arsip data panitia.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -127,7 +127,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #03",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_9300.JPG",
+    src: "assets/ostlympic/DAY1/IMG_9300.JPG",
     desc: "Crew pengelola alokasi dana operasional dan rekapitulasi keuangan acara.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -137,7 +137,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #04",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_9431.JPG",
+    src: "assets/ostlympic/DAY1/IMG_9431.JPG",
     desc: "Crew penyusun berkas proposal, perizinan, dan penjadwalan rapat panitia.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -147,7 +147,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #05",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSC_0116.JPG",
+    src: "assets/ostlympic/DAY1/DSC_0116.JPG",
     desc: "Crew pengawas ritme kerja antar divisi selama persiapan hingga festival berlangsung.",
     style: "filmstrip",
     rotate: "-rotate-1"
@@ -157,7 +157,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #06",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_2463.JPG",
+    src: "assets/ostlympic/DAY1/IMG_2463.JPG",
     desc: "Crew pemantau kepatuhan timeline dan pengerjaan tugas tiap divisi.",
     style: "sticker",
     rotate: "rotate-4"
@@ -167,7 +167,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #07",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/IMG_9269.JPG",
+    src: "assets/ostlympic/DAY1/IMG_9269.JPG",
     desc: "Crew pemeriksa nota transaksional dan validasi alokasi dana darurat.",
     style: "polaroid",
     rotate: "-rotate-3"
@@ -177,7 +177,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #08",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSC09896.JPG",
+    src: "assets/ostlympic/DAY1/DSC09896.JPG",
     desc: "Crew pencatat risalah rapat mendadak dan rekap instruksi pimpinan.",
     style: "filmstrip",
     rotate: "rotate-1"
@@ -187,7 +187,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #09",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/DSC09908.JPG",
+    src: "assets/ostlympic/DAY1/DSC09908.JPG",
     desc: "Crew pengurus surat izin keramaian dan MoU dengan pihak eksternal.",
     style: "sticker",
     rotate: "-rotate-2"
@@ -197,7 +197,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #10",
     jabatan: "Day1",
     divisi: "OSTLYMPIC",
-    src: "assets/ostlympic/day1/[000224].jpg",
+    src: "assets/ostlympic/DAY1/[000224].jpg",
     desc: "Crew penyusun catatan evaluasi dan arsip pelaksanaan festival.",
     style: "polaroid",
     rotate: "rotate-3"
