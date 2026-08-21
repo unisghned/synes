@@ -1,20 +1,13 @@
-// =========================================================================
-// Panitia UI - Multi-Style Frame Engine
-// Optimized: Per-Image Dynamic Lazy Loading & Unloading via IntersectionObserver
-// Status: ALL CREW | Full Database (100 Items)
-// Format: Vertical / Multiline Data Structure
-// =========================================================================
-
 const panitiaDatabase = [
   // =======================================================================
-  // 1. DIVISI BPH & INTI
+  // 1. Day 1
   // =======================================================================
   {
     id: 1,
     nama: "Nama Panitia #01",
-    jabatan: "Crew Koordinator Utama",
-    divisi: "inti",
-    src: "assets/panggung.JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_SC09344_1.JPG",
     desc: "Crew pelaksana yang bertanggung jawab atas koordinasi umum festival Synesthesia.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -22,9 +15,9 @@ const panitiaDatabase = [
   {
     id: 2,
     nama: "Nama Panitia #02",
-    jabatan: "Crew Administrasi & Sesi",
-    divisi: "inti",
-    src: "assets/HIVI.JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/[000153].jpg",
     desc: "Crew yang mengelola administrasi, surat-menyurat, serta arsip data panitia.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -32,9 +25,9 @@ const panitiaDatabase = [
   {
     id: 3,
     nama: "Nama Panitia #03",
-    jabatan: "Crew Bendahara Festival",
-    divisi: "inti",
-    src: "assets/BAND (1).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSC09458.JPG",
     desc: "Crew pengelola alokasi dana operasional dan rekapitulasi keuangan acara.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -42,9 +35,9 @@ const panitiaDatabase = [
   {
     id: 4,
     nama: "Nama Panitia #04",
-    jabatan: "Crew Sekretariat Operasional",
-    divisi: "inti",
-    src: "assets/ARUMA.JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSCF6657.JPG",
     desc: "Crew penyusun berkas proposal, perizinan, dan penjadwalan rapat panitia.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -52,9 +45,9 @@ const panitiaDatabase = [
   {
     id: 5,
     nama: "Nama Panitia #05",
-    jabatan: "Crew Supervisor Lapangan",
-    divisi: "inti",
-    src: "assets/PANGGUNG (2).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSC00258.JPG",
     desc: "Crew pengawas ritme kerja antar divisi selama persiapan hingga festival berlangsung.",
     style: "filmstrip",
     rotate: "-rotate-1"
@@ -62,9 +55,9 @@ const panitiaDatabase = [
   {
     id: 6,
     nama: "Nama Panitia #06",
-    jabatan: "Crew Controller Internal",
-    divisi: "inti",
-    src: "assets/BAND (2).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_ACH8792.JPG",
     desc: "Crew pemantau kepatuhan timeline dan pengerjaan tugas tiap divisi.",
     style: "sticker",
     rotate: "rotate-4"
@@ -72,9 +65,9 @@ const panitiaDatabase = [
   {
     id: 7,
     nama: "Nama Panitia #07",
-    jabatan: "Crew Auditor Keuangan",
-    divisi: "inti",
-    src: "assets/BAND (3).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_ACH9355.JPG",
     desc: "Crew pemeriksa nota transaksional dan validasi alokasi dana darurat.",
     style: "polaroid",
     rotate: "-rotate-3"
@@ -82,9 +75,9 @@ const panitiaDatabase = [
   {
     id: 8,
     nama: "Nama Panitia #08",
-    jabatan: "Crew Sekretaris Lapangan",
-    divisi: "inti",
-    src: "assets/ARUMA (1).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_ACH9268.JPG",
     desc: "Crew pencatat risalah rapat mendadak dan rekap instruksi pimpinan.",
     style: "filmstrip",
     rotate: "rotate-1"
@@ -92,9 +85,9 @@ const panitiaDatabase = [
   {
     id: 9,
     nama: "Nama Panitia #09",
-    jabatan: "Crew Penanggung Jawab Legal",
-    divisi: "inti",
-    src: "assets/HIVI (1).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_ACH9078.JPG",
     desc: "Crew pengurus surat izin keramaian dan MoU dengan pihak eksternal.",
     style: "sticker",
     rotate: "-rotate-2"
@@ -102,212 +95,312 @@ const panitiaDatabase = [
   {
     id: 10,
     nama: "Nama Panitia #10",
-    jabatan: "Crew Evaluasi & Laporan",
-    divisi: "inti",
-    src: "assets/BAND (4).JPG",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/_ACH9572.JPG",
+    desc: "Crew penyusun catatan evaluasi dan arsip pelaksanaan festival.",
+    style: "polaroid",
+    rotate: "rotate-3"
+  },
+    {
+    id: 11,
+    nama: "Nama Panitia #01",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_9255.JPG",
+    desc: "Crew pelaksana yang bertanggung jawab atas koordinasi umum festival Synesthesia.",
+    style: "polaroid",
+    rotate: "-rotate-2"
+  },
+  {
+    id: 12,
+    nama: "Nama Panitia #02",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_1288.JPG",
+    desc: "Crew yang mengelola administrasi, surat-menyurat, serta arsip data panitia.",
+    style: "filmstrip",
+    rotate: "rotate-3"
+  },
+  {
+    id: 13,
+    nama: "Nama Panitia #03",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_9300.JPG",
+    desc: "Crew pengelola alokasi dana operasional dan rekapitulasi keuangan acara.",
+    style: "sticker",
+    rotate: "-rotate-3"
+  },
+  {
+    id: 14,
+    nama: "Nama Panitia #04",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_9431.JPG",
+    desc: "Crew penyusun berkas proposal, perizinan, dan penjadwalan rapat panitia.",
+    style: "polaroid",
+    rotate: "rotate-2"
+  },
+  {
+    id: 15,
+    nama: "Nama Panitia #05",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSC_0116.JPG",
+    desc: "Crew pengawas ritme kerja antar divisi selama persiapan hingga festival berlangsung.",
+    style: "filmstrip",
+    rotate: "-rotate-1"
+  },
+  {
+    id: 16,
+    nama: "Nama Panitia #06",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_2463.JPG",
+    desc: "Crew pemantau kepatuhan timeline dan pengerjaan tugas tiap divisi.",
+    style: "sticker",
+    rotate: "rotate-4"
+  },
+  {
+    id: 17,
+    nama: "Nama Panitia #07",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/IMG_9269.JPG",
+    desc: "Crew pemeriksa nota transaksional dan validasi alokasi dana darurat.",
+    style: "polaroid",
+    rotate: "-rotate-3"
+  },
+  {
+    id: 18,
+    nama: "Nama Panitia #08",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSC09896.JPG",
+    desc: "Crew pencatat risalah rapat mendadak dan rekap instruksi pimpinan.",
+    style: "filmstrip",
+    rotate: "rotate-1"
+  },
+  {
+    id: 19,
+    nama: "Nama Panitia #09",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/DSC09908.JPG",
+    desc: "Crew pengurus surat izin keramaian dan MoU dengan pihak eksternal.",
+    style: "sticker",
+    rotate: "-rotate-2"
+  },
+  {
+    id: 20,
+    nama: "Nama Panitia #10",
+    jabatan: "Day1",
+    divisi: "OSTLYMPIC",
+    src: "assets/ostlympic/day1/[000224].jpg",
     desc: "Crew penyusun catatan evaluasi dan arsip pelaksanaan festival.",
     style: "polaroid",
     rotate: "rotate-3"
   },
 
   // =======================================================================
-  // 2. DIVISI ACARA
+  // 2. DAY 2
   // =======================================================================
   {
-    id: 11,
+    id: 21,
     nama: "Nama Panitia #11",
-    jabatan: "Crew Koordinator Acara",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (5).JPG",
     desc: "Crew perancang rundown acara panggung utama dan jalannya sesi penampilan.",
     style: "filmstrip",
     rotate: "-rotate-4"
   },
   {
-    id: 12,
+    id: 22,
     nama: "Nama Panitia #12",
-    jabatan: "Crew Floor Director Stage",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/DANCE (1).JPG",
     desc: "Crew pengatur alur masuk dan keluar penampil di atas panggung festival.",
     style: "sticker",
     rotate: "rotate-2"
   },
   {
-    id: 13,
+    id: 23,
     nama: "Nama Panitia #13",
-    jabatan: "Crew Liaison Officer (LO) GS",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/DANCE (2).JPG",
     desc: "Crew pendamping kebutuhan penampil utama/artis selama di venue acara.",
     style: "polaroid",
     rotate: "-rotate-1"
   },
   {
-    id: 14,
+    id: 24,
     nama: "Nama Panitia #14",
-    jabatan: "Crew Time Keeper Panggung",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (6).JPG",
     desc: "Crew pemantau durasi dan ketepatan waktu tampil setiap pengisi acara.",
     style: "filmstrip",
     rotate: "rotate-3"
   },
   {
-    id: 15,
+    id: 25,
     nama: "Nama Panitia #15",
-    jabatan: "Crew Regie & Backstage",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (7).JPG",
     desc: "Crew pengatur area belakang panggung agar tetap kondusif dan steril.",
     style: "sticker",
     rotate: "-rotate-3"
   },
   {
-    id: 16,
+    id: 26,
     nama: "Nama Panitia #16",
-    jabatan: "Crew LO Performers Lokal",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (2).JPG",
     desc: "Crew pendamping band sekolah dan penampilan seni internal.",
     style: "polaroid",
     rotate: "rotate-2"
   },
   {
-    id: 17,
+    id: 27,
     nama: "Nama Panitia #17",
-    jabatan: "Crew Pengarah Ice Breaking",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (1).JPG",
     desc: "Crew pemandu interaksi dan hiburan di sela-sela pergantian set panggung.",
     style: "filmstrip",
     rotate: "-rotate-2"
   },
   {
-    id: 18,
+    id: 28,
     nama: "Nama Panitia #18",
-    jabatan: "Crew Kurator Talent",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (2).JPG",
     desc: "Crew penyeleksi dan penata urutan penampilan tari dan musik.",
     style: "sticker",
     rotate: "rotate-1"
   },
   {
-    id: 19,
+    id: 29,
     nama: "Nama Panitia #19",
-    jabatan: "Crew Runner Acara",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (3).JPG",
     desc: "Crew sigap penyampai komunikasi cepat antar tim acara dan teknisi stage.",
     style: "polaroid",
     rotate: "-rotate-4"
   },
   {
-    id: 20,
+    id: 30,
     nama: "Nama Panitia #20",
-    jabatan: "Crew Operator Audio & Cue",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT.JPG",
     desc: "Crew pengatur urutan pemutaran musik latar dan audio pendukung acara.",
     style: "filmstrip",
     rotate: "rotate-3"
   },
   {
-    id: 21,
+    id: 31,
     nama: "Nama Panitia #21",
-    jabatan: "Crew MC Controller",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (1).JPG",
     desc: "Crew pemandu cue sheet dan materi pembawa acara di panggung.",
     style: "sticker",
     rotate: "-rotate-1"
   },
   {
-    id: 22,
+    id: 32,
     nama: "Nama Panitia #22",
-    jabatan: "Crew Cultural Show Handler",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (2).JPG",
     desc: "Crew pengatur tata busana dan perlengkapan tim tari tradisional.",
     style: "polaroid",
     rotate: "rotate-2"
   },
   {
-    id: 23,
+    id: 33,
     nama: "Nama Panitia #23",
-    jabatan: "Crew Soundcheck Coordinator",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/Zaga.png",
     desc: "Crew pengatur jadwal uji suara band sebelum pintu dibuka.",
     style: "filmstrip",
     rotate: "-rotate-3"
   },
   {
-    id: 24,
+    id: 34,
     nama: "Nama Panitia #24",
-    jabatan: "Crew Greenroom Attendant",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (3).JPG",
     desc: "Crew penata kenyamanan ruang tunggu artis sebelum tampil.",
     style: "sticker",
     rotate: "rotate-4"
   },
   {
-    id: 25,
+    id: 35,
     nama: "Nama Panitia #25",
-    jabatan: "Crew Confetti & Effects",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/Lala.png",
     desc: "Crew peluncur efek semburan kertas dan penutup pesta acara.",
     style: "polaroid",
     rotate: "-rotate-2"
   },
   {
-    id: 26,
+    id: 36,
     nama: "Nama Panitia #26",
-    jabatan: "Crew Visual Projection",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (4).JPG",
     desc: "Crew pengatur tampilan backdrop LED visual selama pertunjukan.",
     style: "filmstrip",
     rotate: "rotate-3"
   },
   {
-    id: 27,
+    id: 37,
     nama: "Nama Panitia #27",
-    jabatan: "Crew Closing Ceremony",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (8).JPG",
     desc: "Crew penata selebrasi pelepasan balon dan ucapan penutup.",
     style: "sticker",
     rotate: "-rotate-1"
   },
   {
-    id: 28,
+    id: 38,
     nama: "Nama Panitia #28",
-    jabatan: "Crew Runner Guest Star",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (5).JPG",
     desc: "Crew pendamping mobilitas tim artis dari hotel ke panggung.",
     style: "polaroid",
     rotate: "rotate-1"
   },
   {
-    id: 29,
+    id: 39,
     nama: "Nama Panitia #29",
-    jabatan: "Crew Maskot & Hospitality",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (3).JPG",
     desc: "Crew pendamping talenta maskot Zaga, Lala, Rocky, dan Kila.",
     style: "filmstrip",
     rotate: "-rotate-4"
   },
   {
-    id: 30,
+    id: 40,
     nama: "Nama Panitia #30",
-    jabatan: "Crew Stage Choreographer",
-    divisi: "acara",
+    jabatan: "Day2",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (4).JPG",
     desc: "Crew pemandu posisi blocking penampil dan penari panggung.",
     style: "sticker",
@@ -315,201 +408,201 @@ const panitiaDatabase = [
   },
 
   // =======================================================================
-  // 3. DIVISI HUMAS & DOKUMENTASI
+  // 3. Day3
   // =======================================================================
   {
-    id: 31,
+    id: 41,
     nama: "Nama Panitia #31",
-    jabatan: "Crew Koordinator Humas",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (6).JPG",
     desc: "Crew penanggung jawab publikasi dan komunikasi luar festival.",
     style: "polaroid",
     rotate: "-rotate-2"
   },
   {
-    id: 32,
+    id: 42,
     nama: "Nama Panitia #32",
-    jabatan: "Crew Fotografer Panggung",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (5).JPG",
     desc: "Crew pengabadikan momen penting dan ekspresi pengunjung di panggung.",
     style: "filmstrip",
     rotate: "rotate-3"
   },
   {
-    id: 33,
+    id: 43,
     nama: "Nama Panitia #33",
-    jabatan: "Crew Videografer & Aftermath",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (6).JPG",
     desc: "Crew perekam video recap highlights dan cuplikan visual acara.",
     style: "sticker",
     rotate: "-rotate-3"
   },
   {
-    id: 34,
+    id: 44,
     nama: "Nama Panitia #34",
-    jabatan: "Crew Media Sosial & Feed",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/Rocky.png",
     desc: "Crew pengelola konten instagram, tiktok, dan linimasa promosi.",
     style: "polaroid",
     rotate: "rotate-4"
   },
   {
-    id: 35,
+    id: 45,
     nama: "Nama Panitia #35",
-    jabatan: "Crew Press & Sponsorship",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/Kila.png",
     desc: "Crew penyusun laporan sponsor dan jalinan kerja sama media partner.",
     style: "filmstrip",
     rotate: "-rotate-1"
   },
   {
-    id: 36,
+    id: 46,
     nama: "Nama Panitia #36",
-    jabatan: "Crew Ticketing & Registrasi",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (9).JPG",
     desc: "Crew penanggung jawab penukaran gelang/tiket masuk pengunjung.",
     style: "sticker",
     rotate: "rotate-2"
   },
   {
-    id: 37,
+    id: 47,
     nama: "Nama Panitia #37",
-    jabatan: "Crew Customer Relations",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (3).JPG",
     desc: "Crew penerima pusat informasi dan bantuan kendala bagi penonton.",
     style: "polaroid",
     rotate: "-rotate-3"
   },
   {
-    id: 38,
+    id: 48,
     nama: "Nama Panitia #38",
-    jabatan: "Crew Graphic Designer",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (7).JPG",
     desc: "Crew pembuat aset grafis promosi, banner, dan identitas visual.",
     style: "filmstrip",
     rotate: "rotate-1"
   },
   {
-    id: 39,
+    id: 49,
     nama: "Nama Panitia #39",
-    jabatan: "Crew Live Streaming Operator",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (4).JPG",
     desc: "Crew pemantau transmisi video siaran langsung acara.",
     style: "sticker",
     rotate: "-rotate-2"
   },
   {
-    id: 40,
+    id: 50,
     nama: "Nama Panitia #40",
-    jabatan: "Crew Penulis Narasi & Script",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (10).JPG",
     desc: "Crew pembuat naskah MC, siaran pers, dan naskah konten promosi.",
     style: "polaroid",
     rotate: "rotate-3"
   },
   {
-    id: 41,
+    id: 51,
     nama: "Nama Panitia #41",
-    jabatan: "Crew Field Photographer",
-    divisi: "humas",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/DANCE (3).JPG",
     desc: "Crew dokumentasi area bazaar dan interaksi pengunjung.",
     style: "filmstrip",
     rotate: "-rotate-4"
   },
   {
-    id: 42,
-    nama: "Nama Panitia #42",
-    jabatan: "Crew Gate Inspection",
-    divisi: "humas",
+    id: 52,
+    nama: "Nama Panitia #52",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (1).JPG",
     desc: "Crew pemeriksa tiket dan barang bawaan di pintu masuk.",
     style: "sticker",
     rotate: "rotate-2"
   },
   {
-    id: 43,
-    nama: "Nama Panitia #43",
-    jabatan: "Crew VIP Hospitality",
-    divisi: "humas",
+    id: 53,
+    nama: "Nama Panitia #53",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (5).JPG",
     desc: "Crew penerima tamu undangan khusus dan komite sekolah.",
     style: "polaroid",
     rotate: "-rotate-1"
   },
   {
-    id: 44,
-    nama: "Nama Panitia #44",
-    jabatan: "Crew Merchandise Store",
-    divisi: "humas",
+    id: 54,
+    nama: "Nama Panitia #54",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (8).JPG",
     desc: "Crew penjual kaus, stiker, dan cenderamata resmi Synesthesia.",
     style: "filmstrip",
     rotate: "rotate-4"
   },
   {
-    id: 45,
-    nama: "Nama Panitia #45",
-    jabatan: "Crew Photo Booth Assistant",
-    divisi: "humas",
+    id: 55,
+    nama: "Nama Panitia #55",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/Zaga.png",
     desc: "Crew pengarah gaya penonton di bilik cetak foto kenangan.",
     style: "sticker",
     rotate: "-rotate-3"
   },
   {
-    id: 46,
-    nama: "Nama Panitia #46",
-    jabatan: "Crew Information Voice",
-    divisi: "humas",
+    id: 56,
+    nama: "Nama Panitia #56",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (11).JPG",
     desc: "Crew pengisi pengumuman pengeras suara pusat informasi.",
     style: "polaroid",
     rotate: "rotate-1"
   },
   {
-    id: 47,
-    nama: "Nama Panitia #47",
-    jabatan: "Crew Media Center Officer",
-    divisi: "humas",
+    id: 57,
+    nama: "Nama Panitia #57",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT.JPG",
     desc: "Crew pengelola kebutuhan jurnalis dan wartawan peliput.",
     style: "filmstrip",
     rotate: "-rotate-2"
   },
   {
-    id: 48,
-    nama: "Nama Panitia #48",
-    jabatan: "Crew Social Media Live",
-    divisi: "humas",
+    id: 58,
+    nama: "Nama Panitia #58",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (4).JPG",
     desc: "Crew pengunggah story dan update langsung selama acara.",
     style: "sticker",
     rotate: "rotate-3"
   },
   {
-    id: 49,
-    nama: "Nama Panitia #49",
-    jabatan: "Crew Copywriter & Captioner",
-    divisi: "humas",
+    id: 59,
+    nama: "Nama Panitia #59",
+    jabatan: "Day3",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (12).JPG",
     desc: "Crew penyusun teks promosi dan pengumuman mendadak.",
     style: "polaroid",
     rotate: "-rotate-4"
   },
   {
-    id: 50,
-    nama: "Nama Panitia #50",
+    id: 60,
+    nama: "Nama Panitia #60",
     jabatan: "Crew Public Relations Field",
     divisi: "humas",
     src: "assets/panggung.JPG",
@@ -519,203 +612,203 @@ const panitiaDatabase = [
   },
 
   // =======================================================================
-  // 4. DIVISI LOGISTIK & TEKNIK
+  // 4. Day 4
   // =======================================================================
   {
-    id: 51,
-    nama: "Nama Panitia #51",
-    jabatan: "Crew Koordinator Logistik",
-    divisi: "logistik",
+    id: 61,
+    nama: "Nama Panitia #61",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (2).JPG",
     desc: "Crew pengelola kebutuhan teknis, venue, dan perizinan barang.",
     style: "sticker",
     rotate: "-rotate-1"
   },
   {
-    id: 52,
-    nama: "Nama Panitia #52",
-    jabatan: "Crew Sound & Rigging System",
-    divisi: "logistik",
+    id: 62,
+    nama: "Nama Panitia #62",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/DANCE (4).JPG",
     desc: "Crew penata jalur kelistrikan, amplifier, dan susunan speaker.",
     style: "polaroid",
     rotate: "rotate-3"
   },
   {
-    id: 53,
-    nama: "Nama Panitia #53",
-    jabatan: "Crew Lighting & Effects Laser",
-    divisi: "logistik",
+    id: 63,
+    nama: "Nama Panitia #63",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (2).JPG",
     desc: "Crew pengoperasi sorot lampu beam, smoke machine, dan lighting.",
     style: "filmstrip",
     rotate: "-rotate-3"
   },
   {
-    id: 54,
-    nama: "Nama Panitia #54",
-    jabatan: "Crew Area Bazaar & Tenants",
-    divisi: "logistik",
+    id: 64,
+    nama: "Nama Panitia #64",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (5).JPG",
     desc: "Crew penata kerapihan stan kuliner dan alokasi daya stan bazaar.",
     style: "sticker",
     rotate: "rotate-1"
   },
   {
-    id: 55,
-    nama: "Nama Panitia #55",
-    jabatan: "Crew Konsumsi & Katering",
-    divisi: "logistik",
+    id: 65,
+    nama: "Nama Panitia #65",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/TENANT (3).JPG",
     desc: "Crew pengelola pembagian makanan dan minuman panitia serta artis.",
     style: "polaroid",
     rotate: "-rotate-2"
   },
   {
-    id: 56,
-    nama: "Nama Panitia #56",
-    jabatan: "Crew Keamanan Area Venue",
-    divisi: "logistik",
+    id: 66,
+    nama: "Nama Panitia #66",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (13).JPG",
     desc: "Crew penjaga ketertiban gerbang masuk dan batas barikade panggung.",
     style: "filmstrip",
     rotate: "rotate-4"
   },
   {
-    id: 57,
-    nama: "Nama Panitia #57",
-    jabatan: "Crew Kebersihan & Sanitation",
-    divisi: "logistik",
+    id: 67,
+    nama: "Nama Panitia #67",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (6).JPG",
     desc: "Crew penanggung jawab kebersihan lingkungan dan tempat sampah area.",
     style: "sticker",
     rotate: "-rotate-1"
   },
   {
-    id: 58,
-    nama: "Nama Panitia #58",
-    jabatan: "Crew Medis & First Aid",
-    divisi: "logistik",
+    id: 68,
+    nama: "Nama Panitia #68",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/Lala.png",
     desc: "Crew penanganan kesehatan dan pertolongan pertama penonton.",
     style: "polaroid",
     rotate: "rotate-2"
   },
   {
-    id: 59,
-    nama: "Nama Panitia #59",
-    jabatan: "Crew Dekorasi Venue Utama",
-    divisi: "logistik",
+    id: 69,
+    nama: "Nama Panitia #69",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (7).JPG",
     desc: "Crew penata estetik lorong entrance, instalasi photo booth, dan poster.",
     style: "filmstrip",
     rotate: "-rotate-3"
   },
   {
-    id: 60,
-    nama: "Nama Panitia #60",
-    jabatan: "Crew Perlengkapan Instrument",
-    divisi: "logistik",
+    id: 70,
+    nama: "Nama Panitia #70",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (6).JPG",
     desc: "Crew penyedia alat musik pendukung seperti drumkit, mic, dan amp.",
     style: "sticker",
     rotate: "rotate-3"
   },
   {
-    id: 61,
-    nama: "Nama Panitia #61",
-    jabatan: "Crew Support General",
-    divisi: "logistik",
+    id: 71,
+    nama: "Nama Panitia #71",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/panggung.JPG",
     desc: "Crew fleksibel pembantu operasional divisi logistik di lapangan.",
     style: "polaroid",
     rotate: "-rotate-2"
   },
   {
-    id: 62,
-    nama: "Nama Panitia #62",
-    jabatan: "Crew Barikade & Crowd Control",
-    divisi: "logistik",
+    id: 72,
+    nama: "Nama Panitia #72",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI.JPG",
     desc: "Crew penata barisan penonton di depan panggung utama.",
     style: "filmstrip",
     rotate: "rotate-3"
   },
   {
-    id: 63,
-    nama: "Nama Panitia #63",
-    jabatan: "Crew Monitor Audio Stage",
-    divisi: "logistik",
+    id: 73,
+    nama: "Nama Panitia #73",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (1).JPG",
     desc: "Crew pemantau kejelasan suara monitor panggung untuk musisi.",
     style: "sticker",
     rotate: "-rotate-3"
   },
   {
-    id: 64,
-    nama: "Nama Panitia #64",
-    jabatan: "Crew Transportasi & Parkir",
-    divisi: "logistik",
+    id: 74,
+    nama: "Nama Panitia #74",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA.JPG",
     desc: "Crew penata alur kendaraan penonton dan muatan logistik.",
     style: "polaroid",
     rotate: "rotate-2"
   },
   {
-    id: 65,
-    nama: "Nama Panitia #65",
-    jabatan: "Crew Stage Hand",
-    divisi: "logistik",
+    id: 75,
+    nama: "Nama Panitia #75",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/PANGGUNG (2).JPG",
     desc: "Crew pengangkat instrumen dan penata kabel gitar/mic di stage.",
     style: "filmstrip",
     rotate: "-rotate-1"
   },
   {
-    id: 66,
-    nama: "Nama Panitia #66",
-    jabatan: "Crew Power & Generator",
-    divisi: "logistik",
+    id: 76,
+    nama: "Nama Panitia #76",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (2).JPG",
     desc: "Crew pemantau ketersediaan genset dan stabilitas daya listrik.",
     style: "sticker",
     rotate: "rotate-4"
   },
   {
-    id: 67,
-    nama: "Nama Panitia #67",
-    jabatan: "Crew Crowd Medical Responder",
-    divisi: "logistik",
+    id: 77,
+    nama: "Nama Panitia #77",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (3).JPG",
     desc: "Crew penyelamat cepat di tengah tribun/kerumunan penonton.",
     style: "polaroid",
     rotate: "-rotate-3"
   },
   {
-    id: 68,
-    nama: "Nama Panitia #68",
-    jabatan: "Crew Asset Audit",
-    divisi: "logistik",
+    id: 78,
+    nama: "Nama Panitia #78",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/ARUMA (1).JPG",
     desc: "Crew penanggung jawab keamanan dan jumlah alat sewaan sekolah.",
     style: "filmstrip",
     rotate: "rotate-1"
   },
   {
-    id: 69,
-    nama: "Nama Panitia #69",
-    jabatan: "Crew Radio Frequency & HT",
-    divisi: "logistik",
+    id: 79,
+    nama: "Nama Panitia #79",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/HIVI (1).JPG",
     desc: "Crew penyedia alat komunikasi sinyal Handy Talkie panitia.",
     style: "sticker",
     rotate: "-rotate-2"
   },
   {
-    id: 70,
-    nama: "Nama Panitia #70",
-    jabatan: "Crew Backstage Security",
-    divisi: "logistik",
+    id: 80,
+    nama: "Nama Panitia #80",
+    jabatan: "Day4",
+    divisi: "OSTLYMPIC",
     src: "assets/BAND (4).JPG",
     desc: "Crew penjaga akses lorong belakang panggung dari pengunjung luar.",
     style: "polaroid",
@@ -723,11 +816,11 @@ const panitiaDatabase = [
   },
 
   // =======================================================================
-  // 5. CREW OPERASIONAL TAMBAHAN (71 - 100)
+  // 5. Day 5
   // =======================================================================
   {
-    id: 71,
-    nama: "Nama Panitia #71",
+    id: 81,
+    nama: "Nama Panitia #81",
     jabatan: "Crew Runner Logistik",
     divisi: "logistik",
     src: "assets/BAND (5).JPG",
@@ -736,8 +829,8 @@ const panitiaDatabase = [
     rotate: "-rotate-4"
   },
   {
-    id: 72,
-    nama: "Nama Panitia #72",
+    id: 82,
+    nama: "Nama Panitia #82",
     jabatan: "Crew Konsumsi Artis & VIP",
     divisi: "logistik",
     src: "assets/DANCE (1).JPG",
@@ -746,8 +839,8 @@ const panitiaDatabase = [
     rotate: "rotate-2"
   },
   {
-    id: 73,
-    nama: "Nama Panitia #73",
+    id: 83,
+    nama: "Nama Panitia #83",
     jabatan: "Crew Penata Panggung Utama",
     divisi: "logistik",
     src: "assets/DANCE (2).JPG",
@@ -756,8 +849,8 @@ const panitiaDatabase = [
     rotate: "-rotate-1"
   },
   {
-    id: 74,
-    nama: "Nama Panitia #74",
+    id: 84,
+    nama: "Nama Panitia #84",
     jabatan: "Crew Tenda & Shelter",
     divisi: "logistik",
     src: "assets/BAND (6).JPG",
@@ -766,8 +859,8 @@ const panitiaDatabase = [
     rotate: "rotate-3"
   },
   {
-    id: 75,
-    nama: "Nama Panitia #75",
+    id: 85,
+    nama: "Nama Panitia #85",
     jabatan: "Crew Kelistrikan Bazaar",
     divisi: "logistik",
     src: "assets/BAND (7).JPG",
@@ -776,8 +869,8 @@ const panitiaDatabase = [
     rotate: "-rotate-3"
   },
   {
-    id: 76,
-    nama: "Nama Panitia #76",
+    id: 86,
+    nama: "Nama Panitia #86",
     jabatan: "Crew Pengarah Parkir VIP",
     divisi: "logistik",
     src: "assets/ARUMA (2).JPG",
@@ -786,8 +879,8 @@ const panitiaDatabase = [
     rotate: "rotate-2"
   },
   {
-    id: 77,
-    nama: "Nama Panitia #77",
+    id: 87,
+    nama: "Nama Panitia #87",
     jabatan: "Crew Pengawas Kebersihan Stage",
     divisi: "logistik",
     src: "assets/PANGGUNG (1).JPG",
@@ -796,8 +889,8 @@ const panitiaDatabase = [
     rotate: "-rotate-2"
   },
   {
-    id: 78,
-    nama: "Nama Panitia #78",
+    id: 88,
+    nama: "Nama Panitia #88",
     jabatan: "Crew Posko Kesehatan Utama",
     divisi: "logistik",
     src: "assets/HIVI (2).JPG",
@@ -806,8 +899,8 @@ const panitiaDatabase = [
     rotate: "rotate-1"
   },
   {
-    id: 79,
-    nama: "Nama Panitia #79",
+    id: 89,
+    nama: "Nama Panitia #89",
     jabatan: "Crew Runner Konsumsi",
     divisi: "logistik",
     src: "assets/ARUMA (3).JPG",
@@ -816,8 +909,8 @@ const panitiaDatabase = [
     rotate: "-rotate-4"
   },
   {
-    id: 80,
-    nama: "Nama Panitia #80",
+    id: 90,
+    nama: "Nama Panitia #90",
     jabatan: "Crew Penata Barikade Luar",
     divisi: "logistik",
     src: "assets/TENANT.JPG",
@@ -826,8 +919,8 @@ const panitiaDatabase = [
     rotate: "rotate-3"
   },
   {
-    id: 81,
-    nama: "Nama Panitia #81",
+    id: 91,
+    nama: "Nama Panitia #91",
     jabatan: "Crew Pendamping Talent Lokal",
     divisi: "acara",
     src: "assets/TENANT (1).JPG",
@@ -836,8 +929,8 @@ const panitiaDatabase = [
     rotate: "-rotate-1"
   },
   {
-    id: 82,
-    nama: "Nama Panitia #82",
+    id: 92,
+    nama: "Nama Panitia #92",
     jabatan: "Crew Tim Evaluasi Lapangan",
     divisi: "inti",
     src: "assets/TENANT (2).JPG",
@@ -846,8 +939,8 @@ const panitiaDatabase = [
     rotate: "rotate-2"
   },
   {
-    id: 83,
-    nama: "Nama Panitia #83",
+    id: 93,
+    nama: "Nama Panitia #93",
     jabatan: "Crew Penata Ruang VIP",
     divisi: "humas",
     src: "assets/Zaga.png",
@@ -856,8 +949,8 @@ const panitiaDatabase = [
     rotate: "-rotate-3"
   },
   {
-    id: 84,
-    nama: "Nama Panitia #84",
+    id: 94,
+    nama: "Nama Panitia #94",
     jabatan: "Crew Operator LED Screen",
     divisi: "acara",
     src: "assets/PANGGUNG (3).JPG",
@@ -866,8 +959,8 @@ const panitiaDatabase = [
     rotate: "rotate-4"
   },
   {
-    id: 85,
-    nama: "Nama Panitia #85",
+    id: 95,
+    nama: "Nama Panitia #95",
     jabatan: "Crew Penjaga Gate VIP",
     divisi: "humas",
     src: "assets/Lala.png",
@@ -876,8 +969,8 @@ const panitiaDatabase = [
     rotate: "-rotate-2"
   },
   {
-    id: 86,
-    nama: "Nama Panitia #86",
+    id: 96,
+    nama: "Nama Panitia #96",
     jabatan: "Crew Ticketing Redemption",
     divisi: "humas",
     src: "assets/PANGGUNG (4).JPG",
@@ -886,8 +979,8 @@ const panitiaDatabase = [
     rotate: "rotate-3"
   },
   {
-    id: 87,
-    nama: "Nama Panitia #87",
+    id: 97,
+    nama: "Nama Panitia #97",
     jabatan: "Crew Dokumentasi Tenant",
     divisi: "humas",
     src: "assets/BAND (8).JPG",
@@ -896,8 +989,8 @@ const panitiaDatabase = [
     rotate: "-rotate-1"
   },
   {
-    id: 88,
-    nama: "Nama Panitia #88",
+    id: 98,
+    nama: "Nama Panitia #98",
     jabatan: "Crew Pendamping MC",
     divisi: "acara",
     src: "assets/PANGGUNG (5).JPG",
@@ -906,8 +999,8 @@ const panitiaDatabase = [
     rotate: "rotate-1"
   },
   {
-    id: 89,
-    nama: "Nama Panitia #89",
+    id: 99,
+    nama: "Nama Panitia #99",
     jabatan: "Crew Pengatur Antrean Gate",
     divisi: "humas",
     src: "assets/TENANT (3).JPG",
@@ -916,8 +1009,8 @@ const panitiaDatabase = [
     rotate: "-rotate-4"
   },
   {
-    id: 90,
-    nama: "Nama Panitia #90",
+    id: 100,
+    nama: "Nama Panitia #100",
     jabatan: "Crew Penyedia HT Batterai",
     divisi: "logistik",
     src: "assets/TENANT (4).JPG",
@@ -925,110 +1018,10 @@ const panitiaDatabase = [
     style: "sticker",
     rotate: "rotate-2"
   },
-  {
-    id: 91,
-    nama: "Nama Panitia #91",
-    jabatan: "Crew Logistik Panggung Samping",
-    divisi: "logistik",
-    src: "assets/PANGGUNG (6).JPG",
-    desc: "Crew penjaga instrumen gitar & bass cadangan di wing stage.",
-    style: "polaroid",
-    rotate: "-rotate-2"
-  },
-  {
-    id: 92,
-    nama: "Nama Panitia #92",
-    jabatan: "Crew Penata Kipas Industri",
-    divisi: "logistik",
-    src: "assets/TENANT (5).JPG",
-    desc: "Crew penempatan blower angin di area padat penonton.",
-    style: "filmstrip",
-    rotate: "rotate-3"
-  },
-  {
-    id: 93,
-    nama: "Nama Panitia #93",
-    jabatan: "Crew Pengawas Barikade Utama",
-    divisi: "logistik",
-    src: "assets/TENANT (6).JPG",
-    desc: "Crew pemantau ketahanan pagar besi di depan sound mixer.",
-    style: "sticker",
-    rotate: "-rotate-3"
-  },
-  {
-    id: 94,
-    nama: "Nama Panitia #94",
-    jabatan: "Crew Dokumentasi Aerial/Drone",
-    divisi: "humas",
-    src: "assets/Rocky.png",
-    desc: "Crew penerbang drone untuk pengambilan gambar suasana atas.",
-    style: "polaroid",
-    rotate: "rotate-4"
-  },
-  {
-    id: 95,
-    nama: "Nama Panitia #95",
-    jabatan: "Crew Penanggung Jawab Banner",
-    divisi: "humas",
-    src: "assets/Kila.png",
-    desc: "Crew pemasang spanduk sponsor di sekitar pagar venue.",
-    style: "filmstrip",
-    rotate: "-rotate-1"
-  },
-  {
-    id: 96,
-    nama: "Nama Panitia #96",
-    jabatan: "Crew Pendamping Tim Medis",
-    divisi: "logistik",
-    src: "assets/BAND (9).JPG",
-    desc: "Crew penunjuk jalan ambulans saat rujukan darurat.",
-    style: "sticker",
-    rotate: "rotate-2"
-  },
-  {
-    id: 97,
-    nama: "Nama Panitia #97",
-    jabatan: "Crew Penata Jalur Evakuasi",
-    divisi: "logistik",
-    src: "assets/HIVI (3).JPG",
-    desc: "Crew pemasti arah pintu darurat bebas dari tumpukan barang.",
-    style: "polaroid",
-    rotate: "-rotate-3"
-  },
-  {
-    id: 98,
-    nama: "Nama Panitia #98",
-    jabatan: "Crew Pendata Barang Hilang",
-    divisi: "humas",
-    src: "assets/TENANT (7).JPG",
-    desc: "Crew penerima dan pencatat laporan lost and found penonton.",
-    style: "filmstrip",
-    rotate: "rotate-1"
-  },
-  {
-    id: 99,
-    nama: "Nama Panitia #99",
-    jabatan: "Crew Tim Bersih Akhir Acara",
-    divisi: "logistik",
-    src: "assets/ARUMA (4).JPG",
-    desc: "Crew penyapu area lapangan setelah penonton meninggalkan lokasi.",
-    style: "sticker",
-    rotate: "-rotate-2"
-  },
-  {
-    id: 100,
-    nama: "Nama Panitia #100",
-    jabatan: "Crew Perekap Inventaris",
-    divisi: "inti",
-    src: "assets/BAND (10).JPG",
-    desc: "Crew penghitung ulang ketersediaan barang sewaan sebelum dikembalikan.",
-    style: "polaroid",
-    rotate: "rotate-3"
-  }
 ];
 
 // =========================================================================
-// HTML FRAME BUILDER (Per-Image Dynamic Lazy Loading Target)
+// FRAME MACEM MACEM (CUMAN 3 JIR)
 // =========================================================================
 function createCardHTML(person) {
   if (person.style === 'polaroid') {
@@ -1038,7 +1031,7 @@ function createCardHTML(person) {
         
         <div class="aspect-square w-full bg-zinc-900 overflow-hidden relative shadow-inner rounded-sm border border-black/10">
           <img src="${person.src}" loading="lazy" decoding="async" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover transition-opacity duration-300 group-hover:scale-110">
-          <span class="absolute top-2 right-2 bg-synes-accent/90 backdrop-blur-md text-white text-[9px] font-mono font-extrabold px-2 py-0.5 rounded uppercase border border-white/20 shadow-md">CREW</span>
+          <span class="absolute top-2 right-2 bg-synes-accent/90 backdrop-blur-md text-white text-[9px] font-mono font-extrabold px-2 py-0.5 rounded uppercase border border-white/20 shadow-md">memory</span>
         </div>
 
         <div class="pt-3 text-center select-none space-y-0.5">
@@ -1059,7 +1052,7 @@ function createCardHTML(person) {
 
         <div class="aspect-square w-full bg-zinc-900 overflow-hidden relative border border-white/10">
           <img src="${person.src}" loading="lazy" decoding="async" alt="${person.nama}" class="lazy-panitia-img w-full h-full object-cover transition-opacity duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110">
-          <span class="absolute bottom-1 right-1 text-[8px] font-mono font-bold text-black bg-synes-gold px-2 py-0.5 rounded-sm uppercase tracking-wider">CREW</span>
+          <span class="absolute bottom-1 right-1 text-[8px] font-mono font-bold text-black bg-synes-gold px-2 py-0.5 rounded-sm uppercase tracking-wider">memory</span>
         </div>
 
         <div class="pt-3 text-left px-1 select-none">
@@ -1072,7 +1065,7 @@ function createCardHTML(person) {
     return `
       <div class="bg-synes-card p-3 pb-5 rounded-xl shadow-[6px_6px_0px_0px_rgba(255,59,105,0.8)] border-2 border-synes-accent transform ${person.rotate} hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-300 cursor-pointer group relative">
         <div class="absolute -top-3 -right-2 bg-synes-teal text-zinc-950 text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full shadow-md rotate-12 z-10 border border-white tracking-wider">
-          CREW
+          memory
         </div>
 
         <div class="aspect-square w-full bg-zinc-900 rounded-lg overflow-hidden relative border border-white/20">
@@ -1119,10 +1112,11 @@ function resolvePersonDay(person) {
   if (person.day) return person.day;
 
   const id = Number(person.id) || 0;
-  if (id <= 25) return 'Day 1';
-  if (id <= 50) return 'Day 2';
-  if (id <= 75) return 'Day 3';
-  return 'Day 4';
+  if (id <= 20) return 'Day 1';
+  if (id <= 40) return 'Day 2';
+  if (id <= 60) return 'Day 3';
+  if (id <= 80) return 'Day 4';
+  return 'Day 5';
 }
 
 function getFilteredPanitia(filterCategory = 'all') {
