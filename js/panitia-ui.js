@@ -211,7 +211,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #11",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (5).JPG",
+    src: "assets/ostlympic/DAY2/DSC01631.JPG",
     desc: "Crew perancang rundown acara panggung utama dan jalannya sesi penampilan.",
     style: "filmstrip",
     rotate: "-rotate-4"
@@ -221,7 +221,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #12",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/DANCE (1).JPG",
+    src: "assets/ostlympic/DAY2/DSCF9299 (1).JPG",
     desc: "Crew pengatur alur masuk dan keluar penampil di atas panggung festival.",
     style: "sticker",
     rotate: "rotate-2"
@@ -231,7 +231,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #13",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/DANCE (2).JPG",
+    src: "assets/ostlympic/DAY2/DSCF8672.JPG",
     desc: "Crew pendamping kebutuhan penampil utama/artis selama di venue acara.",
     style: "polaroid",
     rotate: "-rotate-1"
@@ -241,7 +241,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #14",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (6).JPG",
+    src: "assets/ostlympic/DAY2/DSCF0060.JPG",
     desc: "Crew pemantau durasi dan ketepatan waktu tampil setiap pengisi acara.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -251,7 +251,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #15",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (7).JPG",
+    src: "assets/ostlympic/DAY2/_ACH2167 (1).JPG",
     desc: "Crew pengatur area belakang panggung agar tetap kondusif dan steril.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -261,7 +261,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #16",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/ARUMA (2).JPG",
+    src: "assets/ostlympic/DAY2/_ACH1929.JPG",
     desc: "Crew pendamping band sekolah dan penampilan seni internal.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -271,7 +271,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #17",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (1).JPG",
+    src: "assets/ostlympic/DAY2/_ACH9740.JPG",
     desc: "Crew pemandu interaksi dan hiburan di sela-sela pergantian set panggung.",
     style: "filmstrip",
     rotate: "-rotate-2"
@@ -281,7 +281,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #18",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/HIVI (2).JPG",
+    src: "assets/ostlympic/DAY2/_ACH9857.JPG",
     desc: "Crew penyeleksi dan penata urutan penampilan tari dan musik.",
     style: "sticker",
     rotate: "rotate-1"
@@ -291,7 +291,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #19",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/ARUMA (3).JPG",
+    src: "assets/ostlympic/DAY2/_ACH0095.JPG",
     desc: "Crew sigap penyampai komunikasi cepat antar tim acara dan teknisi stage.",
     style: "polaroid",
     rotate: "-rotate-4"
@@ -301,7 +301,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #20",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT.JPG",
+    src: "assets/ostlympic/DAY2/DSCF0309.JPG",
     desc: "Crew pengatur urutan pemutaran musik latar dan audio pendukung acara.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -311,7 +311,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #21",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (1).JPG",
+    src: "assets/ostlympic/DAY2/DSCF0404.JPG",
     desc: "Crew pemandu cue sheet dan materi pembawa acara di panggung.",
     style: "sticker",
     rotate: "-rotate-1"
@@ -321,7 +321,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #22",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (2).JPG",
+    src: "assets/ostlympic/DAY2/IMG_0012.jpg",
     desc: "Crew pengatur tata busana dan perlengkapan tim tari tradisional.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -331,7 +331,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #23",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/Zaga.png",
+    src: "assets/ostlympic/DAY2/IMG_9360.JPG",
     desc: "Crew pengatur jadwal uji suara band sebelum pintu dibuka.",
     style: "filmstrip",
     rotate: "-rotate-3"
@@ -341,7 +341,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #24",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (3).JPG",
+    src: "assets/ostlympic/DAY2/IMG_0266_result.jpg",
     desc: "Crew penata kenyamanan ruang tunggu artis sebelum tampil.",
     style: "sticker",
     rotate: "rotate-4"
@@ -351,7 +351,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #25",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/Lala.png",
+    src: "assets/ostlympic/DAY2/IMG_0071.JPG",
     desc: "Crew peluncur efek semburan kertas dan penutup pesta acara.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -361,7 +361,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #26",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (4).JPG",
+    src: "assets/ostlympic/DAY2/IMG_0125.JPG",
     desc: "Crew pengatur tampilan backdrop LED visual selama pertunjukan.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -371,7 +371,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #27",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (8).JPG",
+    src: "assets/ostlympic/DAY2/IMG_9868.JPG",
     desc: "Crew penata selebrasi pelepasan balon dan ucapan penutup.",
     style: "sticker",
     rotate: "-rotate-1"
@@ -381,7 +381,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #28",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (5).JPG",
+    src: "assets/ostlympic/DAY2/IMG_9600.JPG",
     desc: "Crew pendamping mobilitas tim artis dari hotel ke panggung.",
     style: "polaroid",
     rotate: "rotate-1"
@@ -391,7 +391,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #29",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (3).JPG",
+    src: "assets/ostlympic/DAY2/DSC01916.JPG",
     desc: "Crew pendamping talenta maskot Zaga, Lala, Rocky, dan Kila.",
     style: "filmstrip",
     rotate: "-rotate-4"
@@ -401,7 +401,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #30",
     jabatan: "Day2",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (4).JPG",
+    src: "assets/ostlympic/DAY2/DSC05203.JPG",
     desc: "Crew pemandu posisi blocking penampil dan penari panggung.",
     style: "sticker",
     rotate: "rotate-2"
