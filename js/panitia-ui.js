@@ -415,7 +415,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #31",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (6).JPG",
+    src: "assets/ostlympic/DAY3/_ACH0343.JPG",
     desc: "Crew penanggung jawab publikasi dan komunikasi luar festival.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -425,7 +425,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #32",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (5).JPG",
+    src: "assets/ostlympic/DAY3/_ACH0352.JPG",
     desc: "Crew pengabadikan momen penting dan ekspresi pengunjung di panggung.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -435,7 +435,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #33",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (6).JPG",
+    src: "assets/ostlympic/DAY3/_ACH0369.JPG",
     desc: "Crew perekam video recap highlights dan cuplikan visual acara.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -445,7 +445,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #34",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/Rocky.png",
+    src: "assets/ostlympic/DAY3/_ACH0587.JPG",
     desc: "Crew pengelola konten instagram, tiktok, dan linimasa promosi.",
     style: "polaroid",
     rotate: "rotate-4"
@@ -455,7 +455,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #35",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/Kila.png",
+    src: "assets/ostlympic/DAY3/DSC01213.JPG",
     desc: "Crew penyusun laporan sponsor dan jalinan kerja sama media partner.",
     style: "filmstrip",
     rotate: "-rotate-1"
@@ -465,7 +465,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #36",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (9).JPG",
+    src: "assets/ostlympic/DAY3/_ACH0129.JPG",
     desc: "Crew penanggung jawab penukaran gelang/tiket masuk pengunjung.",
     style: "sticker",
     rotate: "rotate-2"
@@ -475,7 +475,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #37",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/HIVI (3).JPG",
+    src: "assets/ostlympic/DAY3/_ACH0327.JPG",
     desc: "Crew penerima pusat informasi dan bantuan kendala bagi penonton.",
     style: "polaroid",
     rotate: "-rotate-3"
@@ -485,7 +485,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #38",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (7).JPG",
+    src: "assets/ostlympic/DAY3/DSC00095.JPG",
     desc: "Crew pembuat aset grafis promosi, banner, dan identitas visual.",
     style: "filmstrip",
     rotate: "rotate-1"
@@ -495,7 +495,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #39",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/ARUMA (4).JPG",
+    src: "assets/ostlympic/DAY3/DSCF1250.JPG",
     desc: "Crew pemantau transmisi video siaran langsung acara.",
     style: "sticker",
     rotate: "-rotate-2"
@@ -505,7 +505,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #40",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (10).JPG",
+    src: "assets/ostlympic/DAY3/DSC01692.JPG",
     desc: "Crew pembuat naskah MC, siaran pers, dan naskah konten promosi.",
     style: "polaroid",
     rotate: "rotate-3"
@@ -515,7 +515,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #41",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/DANCE (3).JPG",
+    src: "assets/ostlympic/DAY3/IMG_0471.CR2",
     desc: "Crew dokumentasi area bazaar dan interaksi pengunjung.",
     style: "filmstrip",
     rotate: "-rotate-4"
@@ -525,7 +525,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #52",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/PANGGUNG (1).JPG",
+    src: "assets/ostlympic/DAY3/IMG_0400.JPG",
     desc: "Crew pemeriksa tiket dan barang bawaan di pintu masuk.",
     style: "sticker",
     rotate: "rotate-2"
@@ -535,7 +535,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #53",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/ARUMA (5).JPG",
+    src: "assets/ostlympic/DAY3/DSCF2188.JPG",
     desc: "Crew penerima tamu undangan khusus dan komite sekolah.",
     style: "polaroid",
     rotate: "-rotate-1"
@@ -545,7 +545,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #54",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT (8).JPG",
+    src: "assets/ostlympic/DAY3/IMG_0224.JPG",
     desc: "Crew penjual kaus, stiker, dan cenderamata resmi Synesthesia.",
     style: "filmstrip",
     rotate: "rotate-4"
@@ -555,7 +555,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #55",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/Zaga.png",
+    src: "assets/ostlympic/DAY3/IMG_1921.JPG",
     desc: "Crew pengarah gaya penonton di bilik cetak foto kenangan.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -565,7 +565,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #56",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (11).JPG",
+    src: "assets/ostlympic/DAY3/IMG_0241.JPG",
     desc: "Crew pengisi pengumuman pengeras suara pusat informasi.",
     style: "polaroid",
     rotate: "rotate-1"
@@ -575,7 +575,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #57",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/TENANT.JPG",
+    src: "assets/ostlympic/DAY3/IMG_9435.JPG",
     desc: "Crew pengelola kebutuhan jurnalis dan wartawan peliput.",
     style: "filmstrip",
     rotate: "-rotate-2"
@@ -585,7 +585,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #58",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/HIVI (4).JPG",
+    src: "assets/ostlympic/DAY3/DSC09791.JPG",
     desc: "Crew pengunggah story dan update langsung selama acara.",
     style: "sticker",
     rotate: "rotate-3"
@@ -595,7 +595,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #59",
     jabatan: "Day3",
     divisi: "OSTLYMPIC",
-    src: "assets/BAND (12).JPG",
+    src: "assets/ostlympic/DAY3/IMG_9298.JPG",
     desc: "Crew penyusun teks promosi dan pengumuman mendadak.",
     style: "polaroid",
     rotate: "-rotate-4"
@@ -605,7 +605,7 @@ const panitiaDatabase = [
     nama: "Nama Panitia #60",
     jabatan: "Crew Public Relations Field",
     divisi: "humas",
-    src: "assets/panggung.JPG",
+    src: "assets/ostlympic/DAY3/DSCF4641.JPG",
     desc: "Crew penyambung komunikasi dengan pihak kepolisian/keamanan luar.",
     style: "filmstrip",
     rotate: "rotate-2"
