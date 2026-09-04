@@ -175,40 +175,20 @@
     </section>
 
     <!-- SEKSI FULL-WIDTH CINEMATIC VIDEO (ANTARA HERO & RECAP) -->
+<!-- SEKSI FULL-WIDTH VIDEO (GOOGLE DRIVE EMBED) -->
 <section id="full-cinematic-video" class="py-12 px-4 md:px-8 relative border-t border-b border-white/5 overflow-hidden bg-[#090D22]">
-    <!-- Ambient Glow Effects (Gradasi Cahaya Background) -->
+    <!-- Ambient Glow Effects -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-r from-synes-accent/15 via-purple-600/10 to-synes-teal/15 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto relative z-10">
-        <!-- Container Video Kreatif dengan Glassmorphism Border & Floating Shadow -->
-        <div class="relative group rounded-3xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md shadow-[0_0_50px_rgba(0,0,0,0.8)] transition-all duration-700 hover:border-synes-teal/40 hover:shadow-[0_0_50px_rgba(13,242,201,0.15)]">
-            
-            <!-- Element Video Utuh -->
-            <video id="cinematic-video-player" class="w-full aspect-video object-cover block transition-transform duration-1000 group-hover:scale-[1.01]" poster="assets/fotoosis3.JPG" preload="metadata" onclick="toggleFullVideo(this)">
-                <source src="assets/video_osis.mp4" type="video/mp4">
-                Browser kamu tidak mendukung pemutaran video.
-            </video>
-
-            <!-- Subtle Artistic Gradient Overlays (Tanpa Teks) -->
-            <!-- Vignette halus di pinggir agar video terlihat menyatu dengan background gelap -->
-            <div id="video-vignette" class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_50%,rgba(9,13,34,0.6)_100%)] transition-opacity duration-500"></div>
-            
-            <!-- Gradasi Lembut di bagian Atas & Bawah -->
-            <div id="video-top-gradient" class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#090D22]/80 via-[#090D22]/20 to-transparent pointer-events-none transition-opacity duration-500"></div>
-            <div id="video-bottom-gradient" class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#090D22]/80 via-[#090D22]/20 to-transparent pointer-events-none transition-opacity duration-500"></div>
-
-            <!-- Minimalist Play Button (Glow Accent) -->
-            <div id="video-play-overlay" class="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px] transition-all duration-500 cursor-pointer" onclick="toggleFullVideo(document.getElementById('cinematic-video-player'))">
-                <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-[0_0_30px_rgba(255,59,105,0.4)] group-hover:scale-110 group-hover:bg-synes-accent group-hover:border-transparent transition-all duration-500">
-                    <svg id="full-play-icon" class="w-8 h-8 translate-x-0.5 fill-current" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    <svg id="full-pause-icon" class="w-8 h-8 fill-current hidden" viewBox="0 0 24 24">
-                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                    </svg>
-                </div>
-            </div>
-
+        <!-- Container Frame Video -->
+        <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+            <iframe 
+                src="https://drive.google.com/file/d/1I8XeoTpxyPWyWS5FxPFWtZd5ITCz0WPv/preview" 
+                class="w-full h-full border-0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </section>
