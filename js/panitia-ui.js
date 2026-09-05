@@ -821,9 +821,9 @@ const panitiaDatabase = [
   {
     id: 81,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Runner Logistik",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/BAND (5).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSC09935.JPG",
     desc: "Crew kurir pengambil perlengkapan cepat saat keadaan darurat.",
     style: "filmstrip",
     rotate: "-rotate-4"
@@ -831,9 +831,9 @@ const panitiaDatabase = [
   {
     id: 82,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Konsumsi Artis & VIP",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/DANCE (1).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/IMG_9439.JPG",
     desc: "Crew penyiap makanan khusus catering guest star dan komite.",
     style: "sticker",
     rotate: "rotate-2"
@@ -841,9 +841,9 @@ const panitiaDatabase = [
   {
     id: 83,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Penata Panggung Utama",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/DANCE (2).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/_ACH3110.JPG",
     desc: "Crew penyusun backdrop fisik dan lantai karpet panggung.",
     style: "polaroid",
     rotate: "-rotate-1"
@@ -851,9 +851,9 @@ const panitiaDatabase = [
   {
     id: 84,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Tenda & Shelter",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/BAND (6).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/_ACH3096.JPG",
     desc: "Crew penanggung jawab pemasangan terpal dan tenda peleton.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -861,9 +861,9 @@ const panitiaDatabase = [
   {
     id: 85,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Kelistrikan Bazaar",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/BAND (7).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF4866.JPG",
     desc: "Crew pembagi kabel roll dan beban listrik untuk tiap tenant.",
     style: "sticker",
     rotate: "-rotate-3"
@@ -871,9 +871,9 @@ const panitiaDatabase = [
   {
     id: 86,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Pengarah Parkir VIP",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/ARUMA (2).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF4768.JPG",
     desc: "Crew pengatur slot khusus parkir mobil pengisi acara dan guru.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -881,9 +881,9 @@ const panitiaDatabase = [
   {
     id: 87,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Pengawas Kebersihan Stage",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/PANGGUNG (1).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF4710.JPG",
     desc: "Crew pembersih sampah botol dan kertas confetti di stage.",
     style: "filmstrip",
     rotate: "-rotate-2"
@@ -891,9 +891,9 @@ const panitiaDatabase = [
   {
     id: 88,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Posko Kesehatan Utama",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/HIVI (2).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF4686.JPG",
     desc: "Crew penjaga kasur perawatan dan ketersediaan tabung oksigen.",
     style: "sticker",
     rotate: "rotate-1"
@@ -901,9 +901,9 @@ const panitiaDatabase = [
   {
     id: 89,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Runner Konsumsi",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/ARUMA (3).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF4650.JPG",
     desc: "Crew pembagi nasi kotak dan snack ke tiap pos panitia.",
     style: "polaroid",
     rotate: "-rotate-4"
@@ -911,9 +911,9 @@ const panitiaDatabase = [
   {
     id: 90,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Penata Barikade Luar",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5/TENANT.JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/IMG_6258.JPG",
     desc: "Crew penata pagar pembatas antrean tiket di luar venue.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -921,9 +921,9 @@ const panitiaDatabase = [
   {
     id: 91,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Pendamping Talent Lokal",
-    divisi: "acara",
-    src: "assets/ostlympic/DAY5/TENANT (1).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/IMG_6208.JPG",
     desc: "Crew pengarah waktu standby untuk penampil internal sekolah.",
     style: "sticker",
     rotate: "-rotate-1"
@@ -931,9 +931,9 @@ const panitiaDatabase = [
   {
     id: 92,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Tim Evaluasi Lapangan",
-    divisi: "inti",
-    src: "assets/ostlympic/DAY5/TENANT (2).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF5485.JPG",
     desc: "Crew penilai kinerja dan kelancaran alur operasional acara.",
     style: "polaroid",
     rotate: "rotate-2"
@@ -941,9 +941,9 @@ const panitiaDatabase = [
   {
     id: 93,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Penata Ruang VIP",
-    divisi: "humas",
-    src: "assets/ostlympic/DAY5/Zaga.png",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/_ACH3132.JPG",
     desc: "Crew penata sofa dan pendingin ruangan di lounge tamu khusus.",
     style: "filmstrip",
     rotate: "-rotate-3"
@@ -951,9 +951,9 @@ const panitiaDatabase = [
   {
     id: 94,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Operator LED Screen",
-    divisi: "acara",
-    src: "assets/ostlympic/DAY5/PANGGUNG (3).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/_ACH3147.JPG",
     desc: "Crew pemutar motion graphic pendukung saat konser berlangsung.",
     style: "sticker",
     rotate: "rotate-4"
@@ -961,9 +961,9 @@ const panitiaDatabase = [
   {
     id: 95,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Penjaga Gate VIP",
-    divisi: "humas",
-    src: "assets/ostlympic/DAY5/Lala.png",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSCF5101.JPG",
     desc: "Crew pemeriksa pita akses khusus pintu masuk tamu penting.",
     style: "polaroid",
     rotate: "-rotate-2"
@@ -971,9 +971,9 @@ const panitiaDatabase = [
   {
     id: 96,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Ticketing Redemption",
-    divisi: "humas",
-    src: "assets/ostlympic/DAY5/PANGGUNG (4).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSC06152.JPG",
     desc: "Crew pemindai QR code e-ticket menjadi gelang fisik.",
     style: "filmstrip",
     rotate: "rotate-3"
@@ -981,9 +981,9 @@ const panitiaDatabase = [
   {
     id: 97,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Dokumentasi Tenant",
-    divisi: "humas",
-    src: "assets/ostlympic/DAY5/BAND (8).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSC06010.JPG",
     desc: "Crew peliput aktivitas transaksi dan keseruan di area kuliner.",
     style: "sticker",
     rotate: "-rotate-1"
@@ -991,9 +991,9 @@ const panitiaDatabase = [
   {
     id: 98,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Pendamping MC",
-    divisi: "acara",
-    src: "assets/ostlympic/DAY5/PANGGUNG (5).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSC05923.JPG",
     desc: "Crew pembawa air minum dan perlengkapan panggung untuk MC.",
     style: "polaroid",
     rotate: "rotate-1"
@@ -1001,9 +1001,9 @@ const panitiaDatabase = [
   {
     id: 99,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Pengatur Antrean Gate",
-    divisi: "humas",
-    src: "assets/ostlympic/DAY5/TENANT (3).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5/DSC05883.JPG",
     desc: "Crew pemecah kepadatan penonton saat jam buka pintu.",
     style: "filmstrip",
     rotate: "-rotate-4"
@@ -1011,9 +1011,9 @@ const panitiaDatabase = [
   {
     id: 100,
     nama: "OSTLYMPIC DAY5",
-    jabatan: "Crew Penyedia HT Batterai",
-    divisi: "logistik",
-    src: "assets/ostlympic/DAY5 /TENANT (4).JPG",
+    jabatan: "Day 5",
+    divisi: "ostlympic",
+    src: "assets/ostlympic/DAY5 /IMG-20260214-WA0081.jpg",
     desc: "Crew pengisi daya dan pengisi cadangan baterai walkie-talkie.",
     style: "sticker",
     rotate: "rotate-2"
