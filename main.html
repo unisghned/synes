@@ -175,18 +175,26 @@
     </section>
 
     <!-- SEKSI FULL-WIDTH CINEMATIC VIDEO (ANTARA HERO & RECAP) -->
-<!-- SEKSI FULL-WIDTH VIDEO (GOOGLE DRIVE EMBED) -->
-<div class="relative w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl">
-    <iframe 
-        class="absolute inset-0 w-full h-full" 
-        src="https://www.youtube.com/embed/DjmqA5wLyT4" 
-        title="Synesthesia Video" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-    </iframe>
-</div>
+<!-- SEKSI VIDEO CINEMATIC (UKURAN PROPORSIONAL) -->
+<section id="full-cinematic-video" class="py-10 px-4 relative border-t border-b border-white/5 overflow-hidden bg-[#090D22]">
+    <!-- Ambient Glow Effect (Dikecilkan) -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-[90px] pointer-events-none"></div>
+
+    <!-- Container Utama: Dibatasi max-w-3xl agar tidak terlalu raksasa di PC -->
+    <div class="max-w-3xl mx-auto relative z-10">
+        <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black shadow-[0_0_30px_rgba(0,0,0,0.6)]">
+            <iframe 
+                class="absolute inset-0 w-full h-full" 
+                src="https://www.youtube.com/embed/DjmqA5wLyT4" 
+                title="Synesthesia Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
 
     <!-- 4. KONTEN UTAMA: CAROUSEL SWIPE PREVIEW & MODAL DETIL DESKRIPSI -->
     <section id="recap-section" class="py-24 px-4 md:px-8 relative border-t border-white/5 overflow-hidden">
