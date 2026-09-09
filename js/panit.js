@@ -10,16 +10,16 @@ const panitiaOSISData = [
     { id: "PAN-02", nama: "Desmond Edmundo", jabatan: "Vice President (Wakil Ketua)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00474.JPG", quote: "Waketos Gila, anomali, mitologi, dan gasabaran" },
 
     // --- SECRETARY (2) ---
-    { id: "PAN-03", nama: "Chloe Leticia Harmit", jabatan: "Secretary I", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00436.JPG", quote: "Pengelolaan persuratan dan administrasi organisasi." },
-    { id: "PAN-04", nama: "Karenn Aeleena Nicole", jabatan: "Secretary II", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00163.JPG", quote: "Penyusunan arsip, dokumen resmi, dan notulensi rapat." },
+    { id: "PAN-03", nama: "Chloe Leticia Harmit", jabatan: "Secretary I", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00436.JPG", quote: "Sekre pencatat segala notulensi." },
+    { id: "PAN-04", nama: "Karenn Aeleena Nicole", jabatan: "Secretary II", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00163.JPG", quote: "Sekre yg suka teriak teriak dan rusuh." },
  
     // --- TREASURER (2) ---
-    { id: "PAN-05", nama: "Verena Kayleen Sung", jabatan: "Treasurer I", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00321.JPG", quote: "Manajemen arus kas dan pengalokasian anggaran." },
-    { id: "PAN-06", nama: "Lovita Bailey Adam", jabatan: "Treasurer II", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00317.JPG", quote: "Pembukuan keuangan transparan dan akuntabel." },
+    { id: "PAN-05", nama: "Verena Kayleen Sung", jabatan: "Treasurer I", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00321.JPG", quote: "Bendahara pemarah sekaligus misdinar gabriel." },
+    { id: "PAN-06", nama: "Lovita Bailey Adam", jabatan: "Treasurer II", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00317.JPG", quote: "Bendahara yg seirng ketakutanl." },
 
     // --- KREAVENTURE (5) ---
-    { id: "PAN-07", nama: "Florence Yael Budiman", jabatan: "Coordinator Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00443.JPG", quote: "Pengembangan konsep kreatif dan estetika acara." },
-    { id: "PAN-08", nama: "Caroline Kezia Budijanto", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00356.JPG", quote: "Desain elemen visual dan perancangan dekorasi." },
+    { id: "PAN-07", nama: "Florence Yael Budiman", jabatan: "Coordinator Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00443.JPG", quote: "Sosok tinggi kiris sosmed." },
+    { id: "PAN-08", nama: "Caroline Kezia Budijanto", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00356.JPG", quote: "Pacar Ray yang kalo marah suka ngejer." },
     { id: "PAN-09", nama: "Joaquin Leandra Constantilova", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00365.JPG", quote: "Produksi karya seni visual dan instalasi panggung." },
     { id: "PAN-10", nama: "Carla Angela Herdiana", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00311.JPG", quote: "Inovasi konten program dan pementasan seni." },
     { id: "PAN-11", nama: "Caroline Ransquella Faustine N", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00372.JPG", quote: "Penyusunan rundown kreatif kegiatan siswa." },
