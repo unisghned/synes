@@ -6,8 +6,8 @@
 
 const panitiaOSISData = [
     // --- PIMPINAN UTAMA (PREZ & VICE) ---
-    { id: "PAN-01", nama: "Tantiana Anjanhi", jabatan: "President (Ketua OSIS)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00451.JPG", quote: "Memimpin pergerakan serta menyatukan visi seluruh divisi OSIS." },
-    { id: "PAN-02", nama: "Desmond Edmundo", jabatan: "Vice President (Wakil Ketua)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00474.JPG", quote: "Mengawasi jalannya roda organisasi dan sinergi internal." },
+    { id: "PAN-01", nama: "Tantiana Anjanhi", jabatan: "President (Ketua OSIS)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00451.JPG", quote: "Ketos kecil Pemarah, Sabar, Ramah, wow." },
+    { id: "PAN-02", nama: "Desmond Edmundo", jabatan: "Vice President (Wakil Ketua)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00474.JPG", quote: "Waketos Gila, anomali, mitologi, dan gasabaran" },
 
     // --- SECRETARY (2) ---
     { id: "PAN-03", nama: "Chloe Leticia Harmit", jabatan: "Secretary I", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00436.JPG", quote: "Pengelolaan persuratan dan administrasi organisasi." },
