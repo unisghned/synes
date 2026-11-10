@@ -6,64 +6,61 @@
 
 const panitiaOSISData = [
     // --- PIMPINAN UTAMA (PREZ & VICE) ---
-    { id: "PAN-01", nama: "Tantiana Anjanhi", jabatan: "President (Ketua OSIS)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00451.JPG", quote: "Ketos kecil Pemarah, Sabar, Ramah, wow." },
-    { id: "PAN-02", nama: "Desmond Edmundo", jabatan: "Vice President (Wakil Ketua)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00474.JPG", quote: "Waketos Gila, anomali, mitologi, dan gasabaran" },
+    { id: "PAN-01", nama: "Tantiana Anjanhi", jabatan: "President (Ketua OSIS)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00451.JPG", quote: "Ketos yang keren, pemarah, keibuan, asbun, dan lainnya yang gabisa kebayang" },
+    { id: "PAN-02", nama: "Desmond Edmundo", jabatan: "Vice President (Wakil Ketua)", divisi: "Presidium", divisiLabel: "Presidium", isTop: true, badgeBg: "bg-amber-400 text-slate-950 font-black", foto: "assets/panitia/DSC00474.JPG", quote: "waketos sok cool, aneh, weird, gaje, dan banyak negatifnya tapi tetep keren di osis" },
 
     // --- SECRETARY (2) ---
-    { id: "PAN-03", nama: "Chloe Leticia Harmit", jabatan: "Secretary I", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00436.JPG", quote: "Sekre pencatat segala notulensi." },
-    { id: "PAN-04", nama: "Karenn Aeleena Nicole", jabatan: "Secretary II", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00163.JPG", quote: "Sekre yg suka teriak teriak dan rusuh." },
+    { id: "PAN-03", nama: "Chloe Leticia Harmit", jabatan: "Secretary I", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00436.JPG", quote: "Sekre yang selalu nyatet tiap rapat dan bikin notulensi" },
+    { id: "PAN-04", nama: "Karenn Aeleena Nicole", jabatan: "Secretary II", divisi: "Secretary", divisiLabel: "Secretary", badgeBg: "bg-blue-500 text-white", foto: "assets/panitia/DSC00163.JPG", quote: "Sekre yang brisik banget gaketolong, paslon bersama heti" },
  
     // --- TREASURER (2) ---
-    { id: "PAN-05", nama: "Verena Kayleen Sung", jabatan: "Treasurer I", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00321.JPG", quote: "Bendahara pemarah sekaligus misdinar gabriel." },
-    { id: "PAN-06", nama: "Lovita Bailey Adam", jabatan: "Treasurer II", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00317.JPG", quote: "Bendahara yg seirng ketakutanl." },
+    { id: "PAN-05", nama: "Verena Kayleen Sung", jabatan: "Treasurer I", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00321.JPG", quote: "Bendahara si paling misdinar gabriel yg suka marah marah" },
+    { id: "PAN-06", nama: "Lovita Bailey Adam", jabatan: "Treasurer II", divisi: "Treasurer", divisiLabel: "Treasurer", badgeBg: "bg-emerald-500 text-white", foto: "assets/panitia/DSC00317.JPG", quote: "Bendahara paling anomali, gajelas, rusuh, kekerasan, dsb" },
 
     // --- KREAVENTURE (5) ---
-    { id: "PAN-07", nama: "Florence Yael Budiman", jabatan: "Coordinator Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00443.JPG", quote: "Sosok tinggi kiris sosmed." },
-    { id: "PAN-08", nama: "Caroline Kezia Budijanto", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00356.JPG", quote: "Pacar Ray yang kalo marah suka ngejer." },
-    { id: "PAN-09", nama: "Joaquin Leandra Constantilova", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00365.JPG", quote: "Produksi karya seni visual dan instalasi panggung." },
-    { id: "PAN-10", nama: "Carla Angela Herdiana", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00311.JPG", quote: "Inovasi konten program dan pementasan seni." },
-    { id: "PAN-11", nama: "Caroline Ransquella Faustine N", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00372.JPG", quote: "Penyusunan rundown kreatif kegiatan siswa." },
+    { id: "PAN-07", nama: "Florence Yael Budiman", jabatan: "Coordinator Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00443.JPG", quote: "Sosok tinggi kiris yang jago banget di bagian edit post di sosmed" },
+    { id: "PAN-08", nama: "Caroline Kezia Budijanto", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00356.JPG", quote: "Pelukis badut muspus pacarnya ray yang kalo marah suka ngejer" },
+    { id: "PAN-09", nama: "Joaquin Leandra Constantilova", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00365.JPG", quote: "Sosok seram teater gala 2026" },
+    { id: "PAN-10", nama: "Carla Angela Herdiana", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00311.JPG", quote: "SIAP PASKIBRA, SIAP PASBHITA" },
+    { id: "PAN-11", nama: "Caroline Ransquella Faustine N", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00372.JPG", quote: "kreaventure teranomali, ketakutan gajelas" },
 
     // --- VISION VAULT (6) ---
-    { id: "PAN-12", nama: "Josefa Maria Davina Hartanto", jabatan: "Coordinator Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00280.JPG", quote: "Pengawasan dokumentasi dan manajemen aset media." },
-    { id: "PAN-13", nama: "Kleon Alfeus Effendi", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00458.JPG", quote: "Videografi sinematik dan pascaproduksi." },
-    { id: "PAN-14", nama: "Marvel Chanjaya", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00463.JPG", quote: "Fotografi dokumentasi momen kegiatan." },
-    { id: "PAN-15", nama: "John Magsam", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00305.JPG", quote: "Pengelolaan feed dan desain media sosial." },
-    { id: "PAN-16", nama: "Scharbel Darrien Mulyadı", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00349.JPG", quote: "Arsiparis rekaman dan galeri publik." },
-    { id: "PAN-17", nama: "Denaya Princess Hermawan", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00286.JPG", quote: "Pengeditan video teaser dan recap event." },
+    { id: "PAN-12", nama: "Josefa Maria Davina Hartanto", jabatan: "Coordinator Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00280.JPG", quote: "sosok dokum yg selalu ngomel dan asal ngomong" },
+    { id: "PAN-13", nama: "Kleon Alfeus Effendi", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00458.JPG", quote: "gw" },
+    { id: "PAN-14", nama: "Marvel Chanjaya", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00463.JPG", quote: "sosok teman mulmed yg rangkap jadi apa aja" },
+    { id: "PAN-15", nama: "John Magsam", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00305.JPG", quote: "Sosok mulmed perintis dan jago mtl fisika" },
+    { id: "PAN-16", nama: "Scharbel Darrien Mulyadı", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00349.JPG", quote: "Sosok tinggi kiris yang kemana mana minta tos wae" },
+    { id: "PAN-17", nama: "Denaya Princess Hermawan", jabatan: "Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00286.JPG", quote: "Sosok aktor pemain film dan anaknya bu yuni" },
 
     // --- LINGUAVERSE (4) ---
-    { id: "PAN-18", nama: "Maria Christiani Putri", jabatan: "Coordinator Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00440.JPG", quote: "Hubungan masyarakat dan publikasi komunikasi." },
-    { id: "PAN-19", nama: "Orva Nathania", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00398.JPG", quote: "Penyusunan press release dan narasi pengumuman." },
-    { id: "PAN-20", nama: "Anastasia Aileen Maria H", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00405.JPG", quote: "Protokoler acara dan komunikasi antar-pihak." },
-    { id: "PAN-21", nama: "Bernice Celine Kawiharja", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00290.JPG", quote: "Master of Ceremony (MC) dan pemandu acara." },
+    { id: "PAN-18", nama: "Maria Christiani Putri", jabatan: "Coordinator Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00440.JPG", quote: "SOSOK PALING SUKA MARAH MARAH DAN MUKUL" },
+    { id: "PAN-19", nama: "Orva Nathania", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00398.JPG", quote: "sosok alumni trushelle dan sosok tinggi kiris juga" },
+    { id: "PAN-20", nama: "Anastasia Aileen Maria H", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00405.JPG", quote: "sosok yang lumayan kalem selama di osis" },
+    { id: "PAN-21", nama: "Bernice Celine Kawiharja", jabatan: "Linguaverse", divisi: "Linguaverse", divisiLabel: "Linguaverse", badgeBg: "bg-teal-500 text-slate-950", foto: "assets/panitia/DSC00290.JPG", quote: "salah satu anggota yang aga nyebelin dikit." },
 
     // --- MASTER MIND (5) ---
-    { id: "PAN-22", nama: "Rachel Anabella Widiyanto", jabatan: "Coordinator Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00266.JPG", quote: "Riset strategis dan perancangan arah kegiatan." },
-    { id: "PAN-23", nama: "Devincent Natanael Herdianto", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00426.JPG", quote: "Evaluasi program kerja dan pemetaan kendala." },
-    { id: "PAN-24", nama: "Michael Aaron Christopher", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00469.JPG", quote: "Penyusunan Standar Operasional Prosedur (SOP)." },
-    { id: "PAN-25", nama: "Raymond Jonathan", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00430.JPG", quote: "Pengembangan modul materi kepemimpinan." },
-    { id: "PAN-26", nama: "Calista Westlysia Chang", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00390.JPG", quote: "Analisis data masukan dan aspirasi siswa." },
+    { id: "PAN-22", nama: "Rachel Anabella Widiyanto", jabatan: "Coordinator Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00266.JPG", quote: "Sosok traumatis dengan lagu natal dan teriakannya" },
+    { id: "PAN-23", nama: "Devincent Natanael Herdianto", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00426.JPG", quote:"PSIKOLOG TALENTA MAJU JAYA PACARNYA BAJA" },
+    { id: "PAN-24", nama: "Michael Aaron Christopher", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00469.JPG", quote: "sosok temennya kungfu panda (tukang tidur woi)" },
+    { id: "PAN-25", nama: "Raymond Jonathan", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00430.JPG", quote: "anggota paling rapih dalam berpenampilan fix" },
+    { id: "PAN-26", nama: "Calista Westlysia Chang", jabatan: "Master Mind", divisi: "Master Mind", divisiLabel: "Master Mind", badgeBg: "bg-indigo-500 text-white", foto: "assets/panitia/DSC00390.JPG", quote: "ini anggota yg diem diem bae tapi kalem lah" },
 
     // --- GAME MASTER (5) ---
-    { id: "PAN-27", nama: "Francine Vanette Talar", jabatan: "Coordinator Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00414.JPG", quote: "Manajemen kompetisi, perlombaan, dan e-sports." },
-    { id: "PAN-28", nama: "Aaronn Alexander Lais", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00296.JPG", quote: "Penyusunan regulasi serta bracket pertandingan." },
-    { id: "PAN-29", nama: "Bernadetha Louisa Hernawan", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00449.JPG", quote: "Wasit teknis dan pengawas fair play perlombaan." },
-    { id: "PAN-30", nama: "Kenneth Richie Sabella", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00345.JPG", quote: "Pengondisian peserta lomba dan sistem skor." },
-    { id: "PAN-31", nama: "Ravel Fulvi Algha Yapiawan", jabatan: "ame Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00482.JPG", quote: "Penyiapan perlengkapan dan arena tanding." },
+    { id: "PAN-27", nama: "Francine Vanette Talar", jabatan: "Coordinator Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00414.JPG", quote: "Kurang kurangin teriak apalagi pas main game horror." },
+    { id: "PAN-28", nama: "Aaronn Alexander Lais", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00296.JPG", quote: "sosok extrovert kelas atas dan orang paling have" },
+    { id: "PAN-29", nama: "Bernadetha Louisa Hernawan", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00449.JPG", quote: "sosok paskib yang kalo teriak suka ga kekontrol" },
+    { id: "PAN-30", nama: "Kenneth Richie Sabella", jabatan: "Game Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00345.JPG", quote: "SOSOK MITOLOGI MULMED OSTLYMPIC 2026 (waketos hama skrng)" },
+    { id: "PAN-31", nama: "Ravel Fulvi Algha Yapiawan", jabatan: "ame Master", divisi: "Game Master", divisiLabel: "Game Master", badgeBg: "bg-orange-500 text-white", foto: "assets/panitia/DSC00482.JPG", quote: "Bassist divergen yang paling ganteng dan ber aura" },
 
     // --- DIVINE CORE (6) ---
-    { id: "PAN-32", nama: "Eugenios Roland Silitonga", jabatan: "Coordinator Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00378.JPG", quote: "Pengawasan keamanan, ketertiban, dan kedisiplinan." },
-    { id: "PAN-33", nama: "Ray Emmanuel Mulia", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00270.JPG", quote: "Tim pertolongan pertama & kelengkapan medis (P3K)." },
-    { id: "PAN-34", nama: "Stephanie Enda Anetta Sitepu", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00330.JPG", quote: "Pengelolaan logistik tempat dan penyediaan alat." },
-    { id: "PAN-35", nama: "Gwendalyn Yuktipada", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00360.JPG", quote: "Sterilisasi area kegiatan dan pengamanan pintu." },
-    { id: "PAN-36", nama: "Nonie Faty Lestari Zega", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00341.JPG", quote: "Pengarahan massa dan pengaturan arus pengunjung." },
-    { id: "PAN-37", nama: "Irene Akwila Manullang", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00336.JPG", quote: "Operasional teknis sound system dan kelistrikan." }
+    { id: "PAN-32", nama: "Eugenios Roland Silitonga", jabatan: "Coordinator Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00378.JPG", quote: "Sosok ayah dengan singanggartulo" },
+    { id: "PAN-33", nama: "Ray Emmanuel Mulia", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00270.JPG", quote: "Anggota dengan minus aura terbesar dan hampir nihil sisi positifnya" },
+    { id: "PAN-34", nama: "Stephanie Enda Anetta Sitepu", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00330.JPG", quote: "aduh ini kalo teriak bikin sakit telinga, kalo marah jg ngejar" },
+    { id: "PAN-35", nama: "Gwendalyn Yuktipada", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00360.JPG", quote: "manggil nama orang udah kayak alarm sumpah ga berenti setelah 70x7 kali" },
+    { id: "PAN-36", nama: "Nonie Faty Lestari Zega", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00341.JPG", quote: "sosok yang diem diem bae tapi kalemnya kalem banget buset dah" },
+    { id: "PAN-37", nama: "Irene Akwila Manullang", jabatan: "Divine Core", divisi: "Divine Core", divisiLabel: "Divine Core", badgeBg: "bg-cyan-500 text-slate-950", foto: "assets/panitia/DSC00336.JPG", quote: "PACAR DECO TERAKTIF SIALAN, NGEJERNYA GANGOTAK" }
 ];
 
-/**
- * Render Cards Panitia OSIS
- */
 // Ganti nilai `message` untuk menulis pesan pribadi tiap kartu.
 // Kode dicek berdasarkan ID penerima, bukan berdasarkan kartu yang terakhir dirender.
 const personalMessagesById = {
