@@ -64,6 +64,54 @@ const panitiaOSISData = [
 /**
  * Render Cards Panitia OSIS
  */
+// Ganti nilai `message` untuk menulis pesan pribadi tiap kartu.
+// Kode dicek berdasarkan ID penerima, bukan berdasarkan kartu yang terakhir dirender.
+const personalMessagesById = {
+    "PAN-01": { code: "617879", message: "Hai Tanti, atau yang sering gw panggil si kecil. MAKASIH BANYAK YA UDHA JADI KETUA OSIS PERIODE 25/26 YANG KEREN KECE ABIS. maafin gw juga ya selama ini gw kurang banget di osis, jujur nyesek sih tb tb udh abis masa periode. gw sangat amat very proud ke si kecil ini sih, walaupun sakit, ada acara, ada kegiatan lain tapi bisa ngatur semuanya dan luangin waktu buat osis. ga bisa berkata apa apa lagi sih, walau banyak yg bikin kecewa dan lain sebagainya, lu tetep jaga wibawa, perasaan dan profesionalitas lu di osis sebagai ketos (eh mantan ketos deng wkwkwk). Walau emosi gw udah ga ada, tapi dengan berakhirnya masa jabatan kalian, nyesek banget, gw bakal kenang itu selamanya, bahkan jika waktu diulang beribu ribu kalipun gw ga bakal kecewa sama kepemimpinan kalian, dan bakal tetep dukung kalian. eh maap kepanjangan, intinya aja lah ya. makasih ya kecil, mungkin ini first dan last longteks dari gw. Semoga dilain kesempatan lu dapet jadi pemimpin gw lagi ya, gw gamon berat. SEMOGA OSIS PERIODE KEMAREN JADI 7 MINUTES LU YA CIL!" },
+    "PAN-02": { code: "284397", message: "Hai Edo atau yang sering gw panggil si dontol kenyal hama gajelas. MAKASIH BANYAK UDAH JADI WAKETOS YANG RANDOM ABIS SUMPAH DAH. jujur, lu keren banget untu selama ini gw bangga banget sama lu yg udh stress, cape dan lain lainnya dikorbanin buat osis. Maafin gw ya kalo gw ada salah sama lu, apalagi perbuatan gw yang selalu bikin lu emosi dan lain lainnya, gw minta maaf dari lubuk hati terdalam. Maafin kalo gw ga layak kalo disuru suru ama lu, kadang nyebelin lah dan sebagianya. singkat banget si kepemimpinan kalian, tapi kalo waktu ini diulang sampe beribu ribu kali pun gw tetep dukung kalian kok. eh maap kepanjangan ku idu, semangat terus ya di taiwan. Semoga di lain kesempatan lu bisa mimpin kita kita lagi. JADIKAN OSIS KEMAREN 7 MINUTES LU YA DO!" },
+    "PAN-03": { code: "360292", message: "Hai Chloe atau yg sering gw panggil cole. Makasih ya udah jadi sekre di osis periode 25/26 yang singkat ini. Maafin gw ya kalau selama ini gw ada salah atau suka marah marah sama lu, gw minta maaf dari lubuk hati terdalam. Semoga tetep inget ya sama osis dan jadi kenangan terbaik. Semoga ilmu notulensinya kebawa ampe selama lamanya ya. Thankyou" },
+    "PAN-04": { code: "100464", message: "Hai Karenn atau yg sering gw panggil keren ato ketos hama. MAKASIH YAH UDAH JADI SEKRE DI OSIS PERIODE SEBELUMNYA. Semoga dengan udah jadinya ketos, ilmunya makin nambah. jaga osis dengan baik ya, jadikan itu memori dan kenangan terindah kalian di taun terakhir ini. Maaf ya kalo gw selama ini ada salah sama lu, mulai dari kata kata atau perbuatan gw kayak marah marah yg buat tersinggung. gw proud kok sama lu, udh berjuang selama di osis ini. JADIKAN OSIS SEBAGAI 7 MINUTES LU YA!" },
+    "PAN-05": { code: "602601", message: "Hai Kayleen atau yg sering gw panggil misdi gabriel. Makasih sudah berdinamika bersama osis di periode kemaren. Terimakasih atas semua kerja kerasnya sebagai bendahara osis yg mantap wow. Maafin gw ya kalo ada salah sama lu atau apapun itu. Semoga OSIS menjadi 7 minutes lu ya!" },
+    "PAN-06": { code: "974955", message: "Error with this Message, please contact admin" },
+    "PAN-07": { code: "512809", message: "Error with this Message, please contact admin" },
+    "PAN-08": { code: "244273", message: "Error with this Message, please contact admin" },
+    "PAN-09": { code: "976208", message: "Error with this Message, please contact admin" },
+    "PAN-10": { code: "539383", message: "Error with this Message, please contact admin" },
+    "PAN-11": { code: "967191", message: "Error with this Message, please contact admin" },
+    "PAN-12": { code: "409054", message: "Hai Vina atau yg sering gw panggil iyup. MAKASIH BANYAK UDH JADI PEMIMPIN VISION VAULT YEA SELAMA PERIODE 25/26. Keren abis si ketua satu ini ngomel nya. Maafin gw ya kalo selama di osis banyak salah sama lu, mulai dari kata kata, marah marah, dan lain lainnya yang buat kesel ato emosi. Maaf gabisa ngomong banyak, ga bisa berkata apa apa lagi euy wkwkwkwk. MAKASII YA ATAS PENGALAMANNYA SELAMA SETAUN ATAU DUATAUN. SEMOGA OSIS JADI 7 MINUTES LU YA!" },
+    "PAN-13": { code: "000000", message: "Error with this Message, please contact admin" },
+    "PAN-14": { code: "277344", message: "Hai marvel atau yg sering gw panggil mece, kotak, mc, ce, cm, km, dm. Makasih udah jadi mulmed yg pindah pindah job mulu tiap event, sialan emng. Stay kotak, stay mulmed, semoga kutukan mulmed berlanjut dikuliah hukum. maafin kalo gw sengaja banyakin salah ke lu kotak. semoga osis jadi 7 minutes lu ce, jangan dijadiin sarana bolos!" },
+    "PAN-15": { code: "559270", message: "Error with this Message, please contact admin" },
+    "PAN-16": { code: "210170", message: "Error with this Message, please contact admin" },
+    "PAN-17": { code: "485361", message: "Error with this Message, please contact admin" },
+    "PAN-18": { code: "358339", message: "Hai putri atau yg sering gw panggil iput, iyup, put. Makasih banyak yaa udah berdinamika di osis selama ini, proud of you karena udah bagi waktu dan beradaptasi secara pesat di sma talenta dan di osis. Maafin gw ya kalo gw ada salah sama lu, mulai dara kata kata gw ataupun perbutan yang bikin lu marah atau kesel sama gw, gw minta maaf sedalam dalamnya. SEMOGA OSIS JADI 7 MINUTES LU YA!" },
+    "PAN-19": { code: "534985", message: "Error with this Message, please contact admin" },
+    "PAN-20": { code: "118467", message: "Error with this Message, please contact admin" },
+    "PAN-21": { code: "632296", message: "Error with this Message, please contact admin" },
+    "PAN-22": { code: "804663", message: "Hai Rachel atau yg sering gw panggil akew. Makasih ya udah bekerja keras di osis periode 25/26 ini yang semuanya serba darderdor. Makasih udah jadi pemimpin yg galak, teriak teriak, christmas, dkk di proses perekrutan osis baru. Maafin gw ya kew kalo selama ini gw ada salah sama lu mulai dari kata kata ataupun perbuatan kayak marah marah, ataupun sesuatu yg buat lu kesel ama gw, gw minta maaf. Semoga kedepannya osis bisa jadi 7 minutes lu ya!! " },
+    "PAN-23": { code: "776162", message: "Hai Devincent atau yg sering gw panggil cent, depi, dll. Makasih ya udah menjadi psikolog di osis periode 25/26 ini, yang dimana kerjaanya darderdor banget mulai dari ngangkat ngangkat barang, ngomongin si kumis, ngmongin si kumis, ngmongin si ios, ya nganu lah. Gw bangga ama lu dep udah bisa berdinamika di osis yang bner bner random, mana yg mimpin si kecil sama si sama hama lagi. Maafin gw ya kalo selama ini gw ada salah sama lu, mulai dari kata kata atau perbuatan gw yang bikin marah ataupun nganu lah. Semoga osis jadi 7 minutes lu ya dep!" },
+    "PAN-24": { code: "939354", message: "Error with this Message, please contact admin" },
+    "PAN-25": { code: "142589", message: "Error with this Message, please contact admin" },
+    "PAN-26": { code: "653183", message: "Error with this Message, please contact admin" },
+    "PAN-27": { code: "769917", message: "Hai Francine atau yg sering gw panggil ecin. Makasih ya cin udah bekerja keras di osis periode 25/26 ini. gw bangga banget kok sama lu udah luangin segala keperluan demi osis, dan seluruh tenaga lu buat osis, jangan kapok kapok di jumpscare ya wkwkwk. Maafin gw ya cin kalo selama ini gw ada salah sama lu, mulai dari kata kata dan perbuatan kayak marah marah, ataupun hal lain yang buat kesel atau emosi. Semoga osis bisa jadi 7 minutes lu ya cin! KURANG KURANGIN NANGIS SAMA TERIAK WOI!!!!!" },
+    "PAN-28": { code: "571470", message: "Hai Aaronn atau yg sering gw panggil nengok, ga dong, sering gw panggil arong, ron88, ron. Makasih ya tukang kukis brownies dan tiramisu di periode 25/26 ini. Makasi juga udah selalu ngebantu di osis, jadi orang terandom, teraktif, tergajelas di osis. Maafin gw ron kalo gw banyak salah ama lu (insiden hp diambil sir 1998) mulai dari kata kata atau perbuatna gw selama ini. Semoga osis periode ini jadi kenangan terbaik dan jadi 7 minutes lu nanti ya!" },
+    "PAN-29": { code: "637828", message: "Error with this Message, please contact admin" },
+    "PAN-30": { code: "982978", message: "Hai kenneth atau yang sering gw panggil heti, ken, neth, keni, kari, telor, mulmed, dkk. Semangat terus ya waketos kesayangan gw, jaga adik adiknya nanti yaa, gw titip osis kesayangan gw ini ke lu ken. Makasi juga udah selalu berjuang di osis periode sebelumnya, maaf gw blm bisa jadi kakak kelas yang baik buat lu ken gw nyesel banget. Maafin gw ya atas segala kesalahan gw yg buat lu kesel atau emosi ke gw. Semoga osis ini bisa jadi kenangan terindah dan jadi 7 minutes lu ya ken!!" },
+    "PAN-31": { code: "524731", message: "Hai Algha atau yg sering gw panggil alghuy, ga, al, gha, gha al, dll. TERIMAKASIH SUDA BERJUANG DI OSIS YAAA, APALAGI DI DEBAT KEMARIN LU KEREN BANGET SUMPAH. Makakasii juga yaa udah berjuang di osis selama ini mulai dari duka ataupun suka di osis. Maafin gw ya algha kalo gw selama ini ada salah sama lu mulai dari kata kata atau perbuatan gw kayak marah atau sebagainya ke lu yg bikin kesel. Gw berharap lu bisa rangkul adik adik osis kalian ya. SEMOGA OSIS BISA JADI 7 MINUTES LU YA GHA!!" },
+    "PAN-32": { code: "860037", message: "Error with this Message, please contact admin" },
+    "PAN-33": { code: "990997", message: "Error with this Message, please contact admin" },
+    "PAN-34": { code: "495300", message: "Hai Enda atau yg sering gw panggil nduy, en, da, dkk. Mkasih yaa udah berjuang di osis periode sebelumnya yaitu 25/26. Semangat terus yaa kedepannya, jada terus adik adiknya, jangan dimarahin ya kalau salah, bersikap lembutlah kepada mereka. Kurang kurangin teriak ya, udh waktunya kalian jadi contoh buat adik adik kelasnya. Sebelum itu, gw mau minta maaf ya, kalo selama ini gw ada salah di perkataan atau berbuatan kayak marah marah ataupun hal lainnya yang buat kesel, takut, atau segan ke gw. Semoga osis bisa selalu jadi kenangan dan jadi 7 minutes lu ya!" },
+    "PAN-35": { code: "241409", message: "Error with this Message, please contact admin" },
+    "PAN-36": { code: "580867", message: "Error with this Message, please contact admin" },
+    "PAN-37": { code: "708726", message: "Error with this Message, please contact admin" }
+};
+
+let activeMessageRecipientId = null;
+let panitiaModalCloseTimer = null;
+
+/**
+ * Render Cards Panitia OSIS
+ */
 function renderPanitia(filterCategory = 'all') {
     const topContainer = document.getElementById('panitia-top-rack');
     const gridContainer = document.getElementById('panitia-grid-rack');
@@ -190,6 +238,9 @@ function openPanitiaModal(item) {
     const modal = document.getElementById('panitia-lightbox');
     const modalBox = modal.querySelector('div');
 
+    clearTimeout(panitiaModalCloseTimer);
+    activeMessageRecipientId = item.id;
+    resetPersonalMessage();
     document.getElementById('panitia-img').src = item.foto;
     document.getElementById('panitia-badge').innerText = item.divisiLabel;
     document.getElementById('panitia-badge').className = `absolute top-3 left-3 text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md shadow-md ${item.badgeBg}`;
@@ -208,15 +259,96 @@ function closePanitiaModal() {
     const modal = document.getElementById('panitia-lightbox');
     const modalBox = modal.querySelector('div');
 
+    resetPersonalMessage();
+    activeMessageRecipientId = null;
     modalBox.classList.remove('scale-100', 'opacity-100');
     modalBox.classList.add('scale-95', 'opacity-0');
-    setTimeout(() => {
+    clearTimeout(panitiaModalCloseTimer);
+    panitiaModalCloseTimer = setTimeout(() => {
         modal.classList.add('hidden');
     }, 200);
 }
+
+function showPersonalMessageForm() {
+    const form = document.getElementById('personal-message-form');
+    const input = document.getElementById('personal-message-code');
+    const button = document.getElementById('show-personal-message');
+
+    if (!form || !input || !button || !activeMessageRecipientId) return;
+    button.classList.add('hidden');
+    form.classList.remove('hidden');
+    input.focus();
+}
+
+function unlockPersonalMessage(event) {
+    event.preventDefault();
+
+    const entry = personalMessagesById[activeMessageRecipientId];
+    const input = document.getElementById('personal-message-code');
+    const error = document.getElementById('personal-message-error');
+    const popup = document.getElementById('personal-message-modal');
+    const popupRecipient = document.getElementById('personal-message-recipient');
+    const message = document.getElementById('personal-message-text');
+    const form = document.getElementById('personal-message-form');
+    const recipient = panitiaOSISData.find((person) => person.id === activeMessageRecipientId);
+
+    if (!entry || !input || !error || !popup || !popupRecipient || !message || !form || !recipient) return;
+
+    if (!/^\d{6}$/.test(input.value) || input.value !== entry.code) {
+        error.textContent = 'Kode belum cocok untuk kartu ini. Coba periksa lagi, ya.';
+        input.setAttribute('aria-invalid', 'true');
+        input.focus();
+        return;
+    }
+
+    error.textContent = '';
+    input.removeAttribute('aria-invalid');
+    message.textContent = entry.message || 'Pesan untukmu sedang disiapkan.';
+    popupRecipient.textContent = `UNTUK ${recipient.nama}`;
+    form.classList.add('hidden');
+    popup.classList.remove('hidden');
+    popup.querySelector('button').focus();
+}
+
+function closePersonalMessagePopup() {
+    const popup = document.getElementById('personal-message-modal');
+    if (!popup || popup.classList.contains('hidden')) return;
+
+    popup.classList.add('hidden');
+    resetPersonalMessage();
+    document.getElementById('show-personal-message')?.focus();
+}
+
+function resetPersonalMessage() {
+    const button = document.getElementById('show-personal-message');
+    const form = document.getElementById('personal-message-form');
+    const input = document.getElementById('personal-message-code');
+    const error = document.getElementById('personal-message-error');
+    const popup = document.getElementById('personal-message-modal');
+    const message = document.getElementById('personal-message-text');
+    const recipient = document.getElementById('personal-message-recipient');
+
+    if (button) button.classList.remove('hidden');
+    if (form) form.classList.add('hidden');
+    if (input) {
+        input.value = '';
+        input.removeAttribute('aria-invalid');
+    }
+    if (error) error.textContent = '';
+    if (popup) popup.classList.add('hidden');
+    if (message) message.textContent = '';
+    if (recipient) recipient.textContent = '';
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closePersonalMessagePopup();
+});
 
 // Global Exports
 window.renderPanitia = renderPanitia;
 window.filterPanitia = filterPanitia;
 window.openPanitiaModal = openPanitiaModal;
 window.closePanitiaModal = closePanitiaModal;
+window.showPersonalMessageForm = showPersonalMessageForm;
+window.unlockPersonalMessage = unlockPersonalMessage;
+window.closePersonalMessagePopup = closePersonalMessagePopup;

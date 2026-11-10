@@ -178,7 +178,42 @@
                 <p id="panitia-jabatan" class="text-synes-accent font-bold text-xs uppercase tracking-wider polaroid-font"></p>
                 <p id="panitia-desc" class="text-zinc-600 text-xs leading-relaxed pt-2 border-t border-zinc-200/60"></p>
             </div>
+
+            <section class="mt-5 border-t border-zinc-200 pt-4 text-center">
+                <button id="show-personal-message" type="button" onclick="showPersonalMessageForm()" class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-xs font-bold tracking-wide text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-synes-accent focus:outline-none focus:ring-2 focus:ring-synes-accent focus:ring-offset-2">
+                    <span aria-hidden="true">✉</span>
+                    Lihat pesan ini
+                </button>
+                <p class="mt-2 text-[10px] leading-relaxed text-zinc-500">Masukkan kode 6 digit khusus yang kamu terima untuk kartu ini.</p>
+                <p class="mx-auto mt-2 max-w-sm text-[9px] leading-relaxed text-amber-700">Catatan: kode ini hanya mengunci tampilan. Karena situs ini statis, kode dan pesan di berkas sumber dapat dilihat orang yang tahu cara memeriksanya.</p>
+
+                <form id="personal-message-form" class="mx-auto mt-4 hidden max-w-xs space-y-2" onsubmit="unlockPersonalMessage(event)">
+                    <label for="personal-message-code" class="block text-[10px] font-bold uppercase tracking-widest text-zinc-600">Kode rahasia</label>
+                    <div class="flex gap-2">
+                        <input id="personal-message-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" minlength="6" required aria-describedby="personal-message-error" class="min-w-0 flex-1 rounded-lg border border-zinc-300 bg-white px-3 py-2 text-center font-mono text-lg tracking-[0.3em] text-zinc-900 outline-none transition focus:border-synes-accent focus:ring-2 focus:ring-synes-accent/20" placeholder="••••••">
+                        <button type="submit" class="rounded-lg bg-synes-accent px-4 py-2 text-xs font-bold text-white transition hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-synes-accent focus:ring-offset-2">Buka</button>
+                    </div>
+                    <p id="personal-message-error" class="min-h-4 text-[10px] font-semibold text-rose-600" role="status" aria-live="polite"></p>
+                </form>
+
+            </section>
         </div>
+    </div>
+
+    <div id="personal-message-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-sm" onclick="closePersonalMessagePopup()">
+        <section role="dialog" aria-modal="true" aria-labelledby="personal-message-title" class="w-full max-w-lg overflow-hidden rounded-2xl border border-amber-200 bg-[#fffdf8] text-zinc-800 shadow-2xl" onclick="event.stopPropagation()">
+            <header class="flex items-start justify-between gap-4 border-b border-amber-200/80 bg-gradient-to-r from-amber-50 to-rose-50 px-5 py-4 sm:px-7">
+                <div>
+                    <p class="text-[9px] font-bold uppercase tracking-[0.22em] text-amber-600">A little note for you</p>
+                    <h2 id="personal-message-title" class="mt-1 font-display text-lg font-bold text-zinc-900">Pesan pribadi</h2>
+                    <p id="personal-message-recipient" class="mt-1 text-[10px] font-black tracking-[0.18em] text-synes-accent"></p>
+                </div>
+                <button type="button" onclick="closePersonalMessagePopup()" aria-label="Tutup pesan" class="shrink-0 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-zinc-600 shadow-sm transition hover:bg-rose-50 hover:text-synes-accent focus:outline-none focus:ring-2 focus:ring-synes-accent">✕</button>
+            </header>
+            <div class="max-h-[70vh] overflow-y-auto px-5 py-6 sm:px-7">
+                <p id="personal-message-text" class="whitespace-pre-wrap break-words text-sm leading-7 text-zinc-700"></p>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
