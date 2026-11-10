@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synesthesia | Panitia OSIS</title>
+    <title>OSIS| Panitia OSIS</title>
     <!-- Framework Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -32,15 +32,6 @@
             }
         }
     </script>
-    <style>
-        .polaroid-font {
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-        }
-        .polaroid-shadow {
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 5px 15px rgba(0, 0, 0, 0.45);
-        }
-    </style>
 </head>
 
 <body class="panitiahaha bg-[#0B0F26] text-white font-sans antialiased selection:bg-synes-accent selection:text-white overflow-x-hidden min-h-screen">
@@ -165,8 +156,8 @@
 
     <!-- Modal Lightbox Preview -->
     <div id="panitia-lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 cursor-zoom-out" onclick="closePanitiaModal()">
-        <div class="max-w-md w-full bg-white p-5 pb-8 rounded-sm polaroid-shadow border border-black/10 transform scale-95 opacity-0 transition-all duration-300 relative cursor-default" onclick="event.stopPropagation()">
-            <button onclick="closePanitiaModal()" class="absolute -top-10 right-0 text-white/70 hover:text-synes-accent text-[10px] font-bold tracking-widest uppercase transition-colors">✕ Close Preview</button>
+        <div class="max-w-md max-h-[90vh] overflow-y-auto w-full bg-white p-5 pb-8 rounded-sm polaroid-shadow border border-black/10 transform scale-95 opacity-0 transition-all duration-300 relative cursor-default" onclick="event.stopPropagation()">
+            <button onclick="closePanitiaModal()" class="absolute right-2 top-2 z-40 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-zinc-700 shadow transition-colors hover:text-synes-accent">✕ Close Preview</button>
             
             <div class="aspect-square w-full bg-zinc-950 overflow-hidden shadow-inner border border-zinc-200/50 rounded-sm relative">
                 <img id="panitia-img" src="" alt="Panitia OSIS" class="w-full h-full object-cover filter contrast-[1.03] brightness-[0.99]">
