@@ -22,7 +22,7 @@ const panitiaOSISData = [
     { id: "PAN-08", nama: "Caroline Kezia Budijanto", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00356.JPG", quote: "Pelukis badut muspus pacarnya ray yang kalo marah suka ngejer" },
     { id: "PAN-09", nama: "Joaquin Leandra Constantilova", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00365.JPG", quote: "Sosok seram teater gala 2026" },
     { id: "PAN-10", nama: "Carla Angela Herdiana", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00311.JPG", quote: "SIAP PASKIBRA, SIAP PASBHITA" },
-    { id: "PAN-11", nama: "Caroline Ransquella Faustine N", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00372.JPG", quote: "kreaventure teranomali, ketakutan gajelas" },
+    { id: "PAN-11", nama: "Caroline Ransquella Wozniacky Nadapdap", jabatan: "Kreaventure", divisi: "Kreaventure", divisiLabel: "Kreaventure", badgeBg: "bg-pink-500 text-white", foto: "assets/panitia/DSC00372.JPG", quote: "kreaventure teranomali, ketakutan gajelas" },
 
     // --- VISION VAULT (6) ---
     { id: "PAN-12", nama: "Josefa Maria Davina Hartanto", jabatan: "Coordinator Vision Vault", divisi: "Vision Vault", divisiLabel: "Vision Vault", badgeBg: "bg-purple-600 text-white", foto: "assets/panitia/DSC00280.JPG", quote: "sosok dokum yg selalu ngomel dan asal ngomong" },
